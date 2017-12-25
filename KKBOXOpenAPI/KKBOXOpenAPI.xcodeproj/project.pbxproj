@@ -1,0 +1,1108 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D4FAA1D41C833D71002D8EB4 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D4FAA1D51C833D71002D8EB4 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				D4FAA1D91C833D80002D8EB4 /* PBXTargetDependency */,
+				D4FAA1F41C833E0E002D8EB4 /* PBXTargetDependency */,
+				D4FAA1DD1C833D80002D8EB4 /* PBXTargetDependency */,
+				D4FAA1DF1C833D80002D8EB4 /* PBXTargetDependency */,
+				D4FAA1E11C833D80002D8EB4 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		A70B79DA1D5328F600E22E9F /* KKBOXOpenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0ACC41C7F7DC8005F0DF3 /* KKBOXOpenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A70B79DB1D5328F700E22E9F /* KKBOXOpenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0ACC41C7F7DC8005F0DF3 /* KKBOXOpenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A70B79DC1D5328F700E22E9F /* KKBOXOpenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0ACC41C7F7DC8005F0DF3 /* KKBOXOpenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A70B79DD1D5328F800E22E9F /* KKBOXOpenAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0ACC41C7F7DC8005F0DF3 /* KKBOXOpenAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A70B79E61D532C9C00E22E9F /* KKBOXOpenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */; };
+		A70B79E71D532C9C00E22E9F /* KKBOXOpenAPI+Privates.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */; };
+		A70B79E81D532C9C00E22E9F /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		A70B79E91D532C9D00E22E9F /* KKBOXOpenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */; };
+		A70B79EA1D532C9D00E22E9F /* KKBOXOpenAPI+Privates.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */; };
+		A70B79EB1D532C9D00E22E9F /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		D4114D8F1FCDB9A300758551 /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		D4A0ACB81C7F74B2005F0DF3 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACB71C7F74B2005F0DF3 /* Tests.swift */; };
+		D4A0ACBA1C7F74B2005F0DF3 /* libKKBOXOpenAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D41EFFB11C58C864000B4D10 /* libKKBOXOpenAPI.a */; };
+		D4A0ACCA1C7F7DC8005F0DF3 /* KKBOXOpenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */; };
+		D4A0ACCB1C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */; };
+		D4A0ACCC1C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		D4D3F83E1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D3F83F1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D3F8401FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D3F8411FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D3F8421FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */; };
+		D4D3F8431FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */; };
+		D4D3F8441FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */; };
+		D4D3F8451FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */; };
+		D4D3F8461FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */; };
+		D4FAA1991C833C46002D8EB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FAA1981C833C46002D8EB4 /* Cocoa.framework */; };
+		D4FAA1A01C833C46002D8EB4 /* KKBOXOpenAPIMac-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = D4FAA19F1C833C46002D8EB4 /* KKBOXOpenAPIMac-Prefix.pch */; };
+		D4FAA1A21C833C46002D8EB4 /* KKBOXOpenAPIMac-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FAA1A11C833C46002D8EB4 /* KKBOXOpenAPIMac-Info.plist */; };
+		D4FAA1AF1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FAA1AE1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4FAA1B41C833CA4002D8EB4 /* KKBOXOpenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */; };
+		D4FAA1B51C833CA4002D8EB4 /* KKBOXOpenAPI+Privates.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */; };
+		D4FAA1B61C833CA4002D8EB4 /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		D4FAA1B71C833CA4002D8EB4 /* KKBOXOpenAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */; };
+		D4FAA1B81C833CA4002D8EB4 /* KKBOXOpenAPI+Privates.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */; };
+		D4FAA1B91C833CA4002D8EB4 /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		D4FAA1C21C833D02002D8EB4 /* KKBOXOpenAPItvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FAA1C11C833D02002D8EB4 /* KKBOXOpenAPItvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4FAA1EE1C833E03002D8EB4 /* KKBOXOpenAPIiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D4FAA1ED1C833E03002D8EB4 /* KKBOXOpenAPIiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4545FCF1FF0EA5F00971096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FAA1EA1C833E03002D8EB4;
+			remoteInfo = KKBOXOpenAPIiOS;
+		};
+		D4A0ACBB1C7F74B2005F0DF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41EFFB01C58C864000B4D10;
+			remoteInfo = KKBOXOpenAPI;
+		};
+		D4FAA1D81C833D80002D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41EFFB01C58C864000B4D10;
+			remoteInfo = KKBOXOpenAPI;
+		};
+		D4FAA1DC1C833D80002D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FAA1961C833C46002D8EB4;
+			remoteInfo = KKBOXOpenAPIMac;
+		};
+		D4FAA1DE1C833D80002D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FAA1AB1C833C8D002D8EB4;
+			remoteInfo = KKBOXOpenAPIWatchOS;
+		};
+		D4FAA1E01C833D80002D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FAA1BE1C833D02002D8EB4;
+			remoteInfo = KKBOXOpenAPItvOS;
+		};
+		D4FAA1F31C833E0E002D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFFA91C58C864000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FAA1EA1C833E03002D8EB4;
+			remoteInfo = KKBOXOpenAPIiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D41EFFAF1C58C864000B4D10 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D41EFFB11C58C864000B4D10 /* libKKBOXOpenAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKKBOXOpenAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A0ACB51C7F74B1005F0DF3 /* KKBOXOpenAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKBOXOpenAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A0ACB71C7F74B2005F0DF3 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		D4A0ACB91C7F74B2005F0DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A0ACC01C7F7731005F0DF3 /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4A0ACC41C7F7DC8005F0DF3 /* KKBOXOpenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKBOXOpenAPI.h; sourceTree = SOURCE_ROOT; };
+		D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBOXOpenAPI.m; sourceTree = SOURCE_ROOT; };
+		D4A0ACC61C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KKBOXOpenAPI+Privates.h"; sourceTree = SOURCE_ROOT; };
+		D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KKBOXOpenAPI+Privates.m"; sourceTree = SOURCE_ROOT; };
+		D4A0ACC81C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LFHTTPFormExtensions.h"; sourceTree = SOURCE_ROOT; };
+		D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LFHTTPFormExtensions.m"; sourceTree = SOURCE_ROOT; };
+		D4B1627A1C83395F00369373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBOXOpenAPIObjects.h; sourceTree = "<group>"; };
+		D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBOXOpenAPIObjects.m; sourceTree = "<group>"; };
+		D4FAA1971C833C46002D8EB4 /* KKBOXOpenAPIMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKBOXOpenAPIMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FAA1981C833C46002D8EB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D4FAA19B1C833C46002D8EB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D4FAA19C1C833C46002D8EB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D4FAA19D1C833C46002D8EB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4FAA19F1C833C46002D8EB4 /* KKBOXOpenAPIMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKBOXOpenAPIMac-Prefix.pch"; sourceTree = "<group>"; };
+		D4FAA1A11C833C46002D8EB4 /* KKBOXOpenAPIMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KKBOXOpenAPIMac-Info.plist"; sourceTree = "<group>"; };
+		D4FAA1A31C833C46002D8EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FAA1AC1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKBOXOpenAPIWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FAA1AE1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBOXOpenAPIWatchOS.h; sourceTree = "<group>"; };
+		D4FAA1B01C833C8D002D8EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FAA1BF1C833D02002D8EB4 /* KKBOXOpenAPItvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKBOXOpenAPItvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FAA1C11C833D02002D8EB4 /* KKBOXOpenAPItvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBOXOpenAPItvOS.h; sourceTree = "<group>"; };
+		D4FAA1C31C833D02002D8EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FAA1EB1C833E03002D8EB4 /* KKBOXOpenAPIiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKBOXOpenAPIiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4FAA1ED1C833E03002D8EB4 /* KKBOXOpenAPIiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBOXOpenAPIiOS.h; sourceTree = "<group>"; };
+		D4FAA1EF1C833E03002D8EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D41EFFAE1C58C864000B4D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A0ACB21C7F74B1005F0DF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A0ACBA1C7F74B2005F0DF3 /* libKKBOXOpenAPI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1931C833C46002D8EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1991C833C46002D8EB4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1A81C833C8D002D8EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1BB1C833D02002D8EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1E71C833E03002D8EB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D41EFFA81C58C864000B4D10 = {
+			isa = PBXGroup;
+			children = (
+				D4FAA19E1C833C46002D8EB4 /* KKBOXOpenAPIMac */,
+				D4FAA1AD1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS */,
+				D4FAA1C01C833D02002D8EB4 /* KKBOXOpenAPItvOS */,
+				D4FAA1EC1C833E03002D8EB4 /* KKBOXOpenAPIiOS */,
+				D4B1627C1C83396700369373 /* Frameworks */,
+				D41EFFB31C58C864000B4D10 /* KKBOXOpenAPI */,
+				D4A0ACB61C7F74B1005F0DF3 /* Tests */,
+				D41EFFB21C58C864000B4D10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D41EFFB21C58C864000B4D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D41EFFB11C58C864000B4D10 /* libKKBOXOpenAPI.a */,
+				D4A0ACB51C7F74B1005F0DF3 /* KKBOXOpenAPITests.xctest */,
+				D4FAA1971C833C46002D8EB4 /* KKBOXOpenAPIMac.framework */,
+				D4FAA1AC1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.framework */,
+				D4FAA1BF1C833D02002D8EB4 /* KKBOXOpenAPItvOS.framework */,
+				D4FAA1EB1C833E03002D8EB4 /* KKBOXOpenAPIiOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D41EFFB31C58C864000B4D10 /* KKBOXOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0ACC41C7F7DC8005F0DF3 /* KKBOXOpenAPI.h */,
+				D4A0ACC51C7F7DC8005F0DF3 /* KKBOXOpenAPI.m */,
+				D4A0ACC61C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.h */,
+				D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */,
+				D4A0ACC81C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.h */,
+				D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */,
+				D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */,
+				D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */,
+			);
+			name = KKBOXOpenAPI;
+			sourceTree = "<group>";
+		};
+		D4A0ACB61C7F74B1005F0DF3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0ACB71C7F74B2005F0DF3 /* Tests.swift */,
+				D4A0ACB91C7F74B2005F0DF3 /* Info.plist */,
+				D4A0ACC01C7F7731005F0DF3 /* Tests-Bridging-Header.h */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D4B1627C1C83396700369373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4B1627A1C83395F00369373 /* UIKit.framework */,
+				D4FAA1981C833C46002D8EB4 /* Cocoa.framework */,
+				D4FAA19A1C833C46002D8EB4 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4FAA19A1C833C46002D8EB4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4FAA19B1C833C46002D8EB4 /* AppKit.framework */,
+				D4FAA19C1C833C46002D8EB4 /* CoreData.framework */,
+				D4FAA19D1C833C46002D8EB4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D4FAA19E1C833C46002D8EB4 /* KKBOXOpenAPIMac */ = {
+			isa = PBXGroup;
+			children = (
+				D4FAA19F1C833C46002D8EB4 /* KKBOXOpenAPIMac-Prefix.pch */,
+				D4FAA1A11C833C46002D8EB4 /* KKBOXOpenAPIMac-Info.plist */,
+				D4FAA1A31C833C46002D8EB4 /* Info.plist */,
+			);
+			path = KKBOXOpenAPIMac;
+			sourceTree = "<group>";
+		};
+		D4FAA1AD1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4FAA1AE1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.h */,
+				D4FAA1B01C833C8D002D8EB4 /* Info.plist */,
+			);
+			path = KKBOXOpenAPIWatchOS;
+			sourceTree = "<group>";
+		};
+		D4FAA1C01C833D02002D8EB4 /* KKBOXOpenAPItvOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4FAA1C11C833D02002D8EB4 /* KKBOXOpenAPItvOS.h */,
+				D4FAA1C31C833D02002D8EB4 /* Info.plist */,
+			);
+			path = KKBOXOpenAPItvOS;
+			sourceTree = "<group>";
+		};
+		D4FAA1EC1C833E03002D8EB4 /* KKBOXOpenAPIiOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4FAA1ED1C833E03002D8EB4 /* KKBOXOpenAPIiOS.h */,
+				D4FAA1EF1C833E03002D8EB4 /* Info.plist */,
+			);
+			path = KKBOXOpenAPIiOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D4FAA1941C833C46002D8EB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1A01C833C46002D8EB4 /* KKBOXOpenAPIMac-Prefix.pch in Headers */,
+				A70B79DB1D5328F700E22E9F /* KKBOXOpenAPI.h in Headers */,
+				D4D3F83F1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1A91C833C8D002D8EB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1AF1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.h in Headers */,
+				A70B79DC1D5328F700E22E9F /* KKBOXOpenAPI.h in Headers */,
+				D4D3F8401FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1BC1C833D02002D8EB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1C21C833D02002D8EB4 /* KKBOXOpenAPItvOS.h in Headers */,
+				A70B79DD1D5328F800E22E9F /* KKBOXOpenAPI.h in Headers */,
+				D4D3F8411FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1E81C833E03002D8EB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1EE1C833E03002D8EB4 /* KKBOXOpenAPIiOS.h in Headers */,
+				A70B79DA1D5328F600E22E9F /* KKBOXOpenAPI.h in Headers */,
+				D4D3F83E1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D41EFFB01C58C864000B4D10 /* KKBOXOpenAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41EFFBA1C58C864000B4D10 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPI" */;
+			buildPhases = (
+				D41EFFAD1C58C864000B4D10 /* Sources */,
+				D41EFFAE1C58C864000B4D10 /* Frameworks */,
+				D41EFFAF1C58C864000B4D10 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKBOXOpenAPI;
+			productName = KKBOXOpenAPI;
+			productReference = D41EFFB11C58C864000B4D10 /* libKKBOXOpenAPI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D4A0ACB41C7F74B1005F0DF3 /* KKBOXOpenAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A0ACBF1C7F74B2005F0DF3 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPITests" */;
+			buildPhases = (
+				D4A0ACB11C7F74B1005F0DF3 /* Sources */,
+				D4A0ACB21C7F74B1005F0DF3 /* Frameworks */,
+				D4A0ACB31C7F74B1005F0DF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4545FD01FF0EA5F00971096 /* PBXTargetDependency */,
+				D4A0ACBC1C7F74B2005F0DF3 /* PBXTargetDependency */,
+			);
+			name = KKBOXOpenAPITests;
+			productName = Tests;
+			productReference = D4A0ACB51C7F74B1005F0DF3 /* KKBOXOpenAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4FAA1961C833C46002D8EB4 /* KKBOXOpenAPIMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FAA1A61C833C46002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPIMac" */;
+			buildPhases = (
+				D4FAA1921C833C46002D8EB4 /* Sources */,
+				D4FAA1931C833C46002D8EB4 /* Frameworks */,
+				D4FAA1941C833C46002D8EB4 /* Headers */,
+				D4FAA1951C833C46002D8EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKBOXOpenAPIMac;
+			productName = KKBOXOpenAPIMac;
+			productReference = D4FAA1971C833C46002D8EB4 /* KKBOXOpenAPIMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4FAA1AB1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FAA1B11C833C8D002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPIWatchOS" */;
+			buildPhases = (
+				D4FAA1A71C833C8D002D8EB4 /* Sources */,
+				D4FAA1A81C833C8D002D8EB4 /* Frameworks */,
+				D4FAA1A91C833C8D002D8EB4 /* Headers */,
+				D4FAA1AA1C833C8D002D8EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKBOXOpenAPIWatchOS;
+			productName = KKBOXOpenAPIWatchOS;
+			productReference = D4FAA1AC1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4FAA1BE1C833D02002D8EB4 /* KKBOXOpenAPItvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FAA1C41C833D02002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPItvOS" */;
+			buildPhases = (
+				D4FAA1BA1C833D02002D8EB4 /* Sources */,
+				D4FAA1BB1C833D02002D8EB4 /* Frameworks */,
+				D4FAA1BC1C833D02002D8EB4 /* Headers */,
+				D4FAA1BD1C833D02002D8EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKBOXOpenAPItvOS;
+			productName = KKBOXOpenAPItvOS;
+			productReference = D4FAA1BF1C833D02002D8EB4 /* KKBOXOpenAPItvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4FAA1EA1C833E03002D8EB4 /* KKBOXOpenAPIiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FAA1F01C833E03002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPIiOS" */;
+			buildPhases = (
+				D4FAA1E61C833E03002D8EB4 /* Sources */,
+				D4FAA1E71C833E03002D8EB4 /* Frameworks */,
+				D4FAA1E81C833E03002D8EB4 /* Headers */,
+				D4FAA1E91C833E03002D8EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKBOXOpenAPIiOS;
+			productName = KKBOXOpenAPIiOS;
+			productReference = D4FAA1EB1C833E03002D8EB4 /* KKBOXOpenAPIiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41EFFA91C58C864000B4D10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = KKBOX;
+				TargetAttributes = {
+					D41EFFB01C58C864000B4D10 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D4A0ACB41C7F74B1005F0DF3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = GA2DMW4FFR;
+						LastSwiftMigration = 0810;
+					};
+					D4FAA1961C833C46002D8EB4 = {
+						CreatedOnToolsVersion = 7.3;
+						ProvisioningStyle = Automatic;
+					};
+					D4FAA1AB1C833C8D002D8EB4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D4FAA1BE1C833D02002D8EB4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D4FAA1D41C833D71002D8EB4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D4FAA1EA1C833E03002D8EB4 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = D41EFFAC1C58C864000B4D10 /* Build configuration list for PBXProject "KKBOXOpenAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D41EFFA81C58C864000B4D10;
+			productRefGroup = D41EFFB21C58C864000B4D10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4FAA1D41C833D71002D8EB4 /* All */,
+				D41EFFB01C58C864000B4D10 /* KKBOXOpenAPI */,
+				D4A0ACB41C7F74B1005F0DF3 /* KKBOXOpenAPITests */,
+				D4FAA1EA1C833E03002D8EB4 /* KKBOXOpenAPIiOS */,
+				D4FAA1961C833C46002D8EB4 /* KKBOXOpenAPIMac */,
+				D4FAA1AB1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS */,
+				D4FAA1BE1C833D02002D8EB4 /* KKBOXOpenAPItvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4A0ACB31C7F74B1005F0DF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1951C833C46002D8EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1A21C833C46002D8EB4 /* KKBOXOpenAPIMac-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1AA1C833C8D002D8EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1BD1C833D02002D8EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1E91C833E03002D8EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D41EFFAD1C58C864000B4D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A0ACCC1C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m in Sources */,
+				D4D3F8421FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */,
+				D4A0ACCB1C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m in Sources */,
+				D4A0ACCA1C7F7DC8005F0DF3 /* KKBOXOpenAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A0ACB11C7F74B1005F0DF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4114D8F1FCDB9A300758551 /* NSData+LFHTTPFormExtensions.m in Sources */,
+				D4A0ACB81C7F74B2005F0DF3 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1921C833C46002D8EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1B61C833CA4002D8EB4 /* NSData+LFHTTPFormExtensions.m in Sources */,
+				D4D3F8441FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */,
+				D4FAA1B51C833CA4002D8EB4 /* KKBOXOpenAPI+Privates.m in Sources */,
+				D4FAA1B41C833CA4002D8EB4 /* KKBOXOpenAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1A71C833C8D002D8EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FAA1B91C833CA4002D8EB4 /* NSData+LFHTTPFormExtensions.m in Sources */,
+				D4D3F8451FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */,
+				D4FAA1B81C833CA4002D8EB4 /* KKBOXOpenAPI+Privates.m in Sources */,
+				D4FAA1B71C833CA4002D8EB4 /* KKBOXOpenAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1BA1C833D02002D8EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70B79EB1D532C9D00E22E9F /* NSData+LFHTTPFormExtensions.m in Sources */,
+				D4D3F8461FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */,
+				A70B79EA1D532C9D00E22E9F /* KKBOXOpenAPI+Privates.m in Sources */,
+				A70B79E91D532C9D00E22E9F /* KKBOXOpenAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FAA1E61C833E03002D8EB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70B79E81D532C9C00E22E9F /* NSData+LFHTTPFormExtensions.m in Sources */,
+				D4D3F8431FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */,
+				A70B79E71D532C9C00E22E9F /* KKBOXOpenAPI+Privates.m in Sources */,
+				A70B79E61D532C9C00E22E9F /* KKBOXOpenAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4545FD01FF0EA5F00971096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FAA1EA1C833E03002D8EB4 /* KKBOXOpenAPIiOS */;
+			targetProxy = D4545FCF1FF0EA5F00971096 /* PBXContainerItemProxy */;
+		};
+		D4A0ACBC1C7F74B2005F0DF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41EFFB01C58C864000B4D10 /* KKBOXOpenAPI */;
+			targetProxy = D4A0ACBB1C7F74B2005F0DF3 /* PBXContainerItemProxy */;
+		};
+		D4FAA1D91C833D80002D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41EFFB01C58C864000B4D10 /* KKBOXOpenAPI */;
+			targetProxy = D4FAA1D81C833D80002D8EB4 /* PBXContainerItemProxy */;
+		};
+		D4FAA1DD1C833D80002D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FAA1961C833C46002D8EB4 /* KKBOXOpenAPIMac */;
+			targetProxy = D4FAA1DC1C833D80002D8EB4 /* PBXContainerItemProxy */;
+		};
+		D4FAA1DF1C833D80002D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FAA1AB1C833C8D002D8EB4 /* KKBOXOpenAPIWatchOS */;
+			targetProxy = D4FAA1DE1C833D80002D8EB4 /* PBXContainerItemProxy */;
+		};
+		D4FAA1E11C833D80002D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FAA1BE1C833D02002D8EB4 /* KKBOXOpenAPItvOS */;
+			targetProxy = D4FAA1E01C833D80002D8EB4 /* PBXContainerItemProxy */;
+		};
+		D4FAA1F41C833E0E002D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4FAA1EA1C833E03002D8EB4 /* KKBOXOpenAPIiOS */;
+			targetProxy = D4FAA1F31C833E0E002D8EB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D41EFFB81C58C864000B4D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D41EFFB91C58C864000B4D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D41EFFBB1C58C864000B4D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D41EFFBC1C58C864000B4D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D4A0ACBD1C7F74B2005F0DF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GA2DMW4FFR;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D4A0ACBE1C7F74B2005F0DF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GA2DMW4FFR;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D4FAA1A41C833C46002D8EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = KKBOXOpenAPIMac/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPIMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		D4FAA1A51C833C46002D8EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = KKBOXOpenAPIMac/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPIMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		D4FAA1B21C833C8D002D8EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KKBOXOpenAPIWatchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPIWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		D4FAA1B31C833C8D002D8EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KKBOXOpenAPIWatchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPIWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		D4FAA1C51C833D02002D8EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KKBOXOpenAPItvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPItvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4FAA1C61C833D02002D8EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KKBOXOpenAPItvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPItvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4FAA1D61C833D71002D8EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4FAA1D71C833D71002D8EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D4FAA1F11C833E03002D8EB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KKBOXOpenAPIiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPIiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4FAA1F21C833E03002D8EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KKBOXOpenAPIiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LIBTOOLFLAGS = "-all_load -ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPIiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D41EFFAC1C58C864000B4D10 /* Build configuration list for PBXProject "KKBOXOpenAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41EFFB81C58C864000B4D10 /* Debug */,
+				D41EFFB91C58C864000B4D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41EFFBA1C58C864000B4D10 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41EFFBB1C58C864000B4D10 /* Debug */,
+				D41EFFBC1C58C864000B4D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4A0ACBF1C7F74B2005F0DF3 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A0ACBD1C7F74B2005F0DF3 /* Debug */,
+				D4A0ACBE1C7F74B2005F0DF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FAA1A61C833C46002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPIMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FAA1A41C833C46002D8EB4 /* Debug */,
+				D4FAA1A51C833C46002D8EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FAA1B11C833C8D002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPIWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FAA1B21C833C8D002D8EB4 /* Debug */,
+				D4FAA1B31C833C8D002D8EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FAA1C41C833D02002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPItvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FAA1C51C833D02002D8EB4 /* Debug */,
+				D4FAA1C61C833D02002D8EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FAA1D51C833D71002D8EB4 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FAA1D61C833D71002D8EB4 /* Debug */,
+				D4FAA1D71C833D71002D8EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FAA1F01C833E03002D8EB4 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPIiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FAA1F11C833E03002D8EB4 /* Debug */,
+				D4FAA1F21C833E03002D8EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41EFFA91C58C864000B4D10 /* Project object */;
+}

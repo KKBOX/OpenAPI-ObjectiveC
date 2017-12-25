@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D41EFF771C58C832000B4D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41EFF761C58C832000B4D10 /* AppDelegate.swift */; };
+		D41EFF821C58C832000B4D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41EFF811C58C832000B4D10 /* Assets.xcassets */; };
+		D41EFF851C58C832000B4D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41EFF831C58C832000B4D10 /* LaunchScreen.storyboard */; };
+		D41EFF901C58C832000B4D10 /* KKBOXOpenAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41EFF8F1C58C832000B4D10 /* KKBOXOpenAPITests.swift */; };
+		D4B2EEE71F24493F005A37F6 /* KKMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1FCA51C59400E0042ECF7 /* KKMainTableViewController.swift */; };
+		D4D1FCA81C5942800042ECF7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1FCA71C5942800042ECF7 /* API.swift */; };
+		D4D5450F1FF12CA400A2A00E /* KKFeaturedPlaylistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D5450E1FF12CA400A2A00E /* KKFeaturedPlaylistsTableViewController.swift */; };
+		D4D545111FF1333800A2A00E /* KKPlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545101FF1333800A2A00E /* KKPlaylistTableViewController.swift */; };
+		D4D545131FF13B5600A2A00E /* KKFeaturedPlaylistCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545121FF13B5500A2A00E /* KKFeaturedPlaylistCategoriesTableViewController.swift */; };
+		D4D545151FF13D6700A2A00E /* KKFeaturedPlaylistCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545141FF13D6700A2A00E /* KKFeaturedPlaylistCategoryTableViewController.swift */; };
+		D4D545171FF143F800A2A00E /* KKNewHitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545161FF143F800A2A00E /* KKNewHitsTableViewController.swift */; };
+		D4D545191FF1460000A2A00E /* KKChartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545181FF1460000A2A00E /* KKChartsTableViewController.swift */; };
+		D4E0919A1C74EE3A0018F379 /* KKTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E091991C74EE3A0018F379 /* KKTextViewController.swift */; };
+		D4E4B0EC1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */; };
+		D4E4B0ED1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D41EFF8C1C58C832000B4D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41EFF6B1C58C832000B4D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41EFF721C58C832000B4D10;
+			remoteInfo = KKBOXOpenAPI;
+		};
+		D4E4B0E01D7C762B0026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D41EFFB11C58C864000B4D10;
+			remoteInfo = KKBOXOpenAPI;
+		};
+		D4E4B0E21D7C762B0026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4A0ACB51C7F74B1005F0DF3;
+			remoteInfo = KKBOXOpenAPITests;
+		};
+		D4E4B0E41D7C762B0026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4FAA1EB1C833E03002D8EB4;
+			remoteInfo = KKBOXOpenAPIiOS;
+		};
+		D4E4B0E61D7C762B0026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4FAA1971C833C46002D8EB4;
+			remoteInfo = KKBOXOpenAPIMac;
+		};
+		D4E4B0E81D7C762B0026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4FAA1AC1C833C8D002D8EB4;
+			remoteInfo = KKBOXOpenAPIWatchOS;
+		};
+		D4E4B0EA1D7C762B0026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4FAA1BF1C833D02002D8EB4;
+			remoteInfo = KKBOXOpenAPItvOS;
+		};
+		D4E4B0EE1D7C76370026A356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D4FAA1EA1C833E03002D8EB4;
+			remoteInfo = KKBOXOpenAPIiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4E4B0F01D7C76370026A356 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4E4B0ED1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D41EFF731C58C832000B4D10 /* KKBOXOpenAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBOXOpenAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41EFF761C58C832000B4D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D41EFF811C58C832000B4D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D41EFF841C58C832000B4D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D41EFF861C58C832000B4D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D41EFF8B1C58C832000B4D10 /* KKBOXOpenAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKBOXOpenAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41EFF8F1C58C832000B4D10 /* KKBOXOpenAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKBOXOpenAPITests.swift; sourceTree = "<group>"; };
+		D41EFF911C58C833000B4D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D1FCA11C5931080042ECF7 /* KKBOXOpenAPITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKBOXOpenAPITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4D1FCA51C59400E0042ECF7 /* KKMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKMainTableViewController.swift; sourceTree = "<group>"; };
+		D4D1FCA71C5942800042ECF7 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D4D1FCA91C5943020042ECF7 /* KKBOXOpenAPI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKBOXOpenAPI-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4D5450E1FF12CA400A2A00E /* KKFeaturedPlaylistsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFeaturedPlaylistsTableViewController.swift; sourceTree = "<group>"; };
+		D4D545101FF1333800A2A00E /* KKPlaylistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPlaylistTableViewController.swift; sourceTree = "<group>"; };
+		D4D545121FF13B5500A2A00E /* KKFeaturedPlaylistCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFeaturedPlaylistCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		D4D545141FF13D6700A2A00E /* KKFeaturedPlaylistCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKFeaturedPlaylistCategoryTableViewController.swift; sourceTree = "<group>"; };
+		D4D545161FF143F800A2A00E /* KKNewHitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKNewHitsTableViewController.swift; sourceTree = "<group>"; };
+		D4D545181FF1460000A2A00E /* KKChartsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKChartsTableViewController.swift; sourceTree = "<group>"; };
+		D4E091991C74EE3A0018F379 /* KKTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKTextViewController.swift; sourceTree = "<group>"; };
+		D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KKBOXOpenAPI.xcodeproj; path = ../KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D41EFF701C58C832000B4D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E4B0EC1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41EFF881C58C832000B4D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D41EFF6A1C58C832000B4D10 = {
+			isa = PBXGroup;
+			children = (
+				D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */,
+				D41EFF751C58C832000B4D10 /* KKBOXOpenAPI */,
+				D41EFF8E1C58C832000B4D10 /* KKBOXOpenAPITests */,
+				D41EFF741C58C832000B4D10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D41EFF741C58C832000B4D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D41EFF731C58C832000B4D10 /* KKBOXOpenAPI.app */,
+				D41EFF8B1C58C832000B4D10 /* KKBOXOpenAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D41EFF751C58C832000B4D10 /* KKBOXOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D41EFF761C58C832000B4D10 /* AppDelegate.swift */,
+				D4D1FCA71C5942800042ECF7 /* API.swift */,
+				D4D1FCA51C59400E0042ECF7 /* KKMainTableViewController.swift */,
+				D4D5450E1FF12CA400A2A00E /* KKFeaturedPlaylistsTableViewController.swift */,
+				D4D545101FF1333800A2A00E /* KKPlaylistTableViewController.swift */,
+				D4D545121FF13B5500A2A00E /* KKFeaturedPlaylistCategoriesTableViewController.swift */,
+				D4D545141FF13D6700A2A00E /* KKFeaturedPlaylistCategoryTableViewController.swift */,
+				D4D545161FF143F800A2A00E /* KKNewHitsTableViewController.swift */,
+				D4D545181FF1460000A2A00E /* KKChartsTableViewController.swift */,
+				D4E091991C74EE3A0018F379 /* KKTextViewController.swift */,
+				D41EFF811C58C832000B4D10 /* Assets.xcassets */,
+				D41EFF831C58C832000B4D10 /* LaunchScreen.storyboard */,
+				D41EFF861C58C832000B4D10 /* Info.plist */,
+				D4D1FCA91C5943020042ECF7 /* KKBOXOpenAPI-Bridging-Header.h */,
+			);
+			path = KKBOXOpenAPI;
+			sourceTree = "<group>";
+		};
+		D41EFF8E1C58C832000B4D10 /* KKBOXOpenAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1FCA11C5931080042ECF7 /* KKBOXOpenAPITests-Bridging-Header.h */,
+				D41EFF8F1C58C832000B4D10 /* KKBOXOpenAPITests.swift */,
+				D41EFF911C58C833000B4D10 /* Info.plist */,
+			);
+			path = KKBOXOpenAPITests;
+			sourceTree = "<group>";
+		};
+		D4E4B0D71D7C762B0026A356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E4B0E11D7C762B0026A356 /* libKKBOXOpenAPI.a */,
+				D4E4B0E31D7C762B0026A356 /* KKBOXOpenAPITests.xctest */,
+				D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */,
+				D4E4B0E71D7C762B0026A356 /* KKBOXOpenAPIMac.framework */,
+				D4E4B0E91D7C762B0026A356 /* KKBOXOpenAPIWatchOS.framework */,
+				D4E4B0EB1D7C762B0026A356 /* KKBOXOpenAPItvOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D41EFF721C58C832000B4D10 /* KKBOXOpenAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41EFF9F1C58C833000B4D10 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPI" */;
+			buildPhases = (
+				D41EFF6F1C58C832000B4D10 /* Sources */,
+				D41EFF701C58C832000B4D10 /* Frameworks */,
+				D41EFF711C58C832000B4D10 /* Resources */,
+				D4E4B0F01D7C76370026A356 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4E4B0EF1D7C76370026A356 /* PBXTargetDependency */,
+			);
+			name = KKBOXOpenAPI;
+			productName = KKBOXOpenAPI;
+			productReference = D41EFF731C58C832000B4D10 /* KKBOXOpenAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D41EFF8A1C58C832000B4D10 /* KKBOXOpenAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41EFFA21C58C833000B4D10 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPITests" */;
+			buildPhases = (
+				D41EFF871C58C832000B4D10 /* Sources */,
+				D41EFF881C58C832000B4D10 /* Frameworks */,
+				D41EFF891C58C832000B4D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41EFF8D1C58C832000B4D10 /* PBXTargetDependency */,
+			);
+			name = KKBOXOpenAPITests;
+			productName = KKBOXOpenAPITests;
+			productReference = D41EFF8B1C58C832000B4D10 /* KKBOXOpenAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41EFF6B1C58C832000B4D10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = KKBOX;
+				TargetAttributes = {
+					D41EFF721C58C832000B4D10 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GA2DMW4FFR;
+						LastSwiftMigration = 0910;
+					};
+					D41EFF8A1C58C832000B4D10 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0910;
+						TestTargetID = D41EFF721C58C832000B4D10;
+					};
+				};
+			};
+			buildConfigurationList = D41EFF6E1C58C832000B4D10 /* Build configuration list for PBXProject "KKBOXOpenAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D41EFF6A1C58C832000B4D10;
+			productRefGroup = D41EFF741C58C832000B4D10 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D4E4B0D71D7C762B0026A356 /* Products */;
+					ProjectRef = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D41EFF721C58C832000B4D10 /* KKBOXOpenAPI */,
+				D41EFF8A1C58C832000B4D10 /* KKBOXOpenAPITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D4E4B0E11D7C762B0026A356 /* libKKBOXOpenAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKKBOXOpenAPI.a;
+			remoteRef = D4E4B0E01D7C762B0026A356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4E4B0E31D7C762B0026A356 /* KKBOXOpenAPITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KKBOXOpenAPITests.xctest;
+			remoteRef = D4E4B0E21D7C762B0026A356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KKBOXOpenAPIiOS.framework;
+			remoteRef = D4E4B0E41D7C762B0026A356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4E4B0E71D7C762B0026A356 /* KKBOXOpenAPIMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KKBOXOpenAPIMac.framework;
+			remoteRef = D4E4B0E61D7C762B0026A356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4E4B0E91D7C762B0026A356 /* KKBOXOpenAPIWatchOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KKBOXOpenAPIWatchOS.framework;
+			remoteRef = D4E4B0E81D7C762B0026A356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4E4B0EB1D7C762B0026A356 /* KKBOXOpenAPItvOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KKBOXOpenAPItvOS.framework;
+			remoteRef = D4E4B0EA1D7C762B0026A356 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D41EFF711C58C832000B4D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41EFF851C58C832000B4D10 /* LaunchScreen.storyboard in Resources */,
+				D41EFF821C58C832000B4D10 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41EFF891C58C832000B4D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D41EFF6F1C58C832000B4D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B2EEE71F24493F005A37F6 /* KKMainTableViewController.swift in Sources */,
+				D4D545171FF143F800A2A00E /* KKNewHitsTableViewController.swift in Sources */,
+				D4E0919A1C74EE3A0018F379 /* KKTextViewController.swift in Sources */,
+				D4D545151FF13D6700A2A00E /* KKFeaturedPlaylistCategoryTableViewController.swift in Sources */,
+				D4D545191FF1460000A2A00E /* KKChartsTableViewController.swift in Sources */,
+				D4D1FCA81C5942800042ECF7 /* API.swift in Sources */,
+				D4D545111FF1333800A2A00E /* KKPlaylistTableViewController.swift in Sources */,
+				D41EFF771C58C832000B4D10 /* AppDelegate.swift in Sources */,
+				D4D545131FF13B5600A2A00E /* KKFeaturedPlaylistCategoriesTableViewController.swift in Sources */,
+				D4D5450F1FF12CA400A2A00E /* KKFeaturedPlaylistsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41EFF871C58C832000B4D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41EFF901C58C832000B4D10 /* KKBOXOpenAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D41EFF8D1C58C832000B4D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41EFF721C58C832000B4D10 /* KKBOXOpenAPI */;
+			targetProxy = D41EFF8C1C58C832000B4D10 /* PBXContainerItemProxy */;
+		};
+		D4E4B0EF1D7C76370026A356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KKBOXOpenAPIiOS;
+			targetProxy = D4E4B0EE1D7C76370026A356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D41EFF831C58C832000B4D10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D41EFF841C58C832000B4D10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D41EFF9D1C58C833000B4D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../../KKBOXOpenAPI/KKBOXOpenAPI/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D41EFF9E1C58C833000B4D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../../KKBOXOpenAPI/KKBOXOpenAPI/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D41EFFA01C58C833000B4D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GA2DMW4FFR;
+				INFOPLIST_FILE = KKBOXOpenAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPISample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KKBOXOpenAPI/KKBOXOpenAPI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D41EFFA11C58C833000B4D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GA2DMW4FFR;
+				INFOPLIST_FILE = KKBOXOpenAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPISample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KKBOXOpenAPI/KKBOXOpenAPI-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D41EFFA31C58C833000B4D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = KKBOXOpenAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KKBOXOpenAPITests/KKBOXOpenAPITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKBOXOpenAPI.app/KKBOXOpenAPI";
+			};
+			name = Debug;
+		};
+		D41EFFA41C58C833000B4D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = KKBOXOpenAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.KKBOXOpenAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KKBOXOpenAPITests/KKBOXOpenAPITests-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKBOXOpenAPI.app/KKBOXOpenAPI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D41EFF6E1C58C832000B4D10 /* Build configuration list for PBXProject "KKBOXOpenAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41EFF9D1C58C833000B4D10 /* Debug */,
+				D41EFF9E1C58C833000B4D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41EFF9F1C58C833000B4D10 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41EFFA01C58C833000B4D10 /* Debug */,
+				D41EFFA11C58C833000B4D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41EFFA21C58C833000B4D10 /* Build configuration list for PBXNativeTarget "KKBOXOpenAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41EFFA31C58C833000B4D10 /* Debug */,
+				D41EFFA41C58C833000B4D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41EFF6B1C58C832000B4D10 /* Project object */;
+}

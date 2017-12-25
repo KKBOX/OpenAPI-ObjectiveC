@@ -1,0 +1,9 @@
+language: objective-c
+osx_image: xcode9.2
+script:
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIiOS
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIMac
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIWatchOS
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPItvOS
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPI -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' test
+  

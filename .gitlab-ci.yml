@@ -1,0 +1,4 @@
+job1:
+  script:
+    - urlString='https://ios-ci.kkinternal.com/view/Tools and Libraries/job/KKBOXOpenAPI/build?token=tokenForTriggerOpenAPIJob'
+    - curl -X POST "${urlString}"
