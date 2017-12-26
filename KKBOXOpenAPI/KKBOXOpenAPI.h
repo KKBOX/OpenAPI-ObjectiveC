@@ -105,13 +105,14 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 #pragma mark -
 
 /**
- * The class helps to access KKBOX's Open API/Partner API on Apple
- * platforms such as iOS, macOS, watchOS and tvOS.
+ * The class helps to access KKBOX's Open API on Apple platforms such
+ * as iOS, macOS, watchOS and tvOS.
  *
  * To start accessing KKBOX's API, you need to register your self to
  * obtain a valid client ID(API Key) and shared secret, then you can
  * use your client ID and secret to initialize an instance of the
- * class.
+ * class. To obtain a client ID, please visit
+ * https://developer.kkbox.com/.
  */
 @interface KKBOXOpenAPI : NSObject
 
@@ -147,16 +148,10 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 
 @interface KKBOXOpenAPI (LoginWithClientCredential)
 /**
- * There are three ways to let you start using KKBOX's Open/Partner
- * API. The first way among them is to generate a client credential to
- * fetch an access token to let KKBOX identify you. It allows you to
- * access public data from KKBOX such as public albums, playlists and
- * so on.
- *
- * However, you cannot use client credentials to access private data
- * of a user. You have to let users to log-in into KKBOX and grant
- * permissions for you to do so. You cannot use client credentials to
- * do media playback either, since it requires a Premium Membership.
+ * To start using KKBOx's Open API, you need to log-in in to KKBOX at
+ * first.  You can generate a client credential to fetch an access
+ * token to let KKBOX identify you. It allows you to access public
+ * data from KKBOX such as public albums, playlists and so on.
  *
  * @param callback the callback block.
  * @return an NSURLSessionDataTask object that allow you to cancel the
