@@ -1,14 +1,12 @@
 language: objective-c
 osx_image: xcode9.2
+before_install:
+  - gem install slather --no-rdoc --no-ri --no-document --quiet
 script:
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIiOS
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIMac
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIWatchOS
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPItvOS
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPI -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' test
-  - slather
-before_install: rvm use $RVM_RUBY_VERSION
-install: bundle install --without=documentation --path ../travis_bundle_dir
 after_success: 
   - slather
-  - bash <(curl -s https://codecov.io/bash) -f cobertura.xml -X coveragepy -X gcov -X xcode
