@@ -160,17 +160,6 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 - (nonnull NSURLSessionDataTask *)fetchAccessTokenByClientCredentialWithCallback:(nonnull KKBOXOpenAPILoginCallback)callback;
 @end
 
-#pragma mark - Refresh Token
-
-@interface KKBOXOpenAPI (RefreshToken)
-/**
- * Refresh an existing access token. The method should be called only when
- * there is an existing access token and it expires.
- *
- */
-- (nonnull NSURLSessionDataTask *)refreshTokenWithCallback:(nonnull KKBOXOpenAPILoginCallback)callback;
-@end
-
 @interface KKBOXOpenAPI (API)
 
 #pragma mark - Song Tracks

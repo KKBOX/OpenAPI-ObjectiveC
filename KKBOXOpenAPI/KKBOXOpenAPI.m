@@ -200,23 +200,6 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 
 @end
 
-@implementation KKBOXOpenAPI (RefreshToken)
-
-- (nonnull NSURLSessionDataTask *)refreshTokenWithCallback:(nonnull KKBOXOpenAPILoginCallback)callback
-{
-	if (!self.accessToken) {
-		return nil;
-	}
-
-	NSMutableDictionary < NSString * , NSString * > *POSTParameters = [NSMutableDictionary dictionary];
-	POSTParameters[@"grant_type"] = @"refresh_token";
-	POSTParameters[@"refresh_token"] = self.accessToken.accessToken;
-	return [self _postToURL:[NSURL URLWithString:KKOAuthTokenURLString] POSTParameters:POSTParameters headers:@{} callback:[self _loginHandlerWithCallback:callback]];
-}
-
-@end
-
-
 @implementation KKBOXOpenAPI (API)
 
 #define CALL_API [self _apiTaskWithURL:[NSURL URLWithString:URLString] callback:callback]
