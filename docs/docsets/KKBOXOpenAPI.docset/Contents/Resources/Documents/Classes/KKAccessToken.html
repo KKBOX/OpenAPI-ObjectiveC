@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KKAccessToken Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/KKAccessToken" class="dashAnchor"></a>
+    <a title="KKAccessToken Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">KKBOXOpenAPI Docs</a> (46% documented)</p>
+        <p class="header-right"><a href="https://github.com/kkbox/OpenAPI-ObjectiveC"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">KKBOXOpenAPI Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        KKAccessToken Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/KKAccessToken.html">KKAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKAlbumInfo.html">KKAlbumInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKArtistInfo.html">KKArtistInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKBOXOpenAPI.html">KKBOXOpenAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKBOXOpenAPIObject.html">KKBOXOpenAPIObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKFeaturedPlaylistCategory.html">KKFeaturedPlaylistCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKImageInfo.html">KKImageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKNewReleaseAlbumsCategory.html">KKNewReleaseAlbumsCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKPagingInfo.html">KKPagingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKPlaylistInfo.html">KKPlaylistInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKRadioStation.html">KKRadioStation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKSearchResults.html">KKSearchResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKSummary.html">KKSummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKTrackInfo.html">KKTrackInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KKUserInfo.html">KKUserInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@KKBOXOpenAPIDidLoginNotification">KKBOXOpenAPIDidLoginNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@KKBOXOpenAPIDidRestoreAccessTokenNotification">KKBOXOpenAPIDidRestoreAccessTokenNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@KKBOXOpenAPIErrorDomain">KKBOXOpenAPIErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/KKScope.html">KKScope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KKSearchType.html">KKSearchType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KKTerritoryCode.html">KKTerritoryCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:KKBOXOpenAPI.h@T@KKBOXOpenAPIDataCallback">KKBOXOpenAPIDataCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:KKBOXOpenAPI.h@T@KKBOXOpenAPILoginCallback">KKBOXOpenAPILoginCallback</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>KKAccessToken</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">KKAccessToken</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>The access token object. You need a valid access token to access
+KKBOX&rsquo;s APIs. To obtain an access token, please read about KKBOX&rsquo;s
+log-in flow.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KKAccessToken(im)initWithDictionary:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithDictionary:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KKAccessToken(im)initWithDictionary:">-initWithDictionary:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create an access token by giving a dictionary object fetched from
+ KKBOX&rsquo;s log-in APIs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDictionary</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">inDictionary</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">dictionary</span> <span class="nv">inDictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inDictionary</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a given dictionary</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>an access token</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1/KKBOXOpenAPI/KKBOXOpenAPI.h#L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KKAccessToken(im)initWithCoder:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCoder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KKAccessToken(im)initWithCoder:">-initWithCoder:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCoder</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSCoder</span> <span class="o">*</span><span class="p">)</span><span class="nv">aDecoder</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1/KKBOXOpenAPI/KKBOXOpenAPI.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KKAccessToken(py)accessToken"></a>
+                    <a name="//apple_ref/objc/Property/accessToken" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KKAccessToken(py)accessToken">accessToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The access token string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">accessToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1/KKBOXOpenAPI/KKBOXOpenAPI.h#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KKAccessToken(py)expiresIn"></a>
+                    <a name="//apple_ref/objc/Property/expiresIn" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KKAccessToken(py)expiresIn">expiresIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How long will the access token expire since now.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">expiresIn</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">expiresIn</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1/KKBOXOpenAPI/KKBOXOpenAPI.h#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KKAccessToken(py)tokenType"></a>
+                    <a name="//apple_ref/objc/Property/tokenType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KKAccessToken(py)tokenType">tokenType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Type of the access token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">tokenType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">tokenType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1/KKBOXOpenAPI/KKBOXOpenAPI.h#L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KKAccessToken(py)scope"></a>
+                    <a name="//apple_ref/objc/Property/scope" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KKAccessToken(py)scope">scope</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scope of the access token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">scope</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">scope</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1/KKBOXOpenAPI/KKBOXOpenAPI.h#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="http://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2017-12-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

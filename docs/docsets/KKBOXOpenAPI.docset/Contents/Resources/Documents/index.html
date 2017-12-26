@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KKBOXOpenAPI  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="KKBOXOpenAPI  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">KKBOXOpenAPI Docs</a> (46% documented)</p>
+        <p class="header-right"><a href="https://github.com/kkbox/OpenAPI-ObjectiveC"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">KKBOXOpenAPI Reference</a>
+        <img id="carat" src="img/carat.png" />
+        KKBOXOpenAPI  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/KKAccessToken.html">KKAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKAlbumInfo.html">KKAlbumInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKArtistInfo.html">KKArtistInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKBOXOpenAPI.html">KKBOXOpenAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKBOXOpenAPIObject.html">KKBOXOpenAPIObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKFeaturedPlaylistCategory.html">KKFeaturedPlaylistCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKImageInfo.html">KKImageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKNewReleaseAlbumsCategory.html">KKNewReleaseAlbumsCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKPagingInfo.html">KKPagingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKPlaylistInfo.html">KKPlaylistInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKRadioStation.html">KKRadioStation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKSearchResults.html">KKSearchResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKSummary.html">KKSummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKTrackInfo.html">KKTrackInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KKUserInfo.html">KKUserInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@KKBOXOpenAPIDidLoginNotification">KKBOXOpenAPIDidLoginNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@KKBOXOpenAPIDidRestoreAccessTokenNotification">KKBOXOpenAPIDidRestoreAccessTokenNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@KKBOXOpenAPIErrorDomain">KKBOXOpenAPIErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/KKScope.html">KKScope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/KKSearchType.html">KKSearchType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/KKTerritoryCode.html">KKTerritoryCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:KKBOXOpenAPI.h@T@KKBOXOpenAPIDataCallback">KKBOXOpenAPIDataCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:KKBOXOpenAPI.h@T@KKBOXOpenAPILoginCallback">KKBOXOpenAPILoginCallback</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='kkbox-open-api-developer-sdk-for-ios-macos-watchos-tvos' class='heading'>KKBOX Open API Developer SDK for iOS/macOS/watchOS/tvOS</h1>
+
+<p>Copyright © 2016-2017 KKBOX All Rights Reserved.</p>
+
+<p><a href="https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache-green.svg?style=flat" alt="License Apache"></a>&nbsp;
+<a href="https://www.apple.com/tw/macos"><img src="https://img.shields.io/badge/macOS-10.9-blue.svg" alt="Support"></a>&nbsp;
+<a href="https://www.apple.com/tw/ios"><img src="https://img.shields.io/badge/iOS-7-blue.svg" alt="Support"></a>&nbsp;
+<a href="https://www.apple.com/tw/watchos"><img src="https://img.shields.io/badge/watchOS-2-blue.svg" alt="Support"></a>&nbsp;
+<a href="https://www.apple.com/tw/tvos"><img src="https://img.shields.io/badge/tvOS-9-blue.svg" alt="Support"></a>&nbsp;</p>
+<h2 id='about' class='heading'>About</h2>
+
+<p>The SDK helps to access KKBOX&rsquo;s Open/Partner API. You can easily add
+the SDK to your Xcode project, and start an app powered by KKBOX. You
+may obtain information about song tracks, albums, artists and
+playlists as well.</p>
+
+<p>The project is in Objective-C programing language. You can use the
+SDK on various Apple platforms such as iOS, macOS, watchOS and tvOS.</p>
+
+<p>For further information, please visit <a href="https://docs-en.kkbox.codes">KKBOX Developer Site</a>.</p>
+<h2 id='requirement' class='heading'>Requirement</h2>
+
+<p>The SDK supports</p>
+
+<ul>
+<li>📱 iOS 7.x or above</li>
+<li>💻 Mac OS X 10.9 or above</li>
+<li>⌚️ watchOS 2.x or above</li>
+<li>📺 tvOS 9.x or above</li>
+</ul>
+<h2 id='build' class='heading'>Build ⚒</h2>
+
+<p>You need the latest Xcode and macOS. Xcode 9 and macOS 10.13 high
+sierra are recommended.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>The SDK supports CocoaPods. Please add <code>pod &#39;KKBOXOpenAPI&#39;</code>
+to your Podfile, and then call <code>pod install</code>.</p>
+<h3 id='api-documentation' class='heading'>API Documentation 📖</h3>
+
+<p>KKBOX&rsquo;s Open API documentation is available at <a href="https://developer.kkbox.com/">https://developer.kkbox.com/</a>.</p>
+<h3 id='license' class='heading'>License</h3>
+
+<p>Copyright 2017 KKBOX Technologies Limited</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the <q>License</q>);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at</p>
+<pre class="highlight plaintext"><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an <q>AS IS</q> BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="http://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2017-12-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
