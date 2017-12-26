@@ -1,0 +1,10 @@
+coverage_service: cobertura_xml
+xcodeproj: KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj
+scheme: KKBOXOpenAPI
+configuration: Debug
+source_directory: KKBOXOpenAPI
+output_directory: ./
+binary-basename: KKBOXOpenAPITests.xctest
+ignore:
+  - KKBOXOpenAPI/Tests/*
+  
