@@ -2,7 +2,11 @@
 
 Copyright © 2016-2017 KKBOX All Rights Reserved.
 
+
+
+[![build](https://api.travis-ci.org/KKBOX/OpenAPI-ObjectiveC.svg)](https://travis-ci.org/KKBOX/OpenAPI-ObjectiveC)
 [![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/blob/master/LICENSE)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/v/KKBOXOpenAPI.svg?style=flat)](http://cocoapods.org/pods/KKBOXOpenAPI)&nbsp;
 [![Support](https://img.shields.io/badge/macOS-10.9-blue.svg)](https://www.apple.com/tw/macos)&nbsp;
 [![Support](https://img.shields.io/badge/iOS-7-blue.svg)](https://www.apple.com/tw/ios)&nbsp;
 [![Support](https://img.shields.io/badge/watchOS-2-blue.svg)](https://www.apple.com/tw/watchos)&nbsp;
@@ -41,7 +45,8 @@ to your Podfile, and then call `pod install`.
 
 ### API Documentation 📖
 
-KKBOX's Open API documentation is available at https://developer.kkbox.com/.
+- Documentation for the SDK is available at https://kkbox.github.io/OpenAPI-ObjectiveC/ .
+- KKBOX's Open API documentation is available at https://developer.kkbox.com/ .
 
 ### License
 

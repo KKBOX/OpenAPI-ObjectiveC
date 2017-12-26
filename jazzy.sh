@@ -3,8 +3,8 @@ jazzy \
   --author KKBOX \
   --author_url http://www.kkbox.com \
   --github_url https://github.com/kkbox/OpenAPI-ObjectiveC \
-  --github-file-prefix https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1 \
-  --module-version 1.1 \
+  --github-file-prefix https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4 \
+  --module-version 1.1.4 \
   --umbrella-header KKBOXOpenAPI/KKBOXOpenAPI.h \
   --framework-root . \
   --module KKBOXOpenAPI
