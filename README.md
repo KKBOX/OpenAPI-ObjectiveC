@@ -14,7 +14,7 @@ Copyright © 2016-2017 KKBOX All Rights Reserved.
 
 ## About
 
-The SDK helps to access KKBOX's Open/Partner API. You can easily add
+The SDK helps to access KKBOX's Open API. You can easily add
 the SDK to your Xcode project, and start an app powered by KKBOX. You
 may obtain information about song tracks, albums, artists and
 playlists as well.
