@@ -16,6 +16,7 @@
 @import WatchKit;
 #endif
 
+/** The model objects used in KKBOX's Open API. **/
 @interface KKBOXOpenAPIObject : NSObject
 - (nonnull instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
 @end
@@ -31,25 +32,41 @@
 @property (readonly, assign, nonatomic) NSInteger total;
 @end
 
+/** The object represents information about an image. **/
 @interface KKImageInfo : KKBOXOpenAPIObject
+/** The width of the image. **/
 @property (readonly, assign, nonatomic) CGFloat width;
+/** The height of the image. **/
 @property (readonly, assign, nonatomic) CGFloat height;
+/** The URL of the image. **/
 @property (readonly, strong, nonatomic, nullable) NSURL *imageURL;
 @end
 
+/** The object represents information about an artist on KKBOX. **/
 @interface KKArtistInfo : KKBOXOpenAPIObject
+/** ID of the artist. **/
 @property (readonly, strong, nonatomic, nonnull) NSString *artistID;
+/** Name of the artist. **/
 @property (readonly, strong, nonatomic, nonnull) NSString *artistName;
+/** URL of webpage about the artist. **/
 @property (readonly, strong, nonatomic, nullable) NSURL *artistURL;
+/** Images of the artist. **/
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
+/** The object represents information about an album on KKBOX. **/
 @interface KKAlbumInfo : KKBOXOpenAPIObject
+/** ID of the album. **/
 @property (readonly, strong, nonatomic, nonnull) NSString *albumID;
+/** Name of the album. **/
 @property (readonly, strong, nonatomic, nonnull) NSString *albumName;
+/** URL of the webpage about the album. **/
 @property (readonly, strong, nonatomic, nullable) NSURL *albumURL;
+/** The artist of the album. **/
 @property (readonly, strong, nonatomic, nonnull) KKArtistInfo *artist;
+/** Images of the album. **/
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
+/** When was the album released. **/
 @property (readonly, strong, nonatomic, nonnull) NSString *releaseDate;
 @property (readonly, assign, nonatomic) BOOL explcitness;
 @property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
