@@ -34,20 +34,44 @@ The SDK supports
 
 ## Build ⚒
 
-You need the latest Xcode and macOS. Xcode 9 and macOS 10.13 high
-sierra are recommended.
+You need the latest Xcode and macOS. Xcode 9 and macOS 10.13 High
+Sierra are recommended.
 
 ## Installation
 
 The SDK supports CocoaPods. Please add `pod 'KKBOXOpenAPI'`
 to your Podfile, and then call `pod install`.
 
-### API Documentation 📖
+## Usage
+
+To start using the SDK, you need to create an instance of KKBOXOpenAPI.
+
+``` swift
+let API = KKBOXOpenAPI(clientID: "YOUR_CLIENT_ID", secret: "YOUR_CLIENT_SECRET")
+```
+
+Then, ask the instance to fetch an access token by passing a client credential.
+
+``` swift
+API.fetchAccessTokenByClientCredential { token, error in ... }
+```
+
+Finally, you can start to do the API calls. For example, you can fetch the details
+of a song track by calling 'fetchTrack'.
+
+``` swift
+self.API.fetchTrack(withTrackID: trackID, territory: .taiwan) { track, error in ... }
+```
+
+You can develop your app using the SDK with Swift or Objective-C programming
+language, although we have only Swift sample code here.
+
+## API Documentation 📖
 
 - Documentation for the SDK is available at https://kkbox.github.io/OpenAPI-ObjectiveC/ .
 - KKBOX's Open API documentation is available at https://developer.kkbox.com/ .
 
-### License
+## License
 
 Copyright 2017 KKBOX Technologies Limited
 
