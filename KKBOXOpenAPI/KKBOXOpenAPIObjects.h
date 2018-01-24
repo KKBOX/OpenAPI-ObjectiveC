@@ -51,7 +51,7 @@
 @property (readonly, strong, nonatomic, nonnull) KKArtistInfo *artist;
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @property (readonly, strong, nonatomic, nonnull) NSString *releaseDate;
-@property (readonly, assign, nonatomic) BOOL explcitness;
+@property (readonly, assign, nonatomic) BOOL explicitness;
 @property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
 @end
 
@@ -62,7 +62,7 @@
 @property (readonly, strong, nonatomic, nullable) KKAlbumInfo *album;
 @property (readonly, assign, nonatomic) NSTimeInterval duration;
 @property (readonly, assign, nonatomic) NSInteger trackOrderInAlbum;
-@property (readonly, assign, nonatomic) BOOL explcitness;
+@property (readonly, assign, nonatomic) BOOL explicitness;
 @property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
 @end
 

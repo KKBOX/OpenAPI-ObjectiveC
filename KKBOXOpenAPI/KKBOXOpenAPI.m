@@ -135,7 +135,7 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		return @"";
 	}
 	NSMutableArray *components = [NSMutableArray array];
-	NSDictionary *map = @{@(KKScopeUserProfile): @"user_profile", @(KKScopeUserTerritory): @"user_territory", @(KKScopeUserAccountStatus): @"user_account_status",};
+	NSDictionary *map = @{@(KKScopeUserProfile): @"user_profile", @(KKScopeUserTerritory): @"user_territory", @(KKScopeUserAccountStatus): @"user_account_status"};
 	NSArray *scopes = [map allKeys];
 	for (NSNumber *scopeNumber in scopes) {
 		NSUInteger currentScope = [scopeNumber unsignedIntegerValue];

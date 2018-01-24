@@ -44,7 +44,7 @@
 @property (strong, nonatomic, nonnull) KKArtistInfo *artist;
 @property (strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @property (strong, nonatomic, nonnull) NSString *releaseDate;
-@property (assign, nonatomic) BOOL explcitness;
+@property (assign, nonatomic) BOOL explicitness;
 @property (strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
 @end
 
@@ -55,7 +55,7 @@
 @property (strong, nonatomic, nullable) KKAlbumInfo *album;
 @property (assign, nonatomic) NSTimeInterval duration;
 @property (assign, nonatomic) NSInteger trackOrderInAlbum;
-@property (assign, nonatomic) BOOL explcitness;
+@property (assign, nonatomic) BOOL explicitness;
 @property (strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
 @end
 
@@ -266,7 +266,7 @@
 	self.artist = [[KKArtistInfo alloc] initWithDictionary:([dictionary[@"artist"] isKindOfClass:[NSDictionary class]] ? dictionary[@"artist"] : @{})];
 	self.images = [KKBOXOpenAPIObjectParsingHelper imageArrayFromArray:dictionary[@"images"]];
 	self.releaseDate = [dictionary[@"release_date"] isKindOfClass:[NSString class]] ? dictionary[@"release_date"] : @"";
-	self.explcitness = [dictionary[@"explicitness"] respondsToSelector:@selector(boolValue)] ? [dictionary[@"explicitness"] boolValue] : NO;
+	self.explicitness = [dictionary[@"explicitness"] respondsToSelector:@selector(boolValue)] ? [dictionary[@"explicitness"] boolValue] : NO;
 	self.territoriesThatAvailanbleAt = [KKBOXOpenAPIObjectParsingHelper territoriesFromArray:dictionary[@"available_territories"]];
 }
 @end
@@ -285,7 +285,7 @@
 	}
 	self.trackOrderInAlbum = [dictionary[@"track_number"] respondsToSelector:@selector(integerValue)] ? [dictionary[@"track_number"] integerValue] : 0;
 	self.duration = [dictionary[@"duration"] respondsToSelector:@selector(doubleValue)] ? [dictionary[@"duration"] doubleValue] / 1000.0 : 0;
-	self.explcitness = [dictionary[@"explicitness"] respondsToSelector:@selector(boolValue)] ? [dictionary[@"explicitness"] boolValue] : NO;
+	self.explicitness = [dictionary[@"explicitness"] respondsToSelector:@selector(boolValue)] ? [dictionary[@"explicitness"] boolValue] : NO;
 	self.territoriesThatAvailanbleAt = [KKBOXOpenAPIObjectParsingHelper territoriesFromArray:dictionary[@"available_territories"]];
 }
 @end
