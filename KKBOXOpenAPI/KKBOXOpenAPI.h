@@ -391,7 +391,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch new hits playlists.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featuredplaylists`.
+ * See `https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory
@@ -404,7 +404,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch new hits playlists.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featuredplaylists`.
+ * See `https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory
