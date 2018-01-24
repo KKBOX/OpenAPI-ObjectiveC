@@ -3,9 +3,8 @@
 Copyright © 2016-2017 KKBOX All Rights Reserved.
 
 
-
 [![build](https://api.travis-ci.org/KKBOX/OpenAPI-ObjectiveC.svg)](https://travis-ci.org/KKBOX/OpenAPI-ObjectiveC)
-[![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/blob/master/LICENSE)&nbsp;
+[![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/master/LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/KKBOXOpenAPI.svg?style=flat)](http://cocoapods.org/pods/KKBOXOpenAPI)&nbsp;
 [![Support](https://img.shields.io/badge/macOS-10.9-blue.svg)](https://www.apple.com/tw/macos)&nbsp;
 [![Support](https://img.shields.io/badge/iOS-7-blue.svg)](https://www.apple.com/tw/ios)&nbsp;
@@ -35,20 +34,44 @@ The SDK supports
 
 ## Build ⚒
 
-You need the latest Xcode and macOS. Xcode 9 and macOS 10.13 high
-sierra are recommended.
+You need the latest Xcode and macOS. Xcode 9 and macOS 10.13 High
+Sierra are recommended.
 
 ## Installation
 
 The SDK supports CocoaPods. Please add `pod 'KKBOXOpenAPI'`
 to your Podfile, and then call `pod install`.
 
-### API Documentation 📖
+## Usage
+
+To start using the SDK, you need to create an instance of KKBOXOpenAPI.
+
+``` swift
+let API = KKBOXOpenAPI(clientID: "YOUR_CLIENT_ID", secret: "YOUR_CLIENT_SECRET")
+```
+
+Then, ask the instance to fetch an access token by passing a client credential.
+
+``` swift
+API.fetchAccessTokenByClientCredential { token, error in ... }
+```
+
+Finally, you can start to do the API calls. For example, you can fetch the details
+of a song track by calling 'fetchTrack'.
+
+``` swift
+self.API.fetchTrack(withTrackID: trackID, territory: .taiwan) { track, error in ... }
+```
+
+You can develop your app using the SDK with Swift or Objective-C programming
+language, although we have only Swift sample code here.
+
+## API Documentation 📖
 
 - Documentation for the SDK is available at https://kkbox.github.io/OpenAPI-ObjectiveC/ .
 - KKBOX's Open API documentation is available at https://developer.kkbox.com/ .
 
-### License
+## License
 
 Copyright 2017 KKBOX Technologies Limited
 

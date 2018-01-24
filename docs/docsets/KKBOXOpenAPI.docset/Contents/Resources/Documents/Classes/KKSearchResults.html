@@ -14,7 +14,7 @@
     <a title="KKSearchResults Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">KKBOXOpenAPI Docs</a> (46% documented)</p>
+        <p><a href="../index.html">KKBOXOpenAPI Docs</a> (57% documented)</p>
         <p class="header-right"><a href="https://github.com/kkbox/OpenAPI-ObjectiveC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -125,22 +125,7 @@
             <h1>KKSearchResults</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">KKSearchResults</span> <span class="p">:</span> <span class="nc"><a href="../Classes/KKBOXOpenAPIObject.html">KKBOXOpenAPIObject</a></span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/KKTrackInfo.html">KKTrackInfo</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">tracks</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKPagingInfo.html">KKPagingInfo</a></span> <span class="o">*</span><span class="n">tracksPaging</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKSummary.html">KKSummary</a></span> <span class="o">*</span><span class="n">tracksSummary</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/KKAlbumInfo.html">KKAlbumInfo</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">albums</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKPagingInfo.html">KKPagingInfo</a></span> <span class="o">*</span><span class="n">albumsPaging</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKSummary.html">KKSummary</a></span> <span class="o">*</span><span class="n">albumsSummary</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/KKArtistInfo.html">KKArtistInfo</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">artists</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKPagingInfo.html">KKPagingInfo</a></span> <span class="o">*</span><span class="n">artistsPaging</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKSummary.html">KKSummary</a></span> <span class="o">*</span><span class="n">artistsSummary</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">&lt;</span><span class="n"><a href="../Classes/KKPlaylistInfo.html">KKPlaylistInfo</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">playlists</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKPagingInfo.html">KKPagingInfo</a></span> <span class="o">*</span><span class="n">playlistsPaging</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/KKSummary.html">KKSummary</a></span> <span class="o">*</span><span class="n">playlistsSummary</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/KKPagingInfo.html">KKPagingInfo</a></span> <span class="o">*</span><span class="n">paging</span><span class="p">;</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/KKSummary.html">KKSummary</a></span> <span class="o">*</span><span class="n">summary</span><span class="p">;</span>
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">KKSearchResults</span> <span class="p">:</span> <span class="nc"><a href="../Classes/KKBOXOpenAPIObject.html">KKBOXOpenAPIObject</a></span></code></pre>
 
                 </div>
               </div>
@@ -180,7 +165,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -215,7 +200,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -250,7 +235,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -285,7 +270,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -320,7 +305,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -355,7 +340,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -390,7 +375,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -425,7 +410,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -460,7 +445,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -495,7 +480,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -530,7 +515,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -565,7 +550,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -600,7 +585,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -635,7 +620,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.4/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.6/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -645,7 +630,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2017-12-26)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-01-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
