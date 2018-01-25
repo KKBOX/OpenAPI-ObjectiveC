@@ -464,7 +464,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * Fetch the feature playlists contained in a given category. You can
  * obtain the categories from the previous method.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id`.
+ * See `https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param category the given category
