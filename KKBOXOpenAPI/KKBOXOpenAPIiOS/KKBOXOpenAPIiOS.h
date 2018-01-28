@@ -1,7 +1,7 @@
 //
 // KKBOXOpenAPIiOS.h
 //
-// Copyright (c) 2016-2017 KKBOX Taiwan Co., Ltd. All Rights Reserved.
+// Copyright (c) 2016-2018 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
 @import UIKit;

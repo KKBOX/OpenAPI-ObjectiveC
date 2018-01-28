@@ -1,9 +1,8 @@
 # KKBOX Open API Developer SDK for iOS/macOS/watchOS/tvOS
 
-Copyright © 2016-2017 KKBOX All Rights Reserved.
+Copyright © 2016-2018 KKBOX All Rights Reserved.
 
-
-[![build](https://api.travis-ci.org/KKBOX/OpenAPI-ObjectiveC.svg)](https://travis-ci.org/KKBOX/OpenAPI-ObjectiveC)
+[![build](https://api.travis-ci.org/KKBOX/OpenAPI-ObjectiveC.svg)](https://travis-ci.org/KKBOX/OpenAPI-ObjectiveC)&nbsp;
 [![License Apache](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/KKBOX/OpenAPI-ObjectiveC/master/LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/KKBOXOpenAPI.svg?style=flat)](http://cocoapods.org/pods/KKBOXOpenAPI)&nbsp;
 [![Support](https://img.shields.io/badge/macOS-10.9-blue.svg)](https://www.apple.com/tw/macos)&nbsp;
@@ -18,10 +17,15 @@ the SDK to your Xcode project, and start an app powered by KKBOX. You
 may obtain information about song tracks, albums, artists and
 playlists as well.
 
-The project is in Objective-C programing language. You can use the
-SDK on various Apple platforms such as iOS, macOS, watchOS and tvOS.
+The SDK is developed in Objective-C programing language, but you can
+still bridge the SDK to your Swift code. You can use the SDK on
+various Apple platforms such as iOS, macOS, watchOS and tvOS.
 
-For further information, please visit [KKBOX Developer Site](https://docs-en.kkbox.codes).
+If you are looking for a pure Swift SDK, please take a look at
+[KKBOX Open API Swift SDK](https://github.com/KKBOX/OpenAPI-Swift).
+
+For further information, please visit
+[KKBOX Developer Site](https://developer.kkbox.com).
 
 ## Requirement
 
@@ -66,6 +70,9 @@ self.API.fetchTrack(withTrackID: trackID, territory: .taiwan) { track, error in 
 You can develop your app using the SDK with Swift or Objective-C programming
 language, although we have only Swift sample code here.
 
+The project conains a demo project. Please open KKBOXOpenAPI.xcodeproj
+located in the "ExampleIOS" folder with Xcode and give it a try.
+
 ## API Documentation 📖
 
 - Documentation for the SDK is available at https://kkbox.github.io/OpenAPI-ObjectiveC/ .
@@ -73,7 +80,7 @@ language, although we have only Swift sample code here.
 
 ## License
 
-Copyright 2017 KKBOX Technologies Limited
+Copyright 2016-2018 KKBOX Technologies Limited
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

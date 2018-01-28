@@ -14,7 +14,7 @@
     <a title="KKAlbumInfo Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">KKBOXOpenAPI Docs</a> (57% documented)</p>
+        <p><a href="../index.html">KKBOXOpenAPI Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/kkbox/OpenAPI-ObjectiveC"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -129,7 +129,7 @@
 
                 </div>
               </div>
-            <p>The object represents information about an album on KKBOX. *</p>
+            <p>The object represents information about an album on KKBOX.</p>
 
           </section>
           <section class="section task-group-section">
@@ -148,7 +148,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ID of the album. *</p>
+                        <p>ID of the album.</p>
 
                       </div>
                       <div class="declaration">
@@ -183,7 +183,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Name of the album. *</p>
+                        <p>Name of the album.</p>
 
                       </div>
                       <div class="declaration">
@@ -218,7 +218,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>URL of the webpage about the album. *</p>
+                        <p>URL of the webpage about the album.</p>
 
                       </div>
                       <div class="declaration">
@@ -253,7 +253,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The artist of the album. *</p>
+                        <p>The artist of the album.</p>
 
                       </div>
                       <div class="declaration">
@@ -288,7 +288,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Images of the album. *</p>
+                        <p>Images of the album.</p>
 
                       </div>
                       <div class="declaration">
@@ -323,7 +323,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When was the album released. *</p>
+                        <p>When was the album released.</p>
 
                       </div>
                       <div class="declaration">
@@ -358,14 +358,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Is the album explicit or not.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">explicitness</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">explicitness</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -375,7 +375,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -393,24 +393,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The territories that the album is availanble at.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSSet</span> <span class="o">&lt;</span><span class="n">NSNumber</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">territoriesThatAvailanbleAt</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span>
+    <span class="n">NSSet</span><span class="o">&lt;</span><span class="n">NSNumber</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">territoriesThatAvailanbleAt</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">territoriesThatAvailanbleAt</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">NSNumber</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">territoriesThatAvailanbleAt</span><span class="p">:</span> <span class="kt">Set</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPIObjects.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -420,7 +421,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-01-25)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-01-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

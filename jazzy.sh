@@ -8,3 +8,5 @@ jazzy \
   --umbrella-header KKBOXOpenAPI/KKBOXOpenAPI.h \
   --framework-root . \
   --module KKBOXOpenAPI
+
+# jazzy --podspec KKBOXOpenAPI.podspec
