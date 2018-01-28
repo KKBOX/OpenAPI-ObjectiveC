@@ -33,8 +33,8 @@ NSString *KKStringFromTerritoryCode(KKTerritoryCode code) {
 
 - (NSURLSessionDataTask *)_postToURL:(NSURL *)URL POSTParameters:(NSDictionary *)parameters headers:(NSDictionary<NSString *, NSString *> *)headers callback:(void (^)(id, NSError *))callback
 {
-	NSDictionary<NSString *, NSString *> *newHeaders = [headers mutableCopy];
-	[newHeaders setValue:@"application/x-www-form-urlencoded" forKey:@"Content-type"];
+	NSMutableDictionary<NSString *, NSString *> *newHeaders = [headers mutableCopy];
+	newHeaders[@"Content-type"] = @"application/x-www-form-urlencoded";
 	NSData *POSTData = [NSData dataAsWWWURLEncodedFormFromDictionary:parameters];
 	return [self _postToURL:URL POSTData:POSTData headers:newHeaders callback:callback];
 }

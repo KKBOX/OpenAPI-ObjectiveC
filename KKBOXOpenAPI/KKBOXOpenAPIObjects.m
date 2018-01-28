@@ -16,8 +16,8 @@
 @interface KKPagingInfo ()
 @property (assign, nonatomic) NSInteger limit;
 @property (assign, nonatomic) NSInteger offset;
-@property (strong, nonatomic, nullable) NSString *previous;
-@property (strong, nonatomic, nullable) NSString *next;
+@property (strong, nonatomic, nullable) NSURL *previous;
+@property (strong, nonatomic, nullable) NSURL *next;
 @end
 
 @interface KKSummary ()
@@ -207,10 +207,10 @@
 		self.offset = [dictionary[@"offset"] integerValue];
 	}
 	if ([dictionary[@"previous"] isKindOfClass:[NSString class]]) {
-		self.previous = dictionary[@"previous"];
+		self.previous = [NSURL URLWithString:dictionary[@"previous"]];
 	}
 	if ([dictionary[@"next"] isKindOfClass:[NSString class]]) {
-		self.previous = dictionary[@"next"];
+		self.previous = [NSURL URLWithString:dictionary[@"next"]];
 	}
 }
 @end
