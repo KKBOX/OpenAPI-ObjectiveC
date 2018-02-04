@@ -55,8 +55,8 @@ class Tests: XCTestCase {
 		XCTAssertTrue(track.duration > 0)
 		XCTAssertNotNil(track.trackURL)
 		XCTAssertTrue(track.trackOrderInAlbum > 0)
-		XCTAssertTrue(track.territoriesThatAvailanbleAt.count > 0)
-		XCTAssertTrue(track.territoriesThatAvailanbleAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+//		XCTAssertTrue(track.territoriesThatAvailanbleAt.count > 0)
+//		XCTAssertTrue(track.territoriesThatAvailanbleAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		if let album = track.album {
 			self.validate(album: album)
 		}

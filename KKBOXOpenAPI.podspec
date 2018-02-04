@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "KKBOXOpenAPI"
   s.version          = "1.1.8"
-  s.license          = {:type => 'Apache 2.0', :file => "LICENSE"}
+  s.license          = {:type => 'Apache 2.0', :file => "LICENSE.txt"}
   s.summary          = "KKBOX's Open API SDK for iOS, macOS, watchOS and tvOS."
   s.description   = <<-DESC
   KKBOX's Open API SDK for developers working on Apple platforms such as iOS, macOS, watchOS and tvOS.
