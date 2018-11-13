@@ -125,18 +125,14 @@
             <h1>KKScope</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="n">NS_OPTIONS</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">KKScope</span><span class="p">)</span>
+                  <pre class="highlight objective_c"><code><span class="n">NS_OPTIONS</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">KKScope</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="cm">/** No permission */</span>
-    <span class="n">KKScopeNone</span>                <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="cm">/** Permission to get user profile */</span>
-    <span class="n">KKScopeUserProfile</span>         <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="cm">/** Permission to get user territory */</span>
-    <span class="n">KKScopeUserTerritory</span>       <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="cm">/** Permission to get user account status */</span>
-    <span class="n">KKScopeUserAccountStatus</span>   <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="cm">/** Get all permissions */</span>
-    <span class="n">KKScopeAll</span>                 <span class="o">=</span> <span class="n">KKScopeUserProfile</span> <span class="o">|</span> <span class="n">KKScopeUserTerritory</span> <span class="o">|</span> <span class="n">KKScopeUserAccountStatus</span>
+	<span class="cm">/** No permission */</span>
+			<span class="n">KKScopeNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="cm">/** Permission to get user profile */</span>
+			<span class="n">KKScopeUserProfile</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="cm">/** Permission to get user territory */</span>
+			<span class="n">KKScopeUserTerritory</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="cm">/** Permission to get user account status */</span>
+			<span class="n">KKScopeUserAccountStatus</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">,</span> <span class="cm">/** Get all permissions */</span>
+			<span class="n">KKScopeAll</span> <span class="o">=</span> <span class="n">KKScopeUserProfile</span> <span class="o">|</span> <span class="n">KKScopeUserTerritory</span> <span class="o">|</span> <span class="n">KKScopeUserAccountStatus</span>
 <span class="p">}</span></code></pre>
 
                 </div>
@@ -167,12 +163,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">KKScopeNone</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">KKScopeNone</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L72">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -197,17 +193,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">KKScopeUserProfile</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">KKScopeUserProfile</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userProfile</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userProfile</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L74">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -232,17 +228,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">KKScopeUserTerritory</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">KKScopeUserTerritory</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userTerritory</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userTerritory</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L76">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -267,17 +263,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">KKScopeUserAccountStatus</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">KKScopeUserAccountStatus</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userAccountStatus</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">userAccountStatus</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -302,18 +298,18 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">KKScopeAll</span> <span class="o">=</span>
+                          <pre class="highlight objective_c"><code><span class="n">KKScopeAll</span> <span class="o">=</span>
     <span class="n"><a href="../Enums/KKScope.html#/c:@E@KKScope@KKScopeUserProfile">KKScopeUserProfile</a></span> <span class="o">|</span> <span class="n"><a href="../Enums/KKScope.html#/c:@E@KKScope@KKScopeUserTerritory">KKScopeUserTerritory</a></span> <span class="o">|</span> <span class="n"><a href="../Enums/KKScope.html#/c:@E@KKScope@KKScopeUserAccountStatus">KKScopeUserAccountStatus</a></span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">all</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">all</span><span class="p">:</span> <span class="kt">KKScope</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L80">Show on GitHub</a>
+                        <a href="https://github.com/kkbox/OpenAPI-ObjectiveC/tree/1.1.7/KKBOXOpenAPI/KKBOXOpenAPI.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -323,8 +319,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-01-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://www.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
