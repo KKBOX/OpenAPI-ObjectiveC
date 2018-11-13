@@ -12,14 +12,13 @@ Copyright © 2016-2018 KKBOX All Rights Reserved.
 
 ## About
 
-The SDK helps to access KKBOX's Open API. You can easily add
-the SDK to your Xcode project, and start an app powered by KKBOX. You
-may obtain information about song tracks, albums, artists and
-playlists as well.
+The SDK helps to access KKBOX's Open API. You can easily add the SDK to your
+Xcode project, and start an app powered by KKBOX. You may obtain information
+about song tracks, albums, artists and playlists as well.
 
-The SDK is developed in Objective-C programing language, but you can
-still bridge the SDK to your Swift code. You can use the SDK on
-various Apple platforms such as iOS, macOS, watchOS and tvOS.
+The SDK is developed in Objective-C programing language, but you can still
+bridge the SDK to your Swift code. You can use the SDK on various Apple
+platforms such as iOS, macOS, watchOS and tvOS.
 
 If you are looking for a pure Swift SDK, please take a look at
 [KKBOX Open API Swift SDK](https://github.com/KKBOX/OpenAPI-Swift).
@@ -38,8 +37,8 @@ The SDK supports
 
 ## Build ⚒
 
-You need the latest Xcode and macOS. Xcode 9 and macOS 10.13 High
-Sierra are recommended.
+You need the latest Xcode and macOS. Xcode 10 and macOS 10.14 Mojave are
+recommended.
 
 ## Installation
 
@@ -50,27 +49,27 @@ to your Podfile, and then call `pod install`.
 
 To start using the SDK, you need to create an instance of KKBOXOpenAPI.
 
-``` swift
+```swift
 let API = KKBOXOpenAPI(clientID: "YOUR_CLIENT_ID", secret: "YOUR_CLIENT_SECRET")
 ```
 
 Then, ask the instance to fetch an access token by passing a client credential.
 
-``` swift
+```swift
 API.fetchAccessTokenByClientCredential { token, error in ... }
 ```
 
 Finally, you can start to do the API calls. For example, you can fetch the details
 of a song track by calling 'fetchTrack'.
 
-``` swift
+```swift
 self.API.fetchTrack(withTrackID: trackID, territory: .taiwan) { track, error in ... }
 ```
 
 You can develop your app using the SDK with Swift or Objective-C programming
 language, although we have only Swift sample code here.
 
-The project conains a demo project. Please open KKBOXOpenAPI.xcodeproj
+The project contains a demo project. Please open KKBOXOpenAPI.xcodeproj
 located in the "ExampleIOS" folder with Xcode and give it a try.
 
 ## API Documentation 📖
@@ -82,14 +81,14 @@ located in the "ExampleIOS" folder with Xcode and give it a try.
 
 Copyright 2016-2018 KKBOX Technologies Limited
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
     http://www.apache.org/licenses/LICENSE-2.0
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
