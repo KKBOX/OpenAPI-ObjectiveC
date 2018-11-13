@@ -84,7 +84,7 @@
 /** Is the album explicit or not. */
 @property (readonly, assign, nonatomic) BOOL explicitness;
 /** The territories that the album is availanble at. */
-@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
+@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailableAt;
 @end
 
 /** The object represents a track on KKBOX. */
@@ -104,7 +104,7 @@
 /** Is the track explicit or not. */
 @property (readonly, assign, nonatomic) BOOL explicitness;
 /** The territories that the track is available at. */
-@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
+@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailableAt;
 @end
 
 /** The object represents a user on KKBOX. */

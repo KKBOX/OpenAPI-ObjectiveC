@@ -71,7 +71,7 @@ typedef NS_OPTIONS(NSUInteger, KKScope)
 extern NSString *_Nonnull const KKBOXOpenAPIErrorDomain;
 
 /**
- * Fired when KKBOXOpenAPI complates logging-in into KKBOX and
+ * Fired when KKBOXOpenAPI completes logging-in into KKBOX and
  * creating a new access token.
  */
 extern NSString *_Nonnull const KKBOXOpenAPIDidLoginNotification;

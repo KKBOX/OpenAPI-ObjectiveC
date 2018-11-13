@@ -126,7 +126,7 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	[[NSNotificationCenter defaultCenter] postNotificationName:KKBOXOpenAPIDidRestoreAccessTokenNotification object:self];
 }
 
-- (NSString *)_scopeParamater:(KKScope)scope
+- (NSString *)_scopeParameter:(KKScope)scope
 {
 	if (scope == KKScopeAll) {
 		return @"all";
@@ -194,7 +194,7 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	NSString *clientCredentialBase = [NSString stringWithFormat:@"%@:%@", self.clientID, self.clientSecret];
 	NSString *clientCredential = [[clientCredentialBase dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
 	NSDictionary *headers = @{@"Authorization": [NSString stringWithFormat:@"Basic %@", clientCredential]};
-	NSDictionary < NSString *, NSString * > *parameters = @{@"grant_type": @"client_credentials", @"scope": [self _scopeParamater:self.requestScope]};
+	NSDictionary < NSString *, NSString * > *parameters = @{@"grant_type": @"client_credentials", @"scope": [self _scopeParameter:self.requestScope]};
 	return [self _postToURL:[NSURL URLWithString:KKOAuthTokenURLString] POSTParameters:parameters headers:headers callback:[self _loginHandlerWithCallback:callback]];
 }
 
@@ -530,8 +530,8 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		NSMutableArray *stations = [[NSMutableArray alloc] init];
 		if ([dictionary[@"data"] isKindOfClass:[NSArray class]]) {
 			for (NSDictionary *playlistDictionary in dictionary[@"data"]) {
-				KKRadioStation *raioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
-				[stations addObject:raioStation];
+				KKRadioStation *radioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
+				[stations addObject:radioStation];
 			}
 		}
 		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"paging"]];
@@ -565,8 +565,8 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		NSMutableArray *tracks = [[NSMutableArray alloc] init];
 		if ([dictionary[@"tracks"][@"data"] isKindOfClass:[NSArray class]]) {
 			for (NSDictionary *playlistDictionary in dictionary[@"tracks"][@"data"]) {
-				KKTrackInfo *raioStation = [[KKTrackInfo alloc] initWithDictionary:playlistDictionary];
-				[tracks addObject:raioStation];
+				KKTrackInfo *radioStation = [[KKTrackInfo alloc] initWithDictionary:playlistDictionary];
+				[tracks addObject:radioStation];
 			}
 		}
 		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"tracks"][@"paging"]];
@@ -590,8 +590,8 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		NSMutableArray *stations = [[NSMutableArray alloc] init];
 		if ([dictionary[@"data"] isKindOfClass:[NSArray class]]) {
 			for (NSDictionary *playlistDictionary in dictionary[@"data"]) {
-				KKRadioStation *raioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
-				[stations addObject:raioStation];
+				KKRadioStation *radioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
+				[stations addObject:radioStation];
 			}
 		}
 		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"paging"]];

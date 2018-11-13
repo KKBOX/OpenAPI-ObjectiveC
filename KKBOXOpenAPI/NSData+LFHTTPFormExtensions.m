@@ -44,12 +44,12 @@ NS_INLINE NSString *LFHFEEscape(NSString *inValue) {
 	id key;
 	id value;
 
-	if (key = [enumerator nextObject]) {
-		value = [formDictionary objectForKey:key];
+	if ((key = [enumerator nextObject])) {
+		value = formDictionary[key];
 		[combinedDataString appendString:[NSString stringWithFormat:@"%@=%@", LFHFEEscape(key), LFHFEEscape(value)]];
 
 		while ((key = [enumerator nextObject])) {
-			value = [formDictionary objectForKey:key];
+			value = formDictionary[key];
 			[combinedDataString appendString:[NSString stringWithFormat:@"&%@=%@", LFHFEEscape(key), LFHFEEscape(value)]];
 		}
 	}

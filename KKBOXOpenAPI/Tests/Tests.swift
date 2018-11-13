@@ -55,8 +55,8 @@ class Tests: XCTestCase {
 		XCTAssertTrue(track.duration > 0)
 		XCTAssertNotNil(track.trackURL)
 		XCTAssertTrue(track.trackOrderInAlbum > 0)
-//		XCTAssertTrue(track.territoriesThatAvailanbleAt.count > 0)
-//		XCTAssertTrue(track.territoriesThatAvailanbleAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+//		XCTAssertTrue(track.territoriesThatAvailableAt.count > 0)
+//		XCTAssertTrue(track.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		if let album = track.album {
 			self.validate(album: album)
 		}
@@ -69,8 +69,8 @@ class Tests: XCTestCase {
 		XCTAssertNotNil(album.albumURL)
 		XCTAssertTrue(album.images.count == 3)
 //		XCTAssertTrue(album.releaseDate.count > 0)
-//		XCTAssertTrue(album.territoriesThatAvailanbleAt.count > 0, "\(album.albumName)")
-//		XCTAssertTrue(album.territoriesThatAvailanbleAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+//		XCTAssertTrue(album.territoriesThatAvailableAt.count > 0, "\(album.albumName)")
+//		XCTAssertTrue(album.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		self.validate(artist: album.artist)
 	}
 
