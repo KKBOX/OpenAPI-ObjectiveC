@@ -9,14 +9,14 @@
     },
     {
       "file": "/Users/zonble/Work/OpenAPI-ObjectiveC/KKBOXOpenAPI/KKBOXOpenAPI.h",
-      "line": 140,
+      "line": 151,
       "symbol": "KKBOXOpenAPI(LoginWithClientCredential)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/OpenAPI-ObjectiveC/KKBOXOpenAPI/KKBOXOpenAPI.h",
-      "line": 154,
+      "line": 165,
       "symbol": "KKBOXOpenAPI(API)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
