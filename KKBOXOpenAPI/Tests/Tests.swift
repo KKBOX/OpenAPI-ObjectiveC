@@ -13,7 +13,7 @@ class Tests: XCTestCase {
 
 	override func setUp() {
 		super.setUp()
-		self.API = KKBOXOpenAPI(clientID: "5fd35360d795498b6ac424fc9cb38fe7", secret: "8bb68d0d1c2b483794ee1a978c9d0b5d")
+		self.API = KKBOXOpenAPI(clientID: "2074348baadf2d445980625652d9a54f", secret: "ac731b44fb2cf1ea766f43b5a65e82b8")
 	}
 
 	override func tearDown() {
@@ -36,14 +36,14 @@ class Tests: XCTestCase {
 	}
 
 	func testScopeParamater() {
-		XCTAssertEqual(self.API._scopeParamater([.all]), "all")
-		XCTAssertEqual(self.API._scopeParamater([.userProfile]), "user_profile")
-		XCTAssertEqual(self.API._scopeParamater([.userTerritory]), "user_territory")
-		XCTAssertEqual(self.API._scopeParamater([.userAccountStatus]), "user_account_status")
-		XCTAssertEqual(self.API._scopeParamater([.userProfile, .userTerritory]), "user_profile user_territory")
-		XCTAssertEqual(Set(self.API._scopeParamater([.userTerritory, .userAccountStatus]).split(separator: " ")), Set("user_territory user_account_status".split(separator: " ")))
-		XCTAssertEqual(Set(self.API._scopeParamater([.userProfile, .userAccountStatus]).split(separator: " ")), Set("user_profile user_account_status".split(separator: " ")))
-		XCTAssertEqual(self.API._scopeParamater([.userProfile, .userTerritory, .userAccountStatus]), "all")
+		XCTAssertEqual(self.API._scopeParameter([.all]), "all")
+		XCTAssertEqual(self.API._scopeParameter([.userProfile]), "user_profile")
+		XCTAssertEqual(self.API._scopeParameter([.userTerritory]), "user_territory")
+		XCTAssertEqual(self.API._scopeParameter([.userAccountStatus]), "user_account_status")
+		XCTAssertEqual(self.API._scopeParameter([.userProfile, .userTerritory]), "user_profile user_territory")
+		XCTAssertEqual(Set(self.API._scopeParameter([.userTerritory, .userAccountStatus]).split(separator: " ")), Set("user_territory user_account_status".split(separator: " ")))
+		XCTAssertEqual(Set(self.API._scopeParameter([.userProfile, .userAccountStatus]).split(separator: " ")), Set("user_profile user_account_status".split(separator: " ")))
+		XCTAssertEqual(self.API._scopeParameter([.userProfile, .userTerritory, .userAccountStatus]), "all")
 	}
 
 	// MARK: -
@@ -55,8 +55,8 @@ class Tests: XCTestCase {
 		XCTAssertTrue(track.duration > 0)
 		XCTAssertNotNil(track.trackURL)
 		XCTAssertTrue(track.trackOrderInAlbum > 0)
-//		XCTAssertTrue(track.territoriesThatAvailanbleAt.count > 0)
-//		XCTAssertTrue(track.territoriesThatAvailanbleAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+//		XCTAssertTrue(track.territoriesThatAvailableAt.count > 0)
+//		XCTAssertTrue(track.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		if let album = track.album {
 			self.validate(album: album)
 		}
@@ -69,8 +69,8 @@ class Tests: XCTestCase {
 		XCTAssertNotNil(album.albumURL)
 		XCTAssertTrue(album.images.count == 3)
 //		XCTAssertTrue(album.releaseDate.count > 0)
-//		XCTAssertTrue(album.territoriesThatAvailanbleAt.count > 0, "\(album.albumName)")
-//		XCTAssertTrue(album.territoriesThatAvailanbleAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+//		XCTAssertTrue(album.territoriesThatAvailableAt.count > 0, "\(album.albumName)")
+//		XCTAssertTrue(album.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		self.validate(artist: album.artist)
 	}
 

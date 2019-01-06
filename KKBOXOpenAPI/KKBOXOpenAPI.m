@@ -126,7 +126,7 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	[[NSNotificationCenter defaultCenter] postNotificationName:KKBOXOpenAPIDidRestoreAccessTokenNotification object:self];
 }
 
-- (NSString *)_scopeParamater:(KKScope)scope
+- (NSString *)_scopeParameter:(KKScope)scope
 {
 	if (scope == KKScopeAll) {
 		return @"all";
@@ -194,7 +194,7 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	NSString *clientCredentialBase = [NSString stringWithFormat:@"%@:%@", self.clientID, self.clientSecret];
 	NSString *clientCredential = [[clientCredentialBase dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
 	NSDictionary *headers = @{@"Authorization": [NSString stringWithFormat:@"Basic %@", clientCredential]};
-	NSDictionary < NSString * , NSString * > *parameters = @{@"grant_type": @"client_credentials", @"scope": [self _scopeParamater:self.requestScope]};
+	NSDictionary < NSString *, NSString * > *parameters = @{@"grant_type": @"client_credentials", @"scope": [self _scopeParameter:self.requestScope]};
 	return [self _postToURL:[NSURL URLWithString:KKOAuthTokenURLString] POSTParameters:parameters headers:headers callback:[self _loginHandlerWithCallback:callback]];
 }
 
@@ -402,9 +402,9 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return [self fetchFeaturedPlaylistsForTerritory:territory offset:0 limit:100 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit  callback:(nonnull void(^)(NSArray <KKPlaylistInfo *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/featured-playlists?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/featured-playlists?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, error);
@@ -426,14 +426,14 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 
 #pragma mark - New-Hits Playlists
 
-- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory callback:(nonnull void(^)(NSArray <KKPlaylistInfo *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
 	return [self fetchNewHitsPlaylistsForTerritory:territory offset:0 limit:10 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit  callback:(nonnull void(^)(NSArray <KKPlaylistInfo *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/new-hits-playlists?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/new-hits-playlists?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, error);
@@ -460,9 +460,9 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return [self fetchFeaturedPlaylistCategoriesForTerritory:territory offset:0 limit:100 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistCategoriesForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void(^)(NSArray <KKFeaturedPlaylistCategory *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistCategoriesForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKFeaturedPlaylistCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/featured-playlist-categories?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/featured-playlist-categories?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, error);
@@ -487,9 +487,9 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return [self fetchFeaturedPlaylistsInCategory:category territory:territory offset:0 limit:100 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsInCategory:(nonnull NSString *)category territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void(^)(KKFeaturedPlaylistCategory * _Nullable, NSArray <KKPlaylistInfo *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsInCategory:(nonnull NSString *)category territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKFeaturedPlaylistCategory *_Nullable, NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/featured-playlist-categories/%@?territory=%@&offset=%ld&limit=%ld", ESCAPE(category), KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/featured-playlist-categories/%@?territory=%@&offset=%ld&limit=%ld", ESCAPE(category), KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, nil, error);
@@ -530,8 +530,8 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		NSMutableArray *stations = [[NSMutableArray alloc] init];
 		if ([dictionary[@"data"] isKindOfClass:[NSArray class]]) {
 			for (NSDictionary *playlistDictionary in dictionary[@"data"]) {
-				KKRadioStation *raioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
-				[stations addObject:raioStation];
+				KKRadioStation *radioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
+				[stations addObject:radioStation];
 			}
 		}
 		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"paging"]];
@@ -546,9 +546,9 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return [self fetchMoodStationWithStationID:stationID territory:territory offset:0 limit:100 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchMoodStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void(^)(KKRadioStation * _Nullable, NSArray <KKTrackInfo *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchMoodStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/mood-stations/%@?territory=%@&offset=%ld&limit=%ld", ESCAPE(stationID), KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/mood-stations/%@?territory=%@&offset=%ld&limit=%ld", ESCAPE(stationID), KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, nil, error);
@@ -565,8 +565,8 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		NSMutableArray *tracks = [[NSMutableArray alloc] init];
 		if ([dictionary[@"tracks"][@"data"] isKindOfClass:[NSArray class]]) {
 			for (NSDictionary *playlistDictionary in dictionary[@"tracks"][@"data"]) {
-				KKTrackInfo *raioStation = [[KKTrackInfo alloc] initWithDictionary:playlistDictionary];
-				[tracks addObject:raioStation];
+				KKTrackInfo *radioStation = [[KKTrackInfo alloc] initWithDictionary:playlistDictionary];
+				[tracks addObject:radioStation];
 			}
 		}
 		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"tracks"][@"paging"]];
@@ -590,8 +590,8 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 		NSMutableArray *stations = [[NSMutableArray alloc] init];
 		if ([dictionary[@"data"] isKindOfClass:[NSArray class]]) {
 			for (NSDictionary *playlistDictionary in dictionary[@"data"]) {
-				KKRadioStation *raioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
-				[stations addObject:raioStation];
+				KKRadioStation *radioStation = [[KKRadioStation alloc] initWithDictionary:playlistDictionary];
+				[stations addObject:radioStation];
 			}
 		}
 		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"paging"]];
@@ -606,9 +606,9 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return [self fetchGenreStationWithStationID:stationID territory:territory offset:0 limit:100 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchGenreStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit  callback:(nonnull void(^)(KKRadioStation * _Nullable, NSArray <KKTrackInfo *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchGenreStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/genre-stations/%@?territory=%@&offset=%ld&limit=%ld", ESCAPE(stationID), KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/genre-stations/%@?territory=%@&offset=%ld&limit=%ld", ESCAPE(stationID), KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, nil, error);
@@ -684,9 +684,9 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return [self fetchNewReleaseAlbumCategoriesForTerritory:territory offset:0 limit:100 callback:inCallback];
 }
 
-- (nonnull NSURLSessionDataTask *)fetchNewReleaseAlbumCategoriesForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void(^)(NSArray <KKNewReleaseAlbumsCategory *> * _Nullable, KKPagingInfo * _Nullable, KKSummary * _Nullable, NSError * _Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchNewReleaseAlbumCategoriesForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKNewReleaseAlbumsCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/new-release-categories?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long)offset, (long)limit];
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/new-release-categories?territory=%@&offset=%ld&limit=%ld", KKStringFromTerritoryCode(territory), (long) offset, (long) limit];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
 			inCallback(nil, nil, nil, error);

@@ -6,11 +6,13 @@
 
 #import "KKBOXOpenAPI.h"
 
-NSString * _Nonnull KKStringFromTerritoryCode(KKTerritoryCode code);
+NSString *_Nonnull KKStringFromTerritoryCode(KKTerritoryCode code);
 
 @interface KKBOXOpenAPI (Privates)
 
-- (nonnull NSURLSessionDataTask *)_postToURL:(nonnull NSURL *)URL POSTParameters:(nonnull NSDictionary *)parameters headers:(nonnull NSDictionary<NSString *, NSString *> *)headers callback:(nonnull void (^)(id _Nullable, NSError * _Nullable))callback;
-- (nonnull NSURLSessionDataTask *)_postToURL:(nonnull NSURL *)URL POSTData:(nonnull NSData *)POSTData headers:(nonnull NSDictionary<NSString * , NSString * > *)headers callback:(nonnull void (^)(id _Nullable, NSError * _Nullable))callback;
+- (nonnull NSURLSessionDataTask *)_postToURL:(nonnull NSURL *)URL POSTParameters:(nonnull NSDictionary *)parameters headers:(nonnull NSDictionary<NSString *, NSString *> *)headers callback:(nonnull void (^)(id _Nullable, NSError *_Nullable))callback;
+
+- (nonnull NSURLSessionDataTask *)_postToURL:(nonnull NSURL *)URL POSTData:(nonnull NSData *)POSTData headers:(nonnull NSDictionary<NSString *, NSString * > *)headers callback:(nonnull void (^)(id _Nullable, NSError *_Nullable))callback;
+
 - (nonnull NSURLSessionDataTask *)_apiTaskWithURL:(nonnull NSURL *)URL callback:(nonnull KKBOXOpenAPIDataCallback)callback;
 @end;

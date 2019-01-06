@@ -84,7 +84,7 @@
 /** Is the album explicit or not. */
 @property (readonly, assign, nonatomic) BOOL explicitness;
 /** The territories that the album is availanble at. */
-@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
+@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailableAt;
 @end
 
 /** The object represents a track on KKBOX. */
@@ -103,11 +103,11 @@
 @property (readonly, assign, nonatomic) NSInteger trackOrderInAlbum;
 /** Is the track explicit or not. */
 @property (readonly, assign, nonatomic) BOOL explicitness;
-/** The territories that the track is availanble at. */
-@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
+/** The territories that the track is available at. */
+@property (readonly, strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailableAt;
 @end
 
-/** The obejct represents a user on KKBOX. */
+/** The object represents a user on KKBOX. */
 @interface KKUserInfo : KKBOXOpenAPIObject
 /** The ID of the user. */
 @property (readonly, strong, nonatomic, nonnull) NSString *userID;
@@ -151,7 +151,7 @@
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
-/** The object represnets a new release album category. */
+/** The object represents a new release album category. */
 @interface KKNewReleaseAlbumsCategory : KKBOXOpenAPIObject
 /** The ID of the category. */
 @property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
@@ -159,7 +159,7 @@
 @property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
 @end
 
-/** The obejct represents a mood/genre radio station on KKBOX. */
+/** The object represents a mood/genre radio station on KKBOX. */
 @interface KKRadioStation : KKBOXOpenAPIObject
 /** The ID of the station. */
 @property (readonly, strong, nonatomic, nonnull) NSString *stationID;

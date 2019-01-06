@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/zonble/Work/OpenAPI-ObjectiveC/KKBOXOpenAPI/KKBOXOpenAPI.h",
-      "line": 25,
+      "line": 26,
       "symbol": "KKAccessToken.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"

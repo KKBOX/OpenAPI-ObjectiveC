@@ -1,12 +1,14 @@
 language: objective-c
-osx_image: xcode9.2
+osx_image: xcode10.1
 before_install:
+  - gem install xcov --no-rdoc --no-ri --no-document --quiet
   - gem install slather --no-rdoc --no-ri --no-document --quiet
 script:
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIiOS
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIMac
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIWatchOS
   - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPItvOS
-  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPI -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' test
-after_success: 
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPI -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.1' test
+after_success:
+  - xcov --project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj --scheme KKBOXOpenAPIiOS
   - slather

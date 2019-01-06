@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D41EFF721C58C832000B4D10"
-               BuildableName = "KKBOXOpenAPI.app"
+               BlueprintIdentifier = "D41EFFB01C58C864000B4D10"
+               BuildableName = "libKKBOXOpenAPI.a"
                BlueprintName = "KKBOXOpenAPI"
-               ReferencedContainer = "container:../ExampleIOS/KKBOXOpenAPI.xcodeproj">
+               ReferencedContainer = "container:KKBOXOpenAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

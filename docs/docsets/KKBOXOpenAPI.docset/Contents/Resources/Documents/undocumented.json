@@ -2,21 +2,21 @@
   "warnings": [
     {
       "file": "/Users/zonble/Work/OpenAPI-ObjectiveC/KKBOXOpenAPI/KKBOXOpenAPI.h",
-      "line": 25,
+      "line": 26,
       "symbol": "KKAccessToken.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/OpenAPI-ObjectiveC/KKBOXOpenAPI/KKBOXOpenAPI.h",
-      "line": 151,
+      "line": 140,
       "symbol": "KKBOXOpenAPI(LoginWithClientCredential)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/OpenAPI-ObjectiveC/KKBOXOpenAPI/KKBOXOpenAPI.h",
-      "line": 165,
+      "line": 154,
       "symbol": "KKBOXOpenAPI(API)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"

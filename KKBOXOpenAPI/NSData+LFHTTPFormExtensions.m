@@ -28,34 +28,32 @@
 
 #import "NSData+LFHTTPFormExtensions.h"
 
-NS_INLINE NSString *LFHFEEscape(NSString *inValue)
-{
+NS_INLINE NSString *LFHFEEscape(NSString *inValue) {
 	NSMutableCharacterSet *URLQueryPartAllowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
 	[URLQueryPartAllowedCharacterSet removeCharactersInString:@"&+"];
-	
+
 	NSString *escapedString = [inValue stringByAddingPercentEncodingWithAllowedCharacters:URLQueryPartAllowedCharacterSet];
-    return escapedString;
+	return escapedString;
 }
 
 @implementation NSData (LFHTTPFormExtensions)
 + (id)dataAsWWWURLEncodedFormFromDictionary:(NSDictionary *)formDictionary
 {
-    NSMutableString *combinedDataString = [NSMutableString string];
-    NSEnumerator *enumerator = [formDictionary keyEnumerator];
-    id key;
-    id value;
+	NSMutableString *combinedDataString = [NSMutableString string];
+	NSEnumerator *enumerator = [formDictionary keyEnumerator];
+	id key;
+	id value;
 
-    if (key = [enumerator nextObject]) {
-        value = [formDictionary objectForKey:key];
-        [combinedDataString appendString:[NSString stringWithFormat:@"%@=%@", LFHFEEscape(key), LFHFEEscape(value)]];
+	if ((key = [enumerator nextObject])) {
+		value = formDictionary[key];
+		[combinedDataString appendString:[NSString stringWithFormat:@"%@=%@", LFHFEEscape(key), LFHFEEscape(value)]];
 
 		while ((key = [enumerator nextObject])) {
-			value = [formDictionary objectForKey:key];
+			value = formDictionary[key];
 			[combinedDataString appendString:[NSString stringWithFormat:@"&%@=%@", LFHFEEscape(key), LFHFEEscape(value)]];
 		}
 	}
 
-
-    return [combinedDataString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+	return [combinedDataString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
 }
 @end

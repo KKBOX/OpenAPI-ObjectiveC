@@ -45,7 +45,7 @@
 @property (strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @property (strong, nonatomic, nonnull) NSString *releaseDate;
 @property (assign, nonatomic) BOOL explicitness;
-@property (strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
+@property (strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailableAt;
 @end
 
 @interface KKTrackInfo ()
@@ -56,7 +56,7 @@
 @property (assign, nonatomic) NSTimeInterval duration;
 @property (assign, nonatomic) NSInteger trackOrderInAlbum;
 @property (assign, nonatomic) BOOL explicitness;
-@property (strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailanbleAt;
+@property (strong, nonatomic, nonnull) NSSet <NSNumber *> *territoriesThatAvailableAt;
 @end
 
 @interface KKUserInfo ()
@@ -118,8 +118,7 @@
 
 @interface KKBOXOpenAPIObjectParsingHelper : NSObject
 + (NSSet <NSNumber *> *)territoriesFromArray:(NSArray *)array;
-
-+ (NSArray <KKImageInfo *> *)imageArrayFromArray:(NSArray *)dictionayImages;
++ (NSArray <KKImageInfo *> *)imageArrayFromArray:(NSArray *)dictionaryImages;
 @end
 
 @implementation KKBOXOpenAPIObjectParsingHelper
@@ -156,11 +155,11 @@
 	return set;
 }
 
-+ (NSArray <KKImageInfo *> *)imageArrayFromArray:(NSArray *)dictionayImages
++ (NSArray <KKImageInfo *> *)imageArrayFromArray:(NSArray *)dictionaryImages
 {
 	NSMutableArray *images = [NSMutableArray array];
-	if ([dictionayImages isKindOfClass:[NSArray class]]) {
-		for (NSDictionary *imageDictionary in dictionayImages) {
+	if ([dictionaryImages isKindOfClass:[NSArray class]]) {
+		for (NSDictionary *imageDictionary in dictionaryImages) {
 			if ([imageDictionary isKindOfClass:[NSDictionary class]]) {
 				KKImageInfo *imageInfo = [[KKImageInfo alloc] initWithDictionary:imageDictionary];
 				[images addObject:imageInfo];
@@ -267,7 +266,7 @@
 	self.images = [KKBOXOpenAPIObjectParsingHelper imageArrayFromArray:dictionary[@"images"]];
 	self.releaseDate = [dictionary[@"release_date"] isKindOfClass:[NSString class]] ? dictionary[@"release_date"] : @"";
 	self.explicitness = [dictionary[@"explicitness"] respondsToSelector:@selector(boolValue)] ? [dictionary[@"explicitness"] boolValue] : NO;
-	self.territoriesThatAvailanbleAt = [KKBOXOpenAPIObjectParsingHelper territoriesFromArray:dictionary[@"available_territories"]];
+	self.territoriesThatAvailableAt = [KKBOXOpenAPIObjectParsingHelper territoriesFromArray:dictionary[@"available_territories"]];
 }
 @end
 
@@ -286,7 +285,7 @@
 	self.trackOrderInAlbum = [dictionary[@"track_number"] respondsToSelector:@selector(integerValue)] ? [dictionary[@"track_number"] integerValue] : 0;
 	self.duration = [dictionary[@"duration"] respondsToSelector:@selector(doubleValue)] ? [dictionary[@"duration"] doubleValue] / 1000.0 : 0;
 	self.explicitness = [dictionary[@"explicitness"] respondsToSelector:@selector(boolValue)] ? [dictionary[@"explicitness"] boolValue] : NO;
-	self.territoriesThatAvailanbleAt = [KKBOXOpenAPIObjectParsingHelper territoriesFromArray:dictionary[@"available_territories"]];
+	self.territoriesThatAvailableAt = [KKBOXOpenAPIObjectParsingHelper territoriesFromArray:dictionary[@"available_territories"]];
 }
 @end
 
@@ -366,8 +365,8 @@
 
 	if ([dictionary[@"albums"] isKindOfClass:[NSDictionary class]] && [dictionary[@"albums"][@"data"] isKindOfClass:[NSArray class]]) {
 		NSMutableArray *albums = [[NSMutableArray alloc] init];
-		for (NSDictionary *alkbumDictionary in  dictionary[@"albums"][@"data"]) {
-			KKAlbumInfo *track = [[KKAlbumInfo alloc] initWithDictionary:alkbumDictionary];
+		for (NSDictionary *albumDictionary in  dictionary[@"albums"][@"data"]) {
+			KKAlbumInfo *track = [[KKAlbumInfo alloc] initWithDictionary:albumDictionary];
 			[albums addObject:track];
 		}
 		self.albums = albums;
