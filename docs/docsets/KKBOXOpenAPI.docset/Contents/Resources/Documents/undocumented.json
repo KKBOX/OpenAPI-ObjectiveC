@@ -44,176 +44,57 @@
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 21,
-      "symbol": "KKBOXOpenAPIObject.-initWithDictionary:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 24,
-      "symbol": "KKPagingInfo",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 25,
-      "symbol": "KKPagingInfo.limit",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 26,
-      "symbol": "KKPagingInfo.offset",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 27,
-      "symbol": "KKPagingInfo.previous",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 28,
-      "symbol": "KKPagingInfo.next",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 31,
-      "symbol": "KKSummary",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 32,
-      "symbol": "KKSummary.total",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 131,
-      "symbol": "KKFeaturedPlaylistCategory",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 132,
-      "symbol": "KKFeaturedPlaylistCategory.categoryID",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 133,
-      "symbol": "KKFeaturedPlaylistCategory.categoryTitle",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 134,
-      "symbol": "KKFeaturedPlaylistCategory.images",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 137,
-      "symbol": "KKNewReleaseAlbumsCategory",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 138,
-      "symbol": "KKNewReleaseAlbumsCategory.categoryID",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 139,
-      "symbol": "KKNewReleaseAlbumsCategory.categoryTitle",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 158,
+      "line": 178,
       "symbol": "KKSearchResults.tracksPaging",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 159,
+      "line": 179,
       "symbol": "KKSearchResults.tracksSummary",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 162,
+      "line": 183,
       "symbol": "KKSearchResults.albumsPaging",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 163,
+      "line": 184,
       "symbol": "KKSearchResults.albumsSummary",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 166,
+      "line": 188,
       "symbol": "KKSearchResults.artistsPaging",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 167,
+      "line": 189,
       "symbol": "KKSearchResults.artistsSummary",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 170,
+      "line": 193,
       "symbol": "KKSearchResults.playlistsPaging",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 171,
+      "line": 194,
       "symbol": "KKSearchResults.playlistsSummary",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 172,
-      "symbol": "KKSearchResults.paging",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zonble/Work/kkbox_openapi_ios_sdk_public/KKBOXOpenAPI/KKBOXOpenAPIObjects.h",
-      "line": 173,
-      "symbol": "KKSearchResults.summary",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     }
