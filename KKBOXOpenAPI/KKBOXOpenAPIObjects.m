@@ -148,9 +148,6 @@
 		else if ([s isEqualToString:@"JP"]) {
 			[set addObject:@(KKTerritoryCodeJapan)];
 		}
-		else if ([s isEqualToString:@"TH"]) {
-			[set addObject:@(KKTerritoryCodeThailand)];
-		}
 	}
 	return set;
 }

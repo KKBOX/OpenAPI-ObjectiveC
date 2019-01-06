@@ -21,8 +21,6 @@ NSString *KKStringFromTerritoryCode(KKTerritoryCode code) {
 			return @"MY";
 		case KKTerritoryCodeJapan:
 			return @"JP";
-		case KKTerritoryCodeThailand:
-			return @"TH";
 		default:
 			break;
 	}

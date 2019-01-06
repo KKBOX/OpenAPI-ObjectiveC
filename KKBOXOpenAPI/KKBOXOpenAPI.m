@@ -71,12 +71,12 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 
 @implementation KKBOXOpenAPI
 
-- (nullable instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret
+- (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret
 {
 	return [self initWithClientID:clientID secret:secret scope:KKScopeAll];
 }
 
-- (nullable instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret scope:(KKScope)scope
+- (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret scope:(KKScope)scope
 {
 	self = [super init];
 	if (self) {
