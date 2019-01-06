@@ -39,10 +39,8 @@
 		D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KKBOXOpenAPI+Privates.m"; sourceTree = SOURCE_ROOT; };
 		D4A0ACC81C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LFHTTPFormExtensions.h"; sourceTree = SOURCE_ROOT; };
 		D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LFHTTPFormExtensions.m"; sourceTree = SOURCE_ROOT; };
-		D4B1627A1C83395F00369373 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBOXOpenAPIObjects.h; sourceTree = "<group>"; };
 		D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBOXOpenAPIObjects.m; sourceTree = "<group>"; };
-		D4FAA1981C833C46002D8EB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D4FAA19B1C833C46002D8EB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D4FAA19C1C833C46002D8EB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D4FAA19D1C833C46002D8EB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,8 +115,6 @@
 		D4B1627C1C83396700369373 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D4B1627A1C83395F00369373 /* UIKit.framework */,
-				D4FAA1981C833C46002D8EB4 /* Cocoa.framework */,
 				D4FAA19A1C833C46002D8EB4 /* Other Frameworks */,
 			);
 			name = Frameworks;
