@@ -1,5 +1,14 @@
 language: objective-c
-osx_image: xcode10.1
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode10.3
+    - os: osx
+      osx_image: xcode10.2
+    - os: osx
+      osx_image: xcode10.1
+
 before_install:
   - gem install xcov --no-rdoc --no-ri --no-document --quiet
   - gem install slather --no-rdoc --no-ri --no-document --quiet
