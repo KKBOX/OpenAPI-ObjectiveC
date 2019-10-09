@@ -12,6 +12,7 @@
 		A70B79E71D532C9C00E22E9F /* KKBOXOpenAPI+Privates.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC71C7F7DC8005F0DF3 /* KKBOXOpenAPI+Privates.m */; };
 		A70B79E81D532C9C00E22E9F /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
 		D4114D8F1FCDB9A300758551 /* NSData+LFHTTPFormExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACC91C7F7DC8005F0DF3 /* NSData+LFHTTPFormExtensions.m */; };
+		D41856D9234DB800003424D7 /* KKBOXOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FAA1EB1C833E03002D8EB4 /* KKBOXOpenAPI.framework */; };
 		D4A0ACB81C7F74B2005F0DF3 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0ACB71C7F74B2005F0DF3 /* Tests.swift */; };
 		D4D3F83E1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D3F83C1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D3F8431FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D3F83D1FCD74C30078E6B0 /* KKBOXOpenAPIObjects.m */; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41856D9234DB800003424D7 /* KKBOXOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +218,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D41EFFA81C58C864000B4D10;
@@ -390,7 +393,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -404,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kkbox.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

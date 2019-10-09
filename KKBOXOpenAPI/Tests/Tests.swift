@@ -5,8 +5,8 @@
 //
 
 import XCTest
-import KKBOXOpenAPIiOS
-import KKBOXOpenAPIiOS.KKBOXOpenAPIObjects
+import KKBOXOpenAPI
+import KKBOXOpenAPI.KKBOXOpenAPIObjects
 
 class Tests: XCTestCase {
 	var API: KKBOXOpenAPI!
