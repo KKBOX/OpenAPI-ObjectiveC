@@ -1,6 +1,6 @@
 # KKBOX Open API Developer SDK for iOS/macOS/watchOS/tvOS
 
-Copyright © 2016-2019 KKBOX All Rights Reserved.
+Copyright © 2016-2019 KKBOX Technologies Limited
 
 [![Actions Status](https://github.com/KKBOX/OpenAPI-ObjectiveC/workflows/Build/badge.svg)](https://github.com/KKBOX/OpenAPI-ObjectiveC/actions)&nbsp;
 [![build](https://api.travis-ci.org/KKBOX/OpenAPI-ObjectiveC.svg)](https://travis-ci.org/KKBOX/OpenAPI-ObjectiveC)&nbsp;
