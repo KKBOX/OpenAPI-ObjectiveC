@@ -4,11 +4,8 @@ before_install:
   - gem install xcov --no-rdoc --no-ri --no-document --quiet
   - gem install slather --no-rdoc --no-ri --no-document --quiet
 script:
-  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIiOS
-  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIMac
-  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPIWatchOS
-  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPItvOS
-  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPI -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.1' test
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPI
+  - xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPITests -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.1' test
 after_success:
-  - xcov --project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj --scheme KKBOXOpenAPIiOS
+  - xcov --project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj --scheme KKBOXOpenAPITests
   - slather

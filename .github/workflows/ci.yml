@@ -10,4 +10,4 @@ jobs:
       - name: Pod Lib Lint
         run: pod lib lint
       - name: Test
-        run: xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPITests -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' test
+        run: xcodebuild -project KKBOXOpenAPI/KKBOXOpenAPI.xcodeproj -scheme KKBOXOpenAPITests -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.1' test
