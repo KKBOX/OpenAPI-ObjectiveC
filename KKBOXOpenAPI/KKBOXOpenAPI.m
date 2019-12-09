@@ -829,7 +829,12 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return CALL_API;
 }
 
-- (nonnull NSURLSessionDataTask *)fetchChildrenCategoryPlaylists:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory  offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategoryPlaylists:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback
+{
+	return [self fetchChildrenCategoryPlaylists:categoryID territory:territory offset:0 limit:100 callback:callback];
+}
+
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategoryPlaylists:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
 	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/children-categories/%@/playlists?territory=%@", categoryID, KKStringFromTerritoryCode(territory)];
 
