@@ -131,7 +131,7 @@ class Tests: XCTestCase {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchTrack")
 		let trackID = "4kxvr3wPWkaL9_y3o_"
-		self.API.fetchTrack(withTrackID: trackID, territory: .taiwan) { track, error in
+		self.API.fetchTrack(id: trackID, territory: .taiwan) { track, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch track \(String(describing: error))")
@@ -146,7 +146,7 @@ class Tests: XCTestCase {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchTrack")
 		let trackID = "121231231"
-		self.API.fetchTrack(withTrackID: trackID, territory: .taiwan) { track, error in
+		self.API.fetchTrack(id: trackID, territory: .taiwan) { track, error in
 			e.fulfill()
 			XCTAssertNotNil(error)
 		}
@@ -156,7 +156,7 @@ class Tests: XCTestCase {
 	func testFetchAlbum() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchAlbum")
-		self.API.fetchAlbum(withAlbumID: "WpTPGzNLeutVFHcFq6", territory: .taiwan) { album, error in
+		self.API.fetchAlbum(id: "WpTPGzNLeutVFHcFq6", territory: .taiwan) { album, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch album \(String(describing: error))")
@@ -170,7 +170,7 @@ class Tests: XCTestCase {
 	func testFetchTracksInAlbum() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchTracksInAlbum")
-		self.API.fetchTracks(withAlbumID: "WpTPGzNLeutVFHcFq6", territory: .taiwan) { tracks, paging, summary, error in
+		self.API.fetchAlbumTracks(id: "WpTPGzNLeutVFHcFq6", territory: .taiwan) { tracks, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch tracks \(String(describing: error))")
@@ -190,7 +190,7 @@ class Tests: XCTestCase {
 	func testFetchArtist() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchArtist")
-		self.API.fetchArtistInfo(withArtistID: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { artist, error in
+		self.API.fetchArtist(id: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { artist, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch artist \(String(describing: error))")
@@ -204,7 +204,7 @@ class Tests: XCTestCase {
 	func testFetchArtistAlbums() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchArtistAlbums")
-		self.API.fetchAlbumsBelong(toArtistID: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { albums, paging, summary, error in
+		self.API.fetchArtistAlbums(id: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { albums, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch albums \(String(describing: error))")
@@ -223,7 +223,7 @@ class Tests: XCTestCase {
 	func testFetchTopTracksWithArtistID() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchTopSongsWithArtistID")
-		self.API.fetchTopTracks(withArtistID: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { songs, paging, summary, error in
+		self.API.fetchArtistTopTracks(id: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { songs, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch tracks \(String(describing: error))")
@@ -242,7 +242,7 @@ class Tests: XCTestCase {
 	func testFetchRelatedArtistsWithArtistID() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchRelatedArtistsWithArtistID")
-		self.API.fetchRelatedArtists(withArtistID: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { artists, paging, summary, error in
+		self.API.fetchRelatedArtists(id: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { artists, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch artist \(String(describing: error))")
@@ -261,7 +261,7 @@ class Tests: XCTestCase {
 	func testFetchPlaylistWithPlaylistID() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchPlaylistWithPlaylistID")
-		self.API.fetchPlaylist(withPlaylistID: "OsyceCHOw-NvK5j6Vo", territory: .taiwan) { playlist, paging, summary, error in
+		self.API.fetchPlaylist(id: "OsyceCHOw-NvK5j6Vo", territory: .taiwan) { playlist, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch playlist \(String(describing: error))")
@@ -278,7 +278,7 @@ class Tests: XCTestCase {
 	func testFetchSongsInPlaylistWithPlaylistID() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchSongsInPlaylistWithPlaylistID")
-		self.API.fetchTracksInPlaylist(withPlaylistID: "OsyceCHOw-NvK5j6Vo", territory: .taiwan) { tracks, paging, summary, error in
+		self.API.fetchPlaylistTracks(id: "OsyceCHOw-NvK5j6Vo", territory: .taiwan) { tracks, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch playlist \(String(describing: error))")
@@ -297,7 +297,7 @@ class Tests: XCTestCase {
 	func testFetchFeaturedPlaylists() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchFeaturedPlaylists")
-		self.API.fetchFeaturedPlaylists(forTerritory: .taiwan) { playlists, paging, summary, error in
+		self.API.fetchFeaturedPlaylists(territory: .taiwan) { playlists, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch playlist \(String(describing: error))")
@@ -316,7 +316,7 @@ class Tests: XCTestCase {
 	func testFetchNewHitsPlaylists() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchNewHitsPlaylists")
-		self.API.fetchNewHitsPlaylists(forTerritory: .taiwan) { playlists, paging, summary, error in
+		self.API.fetchNewHitsPlaylists(territory: .taiwan) { playlists, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch playlist \(String(describing: error))")
@@ -335,7 +335,7 @@ class Tests: XCTestCase {
 	func testFetchFeaturedPlaylistCategories() {
 		self.waitForToken()
 		let e = self.expectation(description: "fetchFeaturedPlaylistCategories")
-		self.API.fetchFeaturedPlaylistCategories(forTerritory: .taiwan) { categories, paging, summary, error in
+		self.API.fetchFeaturedPlaylistCategories(territory: .taiwan) { categories, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch playlist \(String(describing: error))")
@@ -356,7 +356,7 @@ class Tests: XCTestCase {
 	func testFetchFeaturedPlaylistInCategory() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchFeaturedPlaylistInCategory")
-		self.API.fetchFeaturedPlaylists(inCategory: "CrBHGk1J1KEsQlPLoz", territory: .taiwan) { category, playlists, paging, summary, error in
+		self.API.fetchFeaturedPlaylistCategoryPlaylists(category: "CrBHGk1J1KEsQlPLoz", territory: .taiwan) { category, playlists, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch playlist \(String(describing: error))")
@@ -380,7 +380,7 @@ class Tests: XCTestCase {
 	func testFetchMoodStations() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchMoodStations")
-		self.API.fetchMoodStations(forTerritory: .taiwan) { stations, paging, summary, error in
+		self.API.fetchMoodStations(territory: .taiwan) { stations, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch station \(String(describing: error))")
@@ -400,7 +400,7 @@ class Tests: XCTestCase {
 	func testFetchMoodStation() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchMoodStations")
-		self.API.fetchMoodStation(withStationID: "4tmrBI125HMtMlO9OF", territory: .taiwan) { station, tracks, paging, summary, error in
+		self.API.fetchMoodStation(id: "4tmrBI125HMtMlO9OF", territory: .taiwan) { station, tracks, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch station \(String(describing: error))")
@@ -423,7 +423,7 @@ class Tests: XCTestCase {
 	func testFetchGenreStations() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchGenreStations")
-		self.API.fetchGenreStations(forTerritory: .taiwan) { stations, paging, summary, error in
+		self.API.fetchGenreStations(territory: .taiwan) { stations, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch station \(String(describing: error))")
@@ -443,7 +443,7 @@ class Tests: XCTestCase {
 	func testFetchGenreStation() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchGenreStation")
-		self.API.fetchGenreStation(withStationID: "9ZAb9rkyd3JFDBC0wF", territory: .taiwan) { station, tracks, paging, summary, error in
+		self.API.fetchGenreStation(id: "9ZAb9rkyd3JFDBC0wF", territory: .taiwan) { station, tracks, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch station \(String(describing: error))")

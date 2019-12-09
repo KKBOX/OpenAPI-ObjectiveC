@@ -78,7 +78,7 @@ typedef NS_OPTIONS(NSUInteger, KKScope)
 	KKScopeUserAccountStatus = 1 << 2,
 	/** Get all permissions */
 	KKScopeAll = KKScopeUserProfile | KKScopeUserTerritory | KKScopeUserAccountStatus
-};
+} NS_SWIFT_NAME(KKBOXOpenAPI.Scope);
 
 /** The errors that happen in the SDK. */
 extern NSString *_Nonnull const KKBOXOpenAPIErrorDomain;
@@ -125,7 +125,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @param secret the API secret
  * @return A KKBOXOpenAPI instance
  */
-- (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret;
+- (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret NS_SWIFT_NAME(init(clientID:secret:));
 
 /**
 * Create a new KKBOXOpenAPI instance.
@@ -135,7 +135,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 * @param scope the OAuth permission scope
 * @return A KKBOXOpenAPI instance
 */
-- (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret scope:(KKScope)scope;
+- (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret scope:(KKScope)scope NS_SWIFT_NAME(init(clientID:secret:scope:));
 
 /** Clear existing access token. */
 - (void)logout;
@@ -178,7 +178,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchTrackWithTrackID:(nonnull NSString *)trackID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKTrackInfo *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchTrackWithTrackID:(nonnull NSString *)trackID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKTrackInfo *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchTrack(id:territory:callback:));
 
 #pragma mark - Album
 
@@ -193,7 +193,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchAlbumWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKAlbumInfo *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchAlbumWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKAlbumInfo *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchAlbum(id:territory:callback:));
 
 /**
  * Fetch the song tracks contained in a given album.
@@ -206,7 +206,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchAlbumTracks(id:territory:callback:));
 
 /**
 * Fetch the song tracks contained in a given album.
@@ -221,7 +221,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 * @return an NSURLSessionDataTask object that allow you to cancel the
 * task.
 */
-- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback;
+- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback NS_SWIFT_NAME(fetchAlbumTracks(id:territory:offset:limit:callback:));
 
 #pragma mark - Artists
 
@@ -237,7 +237,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchArtistInfoWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKArtistInfo *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchArtistInfoWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKArtistInfo *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchArtist(id:territory:callback:));
 
 /**
  * Fetch the list of the albums belong to an artist.
@@ -252,7 +252,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchAlbumsBelongToArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKAlbumInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchAlbumsBelongToArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKAlbumInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchArtistAlbums(id:territory:callback:));
 
 /**
  * Fetch the list of the albums belong to an artist.
@@ -269,7 +269,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchAlbumsBelongToArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKAlbumInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchAlbumsBelongToArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKAlbumInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchArtistAlbums(id:territory:offset:limit:callback:));
 
 /**
  * Fetch the top tracks of an artist.
@@ -283,7 +283,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchTopTracksWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchTopTracksWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchArtistTopTracks(id:territory:callback:));
 
 /**
  * Fetch the top tracks of an artist.
@@ -299,7 +299,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchTopTracksWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchTopTracksWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchArtistTopTracks(id:territory:offset:limit:callback:));
 
 /**
  * Fetch related artists of an artist.
@@ -313,7 +313,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchRelatedArtistsWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKArtistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchRelatedArtistsWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKArtistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchRelatedArtists(id:territory:callback:));
 
 /**
  * Fetch related artists of an artist.
@@ -329,7 +329,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchRelatedArtistsWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKArtistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchRelatedArtistsWithArtistID:(nonnull NSString *)artistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKArtistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchRelatedArtists(id:territory:offset:limit:callback:));
 
 #pragma mark - Shared Playlists
 
@@ -344,7 +344,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchPlaylistWithPlaylistID:(nonnull NSString *)playlistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKPlaylistInfo *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchPlaylistWithPlaylistID:(nonnull NSString *)playlistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKPlaylistInfo *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchPlaylist(id:territory:callback:));
 
 /**
  * Fetches information and song tracks of a given playlist.
@@ -357,7 +357,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchTracksInPlaylistWithPlaylistID:(nonnull NSString *)playlistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchTracksInPlaylistWithPlaylistID:(nonnull NSString *)playlistID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchPlaylistTracks(id:territory:callback:));
 
 /**
  * Fetches information and song tracks of a given playlist.
@@ -372,7 +372,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchTracksInPlaylistWithPlaylistID:(nonnull NSString *)playlistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchTracksInPlaylistWithPlaylistID:(nonnull NSString *)playlistID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchPlaylistTracks(id:territory:offset:limit:callback:));
 
 #pragma mark - Featured Playlists
 
@@ -387,7 +387,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchFeaturedPlaylists(territory:callback:));
 
 /**
  * Fetch featured playlists.
@@ -402,7 +402,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchFeaturedPlaylists(territory:offset:limit:callback:));
 
 #pragma mark - New-Hits Playlists
 
@@ -417,7 +417,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchNewHitsPlaylists(territory:callback:));
 
 /**
  * Fetch new hits playlists.
@@ -432,7 +432,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchNewHitsPlaylistsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchNewHitsPlaylists(territory:offset:limit:callback:));
 
 
 #pragma mark - Featured Playlists Categories
@@ -447,7 +447,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistCategoriesForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKFeaturedPlaylistCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistCategoriesForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKFeaturedPlaylistCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchFeaturedPlaylistCategories(territory:callback:));
 
 /**
  * Fetch feature playlist categories.
@@ -461,7 +461,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistCategoriesForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKFeaturedPlaylistCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistCategoriesForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKFeaturedPlaylistCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchFeaturedPlaylistCategories(territory:offset:limit:callback:));
 
 /**
  * Fetch the feature playlists contained in a given category. You can
@@ -476,7 +476,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsInCategory:(nonnull NSString *)category territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKFeaturedPlaylistCategory *_Nullable, NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsInCategory:(nonnull NSString *)category territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKFeaturedPlaylistCategory *_Nullable, NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchFeaturedPlaylistCategoryPlaylists(category:territory:callback:));
 
 /**
  * Fetch the feature playlists contained in a given category. You can
@@ -493,7 +493,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsInCategory:(nonnull NSString *)category territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKFeaturedPlaylistCategory *_Nullable, NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchFeaturedPlaylistsInCategory:(nonnull NSString *)category territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKFeaturedPlaylistCategory *_Nullable, NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchFeaturedPlaylistCategoryPlaylists(category:territory:offset:limit:callback:));
 
 #pragma mark - Radio
 
@@ -508,7 +508,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchMoodStationsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKRadioStation *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchMoodStationsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKRadioStation *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchMoodStations(territory:callback:));
 
 /**
  * Fetch mood stations under a specific radio category.
@@ -522,7 +522,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchMoodStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchMoodStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchMoodStation(id:territory:callback:));
 
 /**
  * Fetch mood stations under a specific radio category.
@@ -538,7 +538,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchMoodStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchMoodStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchMoodStation(id:territory:offset:limit:callback:));
 
 #pragma mark Genre Station
 
@@ -552,7 +552,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchGenreStationsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKRadioStation *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchGenreStationsForTerritory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKRadioStation *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchGenreStations(territory:callback:));
 
 /**
  * Fetch genre-based radio stations under a specific genre category.
@@ -566,7 +566,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchGenreStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+- (nonnull NSURLSessionDataTask *)fetchGenreStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchGenreStation(id:territory:callback:));
 
 /**
  * Fetch genre-based radio stations under a specific genre category.
@@ -582,8 +582,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * @return an NSURLSessionDataTask object that allow you to cancel the
  * task.
  */
-- (nonnull NSURLSessionDataTask *)fetchGenreStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
-
+- (nonnull NSURLSessionDataTask *)fetchGenreStationWithStationID:(nonnull NSString *)stationID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(KKRadioStation *_Nullable, NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchGenreStation(id:territory:offset:limit:callback:));
 
 #pragma mark - Search
 
