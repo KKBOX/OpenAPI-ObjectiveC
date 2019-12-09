@@ -207,3 +207,14 @@
 /** The images of the category. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
+
+@interface KKChildrenCategoryGroup : KKBOXOpenAPIObject
+/** The ID of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
+/** The title of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
+/** The images of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
+/** The images of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSArray <KKChildrenCategory *> *subcategories;
+@end

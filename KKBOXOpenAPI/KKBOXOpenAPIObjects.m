@@ -119,11 +119,20 @@
 @property (strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
+@interface KKChildrenCategoryGroup ()
+@property (strong, nonatomic, nonnull) NSString *categoryID;
+@property (strong, nonatomic, nonnull) NSString *categoryTitle;
+@property (strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
+@property (strong, nonatomic, nonnull) NSArray <KKChildrenCategory *> *subcategories;
+@end
+
+
 #pragma mark -
 
 @interface KKBOXOpenAPIObjectParsingHelper : NSObject
 + (NSSet <NSNumber *> *)territoriesFromArray:(NSArray *)array;
 + (NSArray <KKImageInfo *> *)imageArrayFromArray:(NSArray *)dictionaryImages;
++ (NSArray <KKChildrenCategory *> *)subcategoriesFromArray:(NSArray *)dictionaryImages;
 @end
 
 @implementation KKBOXOpenAPIObjectParsingHelper
@@ -164,6 +173,20 @@
 		for (NSDictionary *imageDictionary in dictionaryImages) {
 			if ([imageDictionary isKindOfClass:[NSDictionary class]]) {
 				KKImageInfo *imageInfo = [[KKImageInfo alloc] initWithDictionary:imageDictionary];
+				[images addObject:imageInfo];
+			}
+		}
+	}
+	return images;
+}
+
++ (NSArray <KKChildrenCategory *> *)subcategoriesFromArray:(NSArray *)dictionaryImages
+{
+	NSMutableArray *images = [NSMutableArray array];
+	if ([dictionaryImages isKindOfClass:[NSArray class]]) {
+		for (NSDictionary *imageDictionary in dictionaryImages) {
+			if ([imageDictionary isKindOfClass:[NSDictionary class]]) {
+				KKChildrenCategory *imageInfo = [[KKChildrenCategory alloc] initWithDictionary:imageDictionary];
 				[images addObject:imageInfo];
 			}
 		}
@@ -422,3 +445,14 @@
 }
 @end
 
+
+@implementation KKChildrenCategoryGroup
+- (void)handleDictionary
+{
+	NSDictionary *dictionary = self.dictionary;
+	self.categoryID = dictionary[@"id"] ?: @"";
+	self.categoryTitle = dictionary[@"title"] ?: @"";
+	self.images = [KKBOXOpenAPIObjectParsingHelper imageArrayFromArray:dictionary[@"images"]];
+	self.subcategories = [KKBOXOpenAPIObjectParsingHelper subcategoriesFromArray:dictionary[@"subcategories"]];
+}
+@end

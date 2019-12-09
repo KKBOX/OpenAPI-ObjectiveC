@@ -39,11 +39,11 @@
 typedef NS_ENUM(NSUInteger, KKTerritoryCode)
 {
 	/** Taiwan */
-	KKTerritoryCodeTaiwan, 
+	KKTerritoryCodeTaiwan,
 	/** HongKong */
-	KKTerritoryCodeHongKong, 
+	KKTerritoryCodeHongKong,
 	/** Singapore */
-	KKTerritoryCodeSingapore, 
+	KKTerritoryCodeSingapore,
 	/** Malaysia */
 	KKTerritoryCodeMalaysia,
 	/** Japan */
@@ -54,9 +54,9 @@ typedef NS_ENUM(NSUInteger, KKTerritoryCode)
 typedef NS_OPTIONS(NSUInteger, KKSearchType)
 {
 	/** Default value */
-	KKSearchTypeNone = 0, 
+	KKSearchTypeNone = 0,
 	/** Search for artists */
-	KKSearchTypeArtist = 1 << 0, 
+	KKSearchTypeArtist = 1 << 0,
 	/** Search for albums */
 	KKSearchTypeAlbum = 1 << 1,
 		/** Search for song tracks */
@@ -69,9 +69,9 @@ typedef NS_OPTIONS(NSUInteger, KKSearchType)
 typedef NS_OPTIONS(NSUInteger, KKScope)
 {
 	/** No permission */
-	KKScopeNone = 0, 
+	KKScopeNone = 0,
 	/** Permission to get user profile */
-	KKScopeUserProfile = 1 << 0, 
+	KKScopeUserProfile = 1 << 0,
 	/** Permission to get user territory */
 	KKScopeUserTerritory = 1 << 1,
 	/** Permission to get user account status */
@@ -713,6 +713,29 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 
 #pragma mark - Children Contents
 
+/**
+ * Fetch the categories for children content in a specific territory.
+ *
+ * See `https://docs-en.kkbox.codes/reference#children-categories`.
+ *
+ * @param territory the given territory. KKBOX may provide different
+ * contents in different territories.
+ * @param callback the callback block
+ * @return an NSURLSessionDataTask object that allow you to cancel the
+ * task.
+ */
 - (nonnull NSURLSessionDataTask *)fetchChildrenCategories:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKChildrenCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+
+/**
+ * Fetches subcategories under a children content category.
+ * @param categoryID
+ * @param territory the given territory. KKBOX may provide different
+ * contents in different territories.
+ * @param callback the callback block
+ * @return an NSURLSessionDataTask object that allow you to cancel the
+ * task.
+ */
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategory:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKChildrenCategoryGroup *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+
 
 @end

@@ -24,10 +24,10 @@ class Tests: XCTestCase {
 
 	func testAccessToken() {
 		let d = ["access_token": "1234",
-				 "expires_in": 1234567890 as Double,
-				 "token_type": "token_type",
-				 "scope": "scope"
-			] as [String: Any]
+		         "expires_in": 1234567890 as Double,
+		         "token_type": "token_type",
+		         "scope": "scope"
+		] as [String: Any]
 		let accessToken = KKAccessToken(dictionary: d)
 		XCTAssertEqual(accessToken.accessToken, d["access_token"] as! String)
 		XCTAssertEqual(accessToken.expiresIn, d["expires_in"] as! TimeInterval)
@@ -117,11 +117,11 @@ class Tests: XCTestCase {
 
 	func useExplicitToken() {
 		self.API.accessToken = KKAccessToken(dictionary:
-			["access_token": "qHeIPUO2hS8eJ0FKS9tUsQ==",
-			 "expires_in": 3153600000,
-			 "refresh_token": "hrJp4YOYxbjDVhQG+nnqpg==",
-			 "scope": "all",
-			 "token_type": "Bearer"]
+		                                     ["access_token": "qHeIPUO2hS8eJ0FKS9tUsQ==",
+		                                      "expires_in": 3153600000,
+		                                      "refresh_token": "hrJp4YOYxbjDVhQG+nnqpg==",
+		                                      "scope": "all",
+		                                      "token_type": "Bearer"]
 		)
 	}
 
@@ -541,10 +541,10 @@ class Tests: XCTestCase {
 		self.wait(for: [e], timeout: 3)
 	}
 
-	func testFetchChidlrenCategories() {
+	func testFetchChildrenCategories() {
 		self.waitForToken()
-		let e = self.expectation(description: "testFetchChidlrenCategories")
-		self.API.fetchChildrenCategories(.taiwan) {  categories, paging, summary, error in
+		let e = self.expectation(description: "testFetchChildrenCategories")
+		self.API.fetchChildrenCategories(.taiwan) { categories, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch charts. \(String(describing: error))")
@@ -555,6 +555,25 @@ class Tests: XCTestCase {
 				XCTAssertNotNil(category.categoryTitle)
 				XCTAssertTrue(category.images.count > 0)
 			}
+			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
+			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
+		}
+		self.wait(for: [e], timeout: 3)
+	}
+
+	func testFetchChildrenCategory() {
+		self.waitForToken()
+		let e = self.expectation(description: "testFetchChildrenCategory")
+		self.API.fetchChildrenCategory("Ksb_8l5NAnG7pCJEUU", territory: .taiwan) { group, paging, summary, error in
+			e.fulfill()
+			if let _ = error {
+				XCTFail("Failed to fetch charts. \(String(describing: error))")
+				return
+			}
+			XCTAssertNotNil(group!.categoryID)
+			XCTAssertNotNil(group!.categoryTitle)
+			XCTAssertTrue(group!.images.count > 0)
+			XCTAssertTrue(group!.subcategories.count > 0)
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
 			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
 		}
