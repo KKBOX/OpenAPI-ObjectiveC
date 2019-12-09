@@ -829,6 +829,30 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 	return CALL_API;
 }
 
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategoryPlaylists:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory  offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
+{
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/children-categories/%@/playlists?territory=%@", categoryID, KKStringFromTerritoryCode(territory)];
+
+	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
+		if (error) {
+			inCallback(nil, nil, nil, error);
+			return;
+		}
+
+		NSMutableArray *playlists = [[NSMutableArray alloc] init];
+		if ([dictionary[@"data"] isKindOfClass:[NSArray class]]) {
+			for (NSDictionary *playlistDictionary in dictionary[@"data"]) {
+				KKPlaylistInfo *category = [[KKPlaylistInfo alloc] initWithDictionary:playlistDictionary];
+				[playlists addObject:category];
+			}
+		}
+		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"paging"]];
+		KKSummary *summary = [[KKSummary alloc] initWithDictionary:dictionary[@"summary"]];
+		inCallback(playlists, paging, summary, nil);
+	};
+
+	return CALL_API;
+}
 
 @end
 

@@ -727,8 +727,11 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 - (nonnull NSURLSessionDataTask *)fetchChildrenCategories:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKChildrenCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
 
 /**
- * Fetches subcategories under a children content category.
- * @param categoryID
+ * Fetch subcategories under a children content category.
+ *
+ * See `https://docs-en.kkbox.codes/reference#children-categories_category_id`.
+ *
+ * @param categoryID ID of the category.
  * @param territory the given territory. KKBOX may provide different
  * contents in different territories.
  * @param callback the callback block
@@ -737,5 +740,20 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  */
 - (nonnull NSURLSessionDataTask *)fetchChildrenCategory:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKChildrenCategoryGroup *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
 
+/**
+ * Fetch the playlists under a children content category.
+ *
+ * See `https://docs-en.kkbox.codes/reference#children-categories_category_id_playlists`.
+ *
+ * @param categoryID ID of the category.
+ * @param territory the given territory. KKBOX may provide different
+ * contents in different territories.
+ * @param offset the offset
+ * @param limit the limit of response
+ * @param callback the callback block
+ * @return an NSURLSessionDataTask object that allow you to cancel the
+ * task.
+ */
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategoryPlaylists:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory  offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
 
 @end

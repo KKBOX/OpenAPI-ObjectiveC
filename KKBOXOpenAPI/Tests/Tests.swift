@@ -580,5 +580,24 @@ class Tests: XCTestCase {
 		self.wait(for: [e], timeout: 3)
 	}
 
+	func testfetchChildrenCategoryPlaylists() {
+		self.waitForToken()
+		let e = self.expectation(description: "testfetchChildrenCategoryPlaylists")
+		self.API.fetchChildrenCategoryPlaylists("-rUEH1DCQOsYM4aN39", territory: .taiwan, offset: 0, limit: 100) { playlists, paging, summary, error in
+			e.fulfill()
+			if let _ = error {
+				XCTFail("Failed to fetch charts. \(String(describing: error))")
+				return
+			}
+
+			for playlist in playlists! {
+				self.validate(playlist: playlist)
+			}
+			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
+			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
+		}
+		self.wait(for: [e], timeout: 3)
+	}
+
 }
 
