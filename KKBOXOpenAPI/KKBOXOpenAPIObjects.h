@@ -198,3 +198,12 @@
 /** The overall summary. */
 @property (readonly, strong, nonatomic, nonnull) KKSummary *summary;
 @end
+
+@interface KKChildrenCategory : KKBOXOpenAPIObject
+/** The ID of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
+/** The title of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
+/** The images of the category. */
+@property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
+@end

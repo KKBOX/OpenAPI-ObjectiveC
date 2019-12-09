@@ -169,7 +169,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the detailed information of a song track.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#tracks_track_id`.
+ * See `https://docs-en.kkbox.codes/reference#tracks_track_id`.
  *
  * @param trackID the ID of the song track
  * @param territory the given territory. The displayed information of
@@ -185,7 +185,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the information of a given album.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#albums_album_id`.
+ * See `https://docs-en.kkbox.codes/reference#albums_album_id`.
  *
  * @param albumID the given album ID
  * @param territory the given territory
@@ -198,7 +198,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the song tracks contained in a given album.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#albums_album_id_tracks`.
+ * See `https://docs-en.kkbox.codes/reference#albums_album_id_tracks`.
  *
  * @param albumID the given album ID
  * @param territory the given territory
@@ -208,12 +208,27 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  */
 - (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
 
+/**
+* Fetch the song tracks contained in a given album.
+*
+* See `https://docs-en.kkbox.codes/reference#albums_album_id_tracks`.
+*
+* @param albumID the given album ID
+* @param territory the given territory
+* @param callback the callback block
+* @param offset the offset
+* @param limit the limit of response
+* @return an NSURLSessionDataTask object that allow you to cancel the
+* task.
+*/
+- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback;
+
 #pragma mark - Artists
 
 /**
  * Fetch the detailed profile of an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id`.
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id`.
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The displayed information of
@@ -227,7 +242,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the list of the albums belong to an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id_albums`
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id_albums`
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The albums list may differ in
@@ -242,7 +257,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the list of the albums belong to an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id_albums`
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id_albums`
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The albums list may differ in
@@ -259,7 +274,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the top tracks of an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id_top-tracks`.
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id_top-tracks`.
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The displayed information of
@@ -273,7 +288,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the top tracks of an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id_top-tracks`.
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id_top-tracks`.
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The displayed information of
@@ -289,7 +304,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch related artists of an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id_related-artists`.
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id_related-artists`.
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The displayed information of
@@ -303,7 +318,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch related artists of an artist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#artists_artist_id_related-artists`.
+ * See `https://docs-en.kkbox.codes/reference#artists_artist_id_related-artists`.
  *
  * @param artistID the ID of the artist
  * @param territory the given territory. The displayed information of
@@ -321,7 +336,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetches information and song tracks of a given playlist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#shared-playlists_playlist_id`.
+ * See `https://docs-en.kkbox.codes/reference#shared-playlists_playlist_id`.
  *
  * @param playlistID the given playlist ID.
  * @param territory the given territory
@@ -334,7 +349,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetches information and song tracks of a given playlist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#shared-playlists_playlist_id_tracks`.
+ * See `https://docs-en.kkbox.codes/reference#shared-playlists_playlist_id_tracks`.
  *
  * @param playlistID the given playlist ID.
  * @param territory the given territory
@@ -347,7 +362,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetches information and song tracks of a given playlist.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#shared-playlists_playlist_id_tracks`.
+ * See `https://docs-en.kkbox.codes/reference#shared-playlists_playlist_id_tracks`.
  *
  * @param playlistID the given playlist ID.
  * @param territory the given territory
@@ -364,7 +379,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch featured playlists.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featured-playlists`.
+ * See `https://docs-en.kkbox.codes/reference#featured-playlists`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory
@@ -377,7 +392,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch featured playlists.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featured-playlists`.
+ * See `https://docs-en.kkbox.codes/reference#featured-playlists_playlist_id`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory
@@ -394,7 +409,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch new hits playlists.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#new-hits-playlists`.
+ * See `https://docs-en.kkbox.codes/reference#new-hits-playlists`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory
@@ -407,7 +422,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch new hits playlists.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#new-hits-playlists`.
+ * See `https://docs-en.kkbox.codes/reference#new-hits-playlists_playlist_id`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory
@@ -425,7 +440,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch feature playlist categories.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories`.
+ * See `https://docs-en.kkbox.codes/reference#featured-playlist-categories`.
  *
  * @param territory the given territory
  * @param callback the callback block
@@ -437,7 +452,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch feature playlist categories.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories`.
+ * See `https://docs-en.kkbox.codes/reference#featured-playlist-categories`.
  *
  * @param territory the given territory
  * @param offset the offset
@@ -452,7 +467,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * Fetch the feature playlists contained in a given category. You can
  * obtain the categories from the previous method.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories_category_id`.
+ * See `https://docs-en.kkbox.codes/reference#featured-playlist-categories_category_id`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param category the given category
@@ -467,7 +482,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * Fetch the feature playlists contained in a given category. You can
  * obtain the categories from the previous method.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#featured-playlist-categories_category_id_playlists`.
+ * See `https://docs-en.kkbox.codes/reference#featured-playlist-categories_category_id`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param category the given category
@@ -487,7 +502,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch mood station categories.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#mood-stations`.
+ * See `https://docs-en.kkbox.codes/reference#mood-stations`.
  * @param territory the given territory
  * @param callback the callback block
  * @return an NSURLSessionDataTask object that allow you to cancel the
@@ -498,7 +513,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch mood stations under a specific radio category.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#mood-stations_station_id`.
+ * See `https://docs-en.kkbox.codes/reference#mood-stations_station_id`.
  *
  * @param stationID the station ID. You can obtain IDs from the
  * previous method.
@@ -512,7 +527,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch mood stations under a specific radio category.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#mood-stations_station_id`.
+ * See `https://docs-en.kkbox.codes/reference#mood-stations_station_id`.
  *
  * @param stationID the station ID. You can obtain IDs from the
  * previous method.
@@ -530,7 +545,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the list of genre radio station categories.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#genre-stations`.
+ * See `https://docs-en.kkbox.codes/reference#genre-stations`.
  *
  * @param territory the given territory
  * @param callback the callback block
@@ -542,7 +557,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch genre-based radio stations under a specific genre category.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#genre-stations_station_id`.
+ * See `https://docs-en.kkbox.codes/reference#genre-stations_station_id`.
  *
  * @param stationID the station ID. You can obtain the list categories
  * from the previous method.
@@ -556,7 +571,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch genre-based radio stations under a specific genre category.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#genre-stations_station_id`.
+ * See `https://docs-en.kkbox.codes/reference#genre-stations_station_id`.
  *
  * @param stationID the station ID. You can obtain the list categories
  * from the previous method.
@@ -575,7 +590,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Search within KKBOX's archive.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#search_1`.
+ * See `https://docs-en.kkbox.codes/reference#search`.
  *
  * @param keyword the keyword
  * @param searchTypes search for song tracks, albums, artists or playlists.
@@ -590,7 +605,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Search within KKBOX's archive.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#search`.
+ * See `https://docs-en.kkbox.codes/reference#search`.
  *
  * @param keyword the keyword
  * @param searchTypes search for song tracks, albums, artists or playlists.
@@ -609,7 +624,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the categories of new released albums in a specific territory.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#new-release-categories`.
+ * See `https://docs-en.kkbox.codes/reference#new-release-categories`.
  *
  * @param territory the given territory. KKBOX may provide different
  * new released albums in different territories.
@@ -622,7 +637,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the categories of new released albums in a specific territory.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#new-release-categories`.
+ * See `https://docs-en.kkbox.codes/reference#new-release-categories`.
  *
  * @param territory the given territory. KKBOX may provide different
  * new released albums in different territories.
@@ -637,7 +652,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch new released albums in a specific category and territory.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#new-release-categories_category_id`.
+ * See `https://docs-en.kkbox.codes/reference#new-release-categories_category_id`.
  *
  * @param categoryID the ID of the category.
  * @param territory the given territory. KKBOX may provide different
@@ -648,11 +663,10 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  */
 - (nonnull NSURLSessionDataTask *)fetchNewReleaseAlbumsUnderCategory:(nonnull NSString *)categoryID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(KKNewReleaseAlbumsCategory *_Nullable, NSArray <KKAlbumInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
 
-
 /**
  * Fetch new released albums in a specific category and territory.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#new-release-categories_category_id`.
+ * See `https://docs-en.kkbox.codes/reference#new-release-categories_category_id`.
  *
  * @param categoryID the ID of the category.
  * @param territory the given territory. KKBOX may provide different
@@ -670,7 +684,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the categories of charts in a specific territory.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#charts`.
+ * See `https://docs-en.kkbox.codes/reference#charts`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory. KKBOX may provide different
@@ -684,7 +698,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 /**
  * Fetch the categories of charts in a specific territory.
  *
- * See `https://docs-en.kkbox.codes/v1.1/reference#charts`.
+ * See `https://docs-en.kkbox.codes/reference#charts_chart_id`.
  * See also `fetchPlaylistWithPlaylistID:territory:callback:`.
  *
  * @param territory the given territory. KKBOX may provide different
@@ -696,5 +710,9 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
  * task.
  */
 - (nonnull NSURLSessionDataTask *)fetchChartsForTerritory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKPlaylistInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
+
+#pragma mark - Children Contents
+
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategories:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKChildrenCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback;
 
 @end

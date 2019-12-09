@@ -241,6 +241,11 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 
 - (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
 {
+	return [self fetchTracksWithAlbumID:albumID territory:territory offset:0 limit:500 callback:inCallback];
+}
+
+- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
+{
 	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/albums/%@/tracks?territory=%@", ESCAPE(albumID), KKStringFromTerritoryCode(territory)];
 	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
 		if (error) {
@@ -777,6 +782,34 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 
 	return CALL_API;
 }
+
+#pragma mark - Children Contents
+
+- (nonnull NSURLSessionDataTask *)fetchChildrenCategories:(KKTerritoryCode)territory callback:(nonnull void (^)(NSArray <KKChildrenCategory *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback
+{
+	NSString *URLString = [NSString stringWithFormat:@"https://api.kkbox.com/v1.1/children-categories?territory=%@", KKStringFromTerritoryCode(territory)];
+
+	KKBOXOpenAPIDataCallback callback = ^(NSDictionary *dictionary, NSError *error) {
+		if (error) {
+			inCallback(nil, nil, nil, error);
+			return;
+		}
+
+		NSMutableArray *playlists = [[NSMutableArray alloc] init];
+		if ([dictionary[@"data"] isKindOfClass:[NSArray class]]) {
+			for (NSDictionary *playlistDictionary in dictionary[@"data"]) {
+				KKChildrenCategory *category = [[KKChildrenCategory alloc] initWithDictionary:playlistDictionary];
+				[playlists addObject:category];
+			}
+		}
+		KKPagingInfo *paging = [[KKPagingInfo alloc] initWithDictionary:dictionary[@"paging"]];
+		KKSummary *summary = [[KKSummary alloc] initWithDictionary:dictionary[@"summary"]];
+		inCallback(playlists, paging, summary, nil);
+	};
+
+	return CALL_API;
+}
+
 
 @end
 

@@ -113,6 +113,11 @@
 @property (strong, nonatomic, nonnull) NSString *categoryTitle;
 @end
 
+@interface KKChildrenCategory ()
+@property (strong, nonatomic, nonnull) NSString *categoryID;
+@property (strong, nonatomic, nonnull) NSString *categoryTitle;
+@property (strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
+@end
 
 #pragma mark -
 
@@ -406,3 +411,14 @@
 	self.categoryTitle = dictionary[@"title"] ?: @"";
 }
 @end
+
+@implementation KKChildrenCategory
+- (void)handleDictionary
+{
+	NSDictionary *dictionary = self.dictionary;
+	self.categoryID = dictionary[@"id"] ?: @"";
+	self.categoryTitle = dictionary[@"title"] ?: @"";
+	self.images = [KKBOXOpenAPIObjectParsingHelper imageArrayFromArray:dictionary[@"images"]];
+}
+@end
+
