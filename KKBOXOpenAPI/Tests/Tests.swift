@@ -48,12 +48,12 @@ class Tests: XCTestCase {
 
 	// MARK: -
 
-	func validate(track: KKTrackInfo) {
+	func validate(track: TrackInfo) {
 		XCTAssertNotNil(track)
-		XCTAssertTrue(track.trackID.count > 0)
-		XCTAssertTrue(track.trackName.count > 0)
+		XCTAssertTrue(track.id.count > 0)
+		XCTAssertTrue(track.name.count > 0)
 		XCTAssertTrue(track.duration > 0)
-		XCTAssertNotNil(track.trackURL)
+		XCTAssertNotNil(track.url)
 		XCTAssertTrue(track.trackOrderInAlbum > 0)
 		//		XCTAssertTrue(track.territoriesThatAvailableAt.count > 0)
 		//		XCTAssertTrue(track.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
@@ -64,9 +64,9 @@ class Tests: XCTestCase {
 
 	func validate(album: KKAlbumInfo) {
 		XCTAssertNotNil(album)
-		XCTAssertTrue(album.albumID.count > 0)
-		XCTAssertTrue(album.albumName.count > 0)
-		XCTAssertNotNil(album.albumURL)
+		XCTAssertTrue(album.id.count > 0)
+		XCTAssertTrue(album.name.count > 0)
+		XCTAssertNotNil(album.url)
 		XCTAssertTrue(album.images.count == 3)
 		//		XCTAssertTrue(album.releaseDate.count > 0)
 		//		XCTAssertTrue(album.territoriesThatAvailableAt.count > 0, "\(album.albumName)")
@@ -74,20 +74,20 @@ class Tests: XCTestCase {
 		self.validate(artist: album.artist)
 	}
 
-	func validate(artist: KKArtistInfo) {
+	func validate(artist: ArtistInfo) {
 		XCTAssertNotNil(artist)
-		XCTAssertTrue(artist.artistID.count > 0)
-		XCTAssertTrue(artist.artistName.count > 0)
-		XCTAssertNotNil(artist.artistURL)
+		XCTAssertTrue(artist.id.count > 0)
+		XCTAssertTrue(artist.name.count > 0)
+		XCTAssertNotNil(artist.url)
 		XCTAssertTrue(artist.images.count == 2)
 	}
 
-	func validate(playlist: KKPlaylistInfo) {
+	func validate(playlist: PlaylistInfo) {
 		XCTAssertNotNil(playlist);
-		XCTAssertTrue(playlist.playlistID.count > 0);
-		XCTAssertTrue(playlist.playlistTitle.count > 0);
+		XCTAssertTrue(playlist.id.count > 0);
+		XCTAssertTrue(playlist.title.count > 0);
 		//		XCTAssertTrue(playlist.playlistDescription.count > 0);
-		XCTAssertNotNil(playlist.playlistURL);
+		XCTAssertNotNil(playlist.url);
 		if (playlist.tracks.count > 0) {
 			for track in playlist.tracks {
 				self.validate(track: track)
@@ -95,10 +95,10 @@ class Tests: XCTestCase {
 		}
 	}
 
-	func validate(user: KKUserInfo) {
-		XCTAssertTrue(user.userID.count > 0)
-		XCTAssertTrue(user.userName.count > 0)
-		XCTAssertNotNil(user.userURL)
+	func validate(user: UserInfo) {
+		XCTAssertTrue(user.id.count > 0)
+		XCTAssertTrue(user.name.count > 0)
+		XCTAssertNotNil(user.url)
 		XCTAssertNotNil(user.userDescription)
 		XCTAssertTrue(user.images.count > 0)
 	}
@@ -223,7 +223,7 @@ class Tests: XCTestCase {
 	func testFetchTopTracksWithArtistID() {
 		self.waitForToken()
 		let e = self.expectation(description: "testFetchTopSongsWithArtistID")
-		self.API.fetchTopTracks(withArtistID: "8q3_xzjl89Yakn_7GB", territory: KKTerritoryCode.taiwan) { songs, paging, summary, error in
+		self.API.fetchTopTracks(withArtistID: "8q3_xzjl89Yakn_7GB", territory: .taiwan) { songs, paging, summary, error in
 			e.fulfill()
 			if let _ = error {
 				XCTFail("Failed to fetch tracks \(String(describing: error))")
@@ -343,8 +343,8 @@ class Tests: XCTestCase {
 			}
 			XCTAssertTrue(categories!.count > 0)
 			for category in categories! {
-				XCTAssertTrue(category.categoryID.count > 0)
-				XCTAssertTrue(category.categoryTitle.count > 0)
+				XCTAssertTrue(category.id.count > 0)
+				XCTAssertTrue(category.title.count > 0)
 				XCTAssertTrue(category.images.count == 2)
 			}
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
@@ -363,13 +363,13 @@ class Tests: XCTestCase {
 				return
 			}
 
-			XCTAssertTrue(category!.categoryID.count > 0)
-			XCTAssertTrue(category!.categoryTitle.count > 0)
+			XCTAssertTrue(category!.id.count > 0)
+			XCTAssertTrue(category!.title.count > 0)
 			XCTAssertTrue(category!.images.count == 2)
 
 			for playlist in playlists! {
-				XCTAssertTrue(playlist.playlistID.count > 0)
-				XCTAssertTrue(playlist.playlistTitle.count > 0)
+				XCTAssertTrue(playlist.id.count > 0)
+				XCTAssertTrue(playlist.title.count > 0)
 			}
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
 			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
@@ -387,8 +387,8 @@ class Tests: XCTestCase {
 				return
 			}
 			for station in stations! {
-				XCTAssertTrue(station.stationID.count > 0, "station id")
-				XCTAssertTrue(station.stationName.count > 0, "station title")
+				XCTAssertTrue(station.id.count > 0, "station id")
+				XCTAssertTrue(station.name.count > 0, "station title")
 				XCTAssertTrue(station.images.count > 0, "images")
 			}
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
@@ -406,8 +406,8 @@ class Tests: XCTestCase {
 				XCTFail("Failed to fetch station \(String(describing: error))")
 				return
 			}
-			XCTAssertTrue(station!.stationID.count > 0, "station id")
-			XCTAssertTrue(station!.stationName.count > 0, "station title")
+			XCTAssertTrue(station!.id.count > 0, "station id")
+			XCTAssertTrue(station!.name.count > 0, "station title")
 			XCTAssertTrue(station!.images.count > 0, "images")
 
 			for track in tracks! {
@@ -430,8 +430,8 @@ class Tests: XCTestCase {
 				return
 			}
 			for station in stations! {
-				XCTAssertTrue(station.stationID.count > 0, "station id")
-				XCTAssertTrue(station.stationName.count > 0, "station title")
+				XCTAssertTrue(station.id.count > 0, "station id")
+				XCTAssertTrue(station.name.count > 0, "station title")
 			}
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
 			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
@@ -449,8 +449,8 @@ class Tests: XCTestCase {
 				XCTFail("Failed to fetch station \(String(describing: error))")
 				return
 			}
-			XCTAssertTrue(station!.stationID.count > 0, "station id")
-			XCTAssertTrue(station!.stationName.count > 0, "station title")
+			XCTAssertTrue(station!.id.count > 0, "station id")
+			XCTAssertTrue(station!.name.count > 0, "station title")
 
 			for track in tracks! {
 				self.validate(track: track)
@@ -490,8 +490,8 @@ class Tests: XCTestCase {
 				return
 			}
 			for category in categories! {
-				XCTAssertTrue(category.categoryID.count > 0)
-				XCTAssertTrue(category.categoryTitle.count > 0)
+				XCTAssertTrue(category.id.count > 0)
+				XCTAssertTrue(category.title.count > 0)
 			}
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
 			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
@@ -509,8 +509,8 @@ class Tests: XCTestCase {
 				return
 			}
 
-			XCTAssertTrue(category!.categoryID.count > 0)
-			XCTAssertTrue(category!.categoryTitle.count > 0)
+			XCTAssertTrue(category!.id.count > 0)
+			XCTAssertTrue(category!.title.count > 0)
 
 			for album in albums! {
 				self.validate(album: album)
@@ -551,8 +551,8 @@ class Tests: XCTestCase {
 				return
 			}
 			for category in categories! {
-				XCTAssertNotNil(category.categoryID)
-				XCTAssertNotNil(category.categoryTitle)
+				XCTAssertNotNil(category.id)
+				XCTAssertNotNil(category.title)
 				XCTAssertTrue(category.images.count > 0)
 			}
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
@@ -570,8 +570,8 @@ class Tests: XCTestCase {
 				XCTFail("Failed to fetch charts. \(String(describing: error))")
 				return
 			}
-			XCTAssertNotNil(group!.categoryID)
-			XCTAssertNotNil(group!.categoryTitle)
+			XCTAssertNotNil(group!.id)
+			XCTAssertNotNil(group!.title)
 			XCTAssertTrue(group!.images.count > 0)
 			XCTAssertTrue(group!.subcategories.count > 0)
 			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)

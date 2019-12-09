@@ -28,6 +28,7 @@
 @end
 
 /** The object that represents the pagination of a API response in list type. */
+NS_SWIFT_NAME(PagingInfo)
 @interface KKPagingInfo : KKBOXOpenAPIObject
 /** The max amount of items in a page. */
 @property (readonly, assign, nonatomic) NSInteger limit;
@@ -40,41 +41,45 @@
 @end
 
 /** The summary of a list. */
+NS_SWIFT_NAME(Summary)
 @interface KKSummary : KKBOXOpenAPIObject
 /** The total amount of items matching the criteria. */
 @property (readonly, assign, nonatomic) NSInteger total;
 @end
 
 /** The object represents information about an image. */
+NS_SWIFT_NAME(ImageInfo)
 @interface KKImageInfo : KKBOXOpenAPIObject
 /** Width of the image. */
 @property (readonly, assign, nonatomic) CGFloat width;
 /** Height of the image. */
 @property (readonly, assign, nonatomic) CGFloat height;
 /** URL of the image. */
-@property (readonly, strong, nonatomic, nullable) NSURL *imageURL;
+@property (readonly, strong, nonatomic, nullable) NSURL *imageURL NS_SWIFT_NAME(url);
 @end
 
 /** The object represents information about an artist on KKBOX. */
+NS_SWIFT_NAME(ArtistInfo)
 @interface KKArtistInfo : KKBOXOpenAPIObject
 /** The ID of the artist. */
-@property (readonly, strong, nonatomic, nonnull) NSString *artistID;
+@property (readonly, strong, nonatomic, nonnull) NSString *artistID NS_SWIFT_NAME(id);
 /** The name of the artist. */
-@property (readonly, strong, nonatomic, nonnull) NSString *artistName;
+@property (readonly, strong, nonatomic, nonnull) NSString *artistName NS_SWIFT_NAME(name);
 /** The URL of webpage about the artist. */
-@property (readonly, strong, nonatomic, nullable) NSURL *artistURL;
+@property (readonly, strong, nonatomic, nullable) NSURL *artistURL NS_SWIFT_NAME(url);
 /** The images of the artist. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
 /** The object represents information about an album on KKBOX. */
+NS_SWIFT_NAME(KKAlbumInfo)
 @interface KKAlbumInfo : KKBOXOpenAPIObject
 /** The ID of the album. */
-@property (readonly, strong, nonatomic, nonnull) NSString *albumID;
+@property (readonly, strong, nonatomic, nonnull) NSString *albumID NS_SWIFT_NAME(id);
 /** The name of the album. */
-@property (readonly, strong, nonatomic, nonnull) NSString *albumName;
+@property (readonly, strong, nonatomic, nonnull) NSString *albumName NS_SWIFT_NAME(name);
 /** The URL of the webpage about the album. */
-@property (readonly, strong, nonatomic, nullable) NSURL *albumURL;
+@property (readonly, strong, nonatomic, nullable) NSURL *albumURL NS_SWIFT_NAME(url);
 /** The artist of the album. */
 @property (readonly, strong, nonatomic, nonnull) KKArtistInfo *artist;
 /** The images of the album. */
@@ -88,13 +93,14 @@
 @end
 
 /** The object represents a track on KKBOX. */
+NS_SWIFT_NAME(TrackInfo)
 @interface KKTrackInfo : KKBOXOpenAPIObject
 /** The ID of the track. */
-@property (readonly, strong, nonatomic, nonnull) NSString *trackID;
+@property (readonly, strong, nonatomic, nonnull) NSString *trackID NS_SWIFT_NAME(id);
 /** The name of the track.*/
-@property (readonly, strong, nonatomic, nonnull) NSString *trackName;
+@property (readonly, strong, nonatomic, nonnull) NSString *trackName NS_SWIFT_NAME(name);
 /** The URL of the webpage of the track. */
-@property (readonly, strong, nonatomic, nullable) NSURL *trackURL;
+@property (readonly, strong, nonatomic, nullable) NSURL *trackURL NS_SWIFT_NAME(url);
 /** The album that the track belong to. */
 @property (readonly, strong, nonatomic, nullable) KKAlbumInfo *album;
 /** Length of the track. */
@@ -108,31 +114,33 @@
 @end
 
 /** The object represents a user on KKBOX. */
+NS_SWIFT_NAME(UserInfo)
 @interface KKUserInfo : KKBOXOpenAPIObject
 /** The ID of the user. */
-@property (readonly, strong, nonatomic, nonnull) NSString *userID;
+@property (readonly, strong, nonatomic, nonnull) NSString *userID NS_SWIFT_NAME(id);
 /** The name of the user. */
-@property (readonly, strong, nonatomic, nonnull) NSString *userName;
+@property (readonly, strong, nonatomic, nonnull) NSString *userName NS_SWIFT_NAME(name);
 /** The description of the user. */
 @property (readonly, strong, nonatomic, nonnull) NSString *userDescription;
 /** The URL of the page of the user on KKBOX. */
-@property (readonly, strong, nonatomic, nullable) NSURL *userURL;
+@property (readonly, strong, nonatomic, nullable) NSURL *userURL NS_SWIFT_NAME(url);
 /** The profile images of the user. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
 /** The object represents a playlist on KKBOX. */
+NS_SWIFT_NAME(PlaylistInfo)
 @interface KKPlaylistInfo : KKBOXOpenAPIObject
 /** The ID of the playlist. */
-@property (readonly, strong, nonatomic, nonnull) NSString *playlistID;
+@property (readonly, strong, nonatomic, nonnull) NSString *playlistID NS_SWIFT_NAME(id);
 /** The title of the playlist. */
-@property (readonly, strong, nonatomic, nonnull) NSString *playlistTitle;
+@property (readonly, strong, nonatomic, nonnull) NSString *playlistTitle NS_SWIFT_NAME(title);
 /** The description of the playlist. */
 @property (readonly, strong, nonatomic, nonnull) NSString *playlistDescription;
 /** The URL of the webpage about the playlist on KKBOX. */
-@property (readonly, strong, nonatomic, nonnull) NSURL *playlistURL;
+@property (readonly, strong, nonatomic, nonnull) NSURL *playlistURL NS_SWIFT_NAME(url);
 /** The curator of the playlist. */
-@property (readonly, strong, nonatomic, nonnull) KKUserInfo *playlistOwner;
+@property (readonly, strong, nonatomic, nonnull) KKUserInfo *playlistOwner NS_SWIFT_NAME(owner);
 /** The images of the playlist. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 /** The tracks contained in the playlist. */
@@ -142,36 +150,40 @@
 @end
 
 /** The object represents a featured playlist category. */
+NS_SWIFT_NAME(FeaturedPlaylistCategory)
 @interface KKFeaturedPlaylistCategory : KKBOXOpenAPIObject
 /** The ID of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryID NS_SWIFT_NAME(id);
 /** The title of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle NS_SWIFT_NAME(title);
 /** The images of the category. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
 /** The object represents a new release album category. */
+NS_SWIFT_NAME(NewReleaseAlbumsCategory)
 @interface KKNewReleaseAlbumsCategory : KKBOXOpenAPIObject
 /** The ID of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryID NS_SWIFT_NAME(id);
 /** The title of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle NS_SWIFT_NAME(title);
 @end
 
 /** The object represents a mood/genre radio station on KKBOX. */
+NS_SWIFT_NAME(RadioStation)
 @interface KKRadioStation : KKBOXOpenAPIObject
 /** The ID of the station. */
-@property (readonly, strong, nonatomic, nonnull) NSString *stationID;
+@property (readonly, strong, nonatomic, nonnull) NSString *stationID NS_SWIFT_NAME(id);
 /** The name of the station. */
-@property (readonly, strong, nonatomic, nonnull) NSString *stationName;
+@property (readonly, strong, nonatomic, nonnull) NSString *stationName NS_SWIFT_NAME(name);
 /** The category of the station. Note: not every station is catogorized. */
-@property (readonly, strong, nonatomic, nullable) NSString *stationCategory;
+@property (readonly, strong, nonatomic, nullable) NSString *stationCategory NS_SWIFT_NAME(category);
 /** The images of the station. Noe: not every station has images. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
 /** The object represents search results. */
+NS_SWIFT_NAME(SearchResults)
 @interface KKSearchResults : KKBOXOpenAPIObject
 /** Track search results. Available when searching for tracks is specified. */
 @property (readonly, strong, nonatomic, nullable) NSArray <KKTrackInfo *> *tracks;
@@ -201,18 +213,19 @@
 
 @interface KKChildrenCategory : KKBOXOpenAPIObject
 /** The ID of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryID NS_SWIFT_NAME(id);
 /** The title of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle NS_SWIFT_NAME(title);
 /** The images of the category. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 @end
 
+NS_SWIFT_NAME(ChildrenCategoryGroup)
 @interface KKChildrenCategoryGroup : KKBOXOpenAPIObject
 /** The ID of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryID;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryID NS_SWIFT_NAME(id);
 /** The title of the category. */
-@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle;
+@property (readonly, strong, nonatomic, nonnull) NSString *categoryTitle NS_SWIFT_NAME(title);
 /** The images of the category. */
 @property (readonly, strong, nonatomic, nonnull) NSArray <KKImageInfo *> *images;
 /** The images of the category. */

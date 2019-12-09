@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, KKTerritoryCode)
 	KKTerritoryCodeMalaysia,
 	/** Japan */
 	KKTerritoryCodeJapan,
-};
+} NS_SWIFT_NAME(KKBOXOpenAPI.Territory);
 
 /** The search types used by the search API. */
 typedef NS_OPTIONS(NSUInteger, KKSearchType)
@@ -63,7 +63,7 @@ typedef NS_OPTIONS(NSUInteger, KKSearchType)
 	KKSearchTypeTrack = 1 << 2,
 		/** Search for playlists */
 	KKSearchTypePlaylist = 1 << 3
-};
+} NS_SWIFT_NAME(KKBOXOpenAPI.SearchType);
 
 /** The permissions that your client requests. */
 typedef NS_OPTIONS(NSUInteger, KKScope)
