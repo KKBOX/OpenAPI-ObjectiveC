@@ -6,7 +6,7 @@
 
 
 @interface KKBOXOpenAPI (Private)
-- (NSString *)_scopeParameter:(KKScope)scope;
+- (nonnull NSString *)_scopeParameter:(KKScope)scope;
 @property (strong, nullable, nonatomic) KKAccessToken *accessToken;
 @end
 

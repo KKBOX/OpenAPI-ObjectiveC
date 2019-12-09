@@ -24,10 +24,10 @@ class Tests: XCTestCase {
 
 	func testAccessToken() {
 		let d = ["access_token": "1234",
-		         "expires_in": 1234567890 as Double,
-		         "token_type": "token_type",
-		         "scope": "scope"
-		] as [String: Any]
+				 "expires_in": 1234567890 as Double,
+				 "token_type": "token_type",
+				 "scope": "scope"
+			] as [String: Any]
 		let accessToken = KKAccessToken(dictionary: d)
 		XCTAssertEqual(accessToken.accessToken, d["access_token"] as! String)
 		XCTAssertEqual(accessToken.expiresIn, d["expires_in"] as! TimeInterval)
@@ -55,8 +55,8 @@ class Tests: XCTestCase {
 		XCTAssertTrue(track.duration > 0)
 		XCTAssertNotNil(track.trackURL)
 		XCTAssertTrue(track.trackOrderInAlbum > 0)
-//		XCTAssertTrue(track.territoriesThatAvailableAt.count > 0)
-//		XCTAssertTrue(track.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+		//		XCTAssertTrue(track.territoriesThatAvailableAt.count > 0)
+		//		XCTAssertTrue(track.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		if let album = track.album {
 			self.validate(album: album)
 		}
@@ -68,9 +68,9 @@ class Tests: XCTestCase {
 		XCTAssertTrue(album.albumName.count > 0)
 		XCTAssertNotNil(album.albumURL)
 		XCTAssertTrue(album.images.count == 3)
-//		XCTAssertTrue(album.releaseDate.count > 0)
-//		XCTAssertTrue(album.territoriesThatAvailableAt.count > 0, "\(album.albumName)")
-//		XCTAssertTrue(album.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
+		//		XCTAssertTrue(album.releaseDate.count > 0)
+		//		XCTAssertTrue(album.territoriesThatAvailableAt.count > 0, "\(album.albumName)")
+		//		XCTAssertTrue(album.territoriesThatAvailableAt.contains(KKTerritoryCode.taiwan.rawValue as NSNumber))
 		self.validate(artist: album.artist)
 	}
 
@@ -86,7 +86,7 @@ class Tests: XCTestCase {
 		XCTAssertNotNil(playlist);
 		XCTAssertTrue(playlist.playlistID.count > 0);
 		XCTAssertTrue(playlist.playlistTitle.count > 0);
-//		XCTAssertTrue(playlist.playlistDescription.count > 0);
+		//		XCTAssertTrue(playlist.playlistDescription.count > 0);
 		XCTAssertNotNil(playlist.playlistURL);
 		if (playlist.tracks.count > 0) {
 			for track in playlist.tracks {
@@ -117,11 +117,11 @@ class Tests: XCTestCase {
 
 	func useExplicitToken() {
 		self.API.accessToken = KKAccessToken(dictionary:
-		["access_token": "qHeIPUO2hS8eJ0FKS9tUsQ==",
-		 "expires_in": 3153600000,
-		 "refresh_token": "hrJp4YOYxbjDVhQG+nnqpg==",
-		 "scope": "all",
-		 "token_type": "Bearer"]
+			["access_token": "qHeIPUO2hS8eJ0FKS9tUsQ==",
+			 "expires_in": 3153600000,
+			 "refresh_token": "hrJp4YOYxbjDVhQG+nnqpg==",
+			 "scope": "all",
+			 "token_type": "Bearer"]
 		)
 	}
 
@@ -540,6 +540,26 @@ class Tests: XCTestCase {
 		}
 		self.wait(for: [e], timeout: 3)
 	}
-	
+
+	func testFetchChidlrenCategories() {
+		self.waitForToken()
+		let e = self.expectation(description: "testFetchChidlrenCategories")
+		self.API.fetchChildrenCategories(.taiwan) {  categories, paging, summary, error in
+			e.fulfill()
+			if let _ = error {
+				XCTFail("Failed to fetch charts. \(String(describing: error))")
+				return
+			}
+			for category in categories! {
+				XCTAssertNotNil(category.categoryID)
+				XCTAssertNotNil(category.categoryTitle)
+				XCTAssertTrue(category.images.count > 0)
+			}
+			XCTAssertNotNil(paging); XCTAssertTrue(paging!.limit > 0)
+			XCTAssertNotNil(summary); XCTAssertTrue(summary!.total > 0)
+		}
+		self.wait(for: [e], timeout: 3)
+	}
+
 }
 

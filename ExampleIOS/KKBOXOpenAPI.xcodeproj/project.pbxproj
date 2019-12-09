@@ -20,8 +20,6 @@
 		D4D545171FF143F800A2A00E /* KKNewHitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545161FF143F800A2A00E /* KKNewHitsTableViewController.swift */; };
 		D4D545191FF1460000A2A00E /* KKChartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D545181FF1460000A2A00E /* KKChartsTableViewController.swift */; };
 		D4E0919A1C74EE3A0018F379 /* KKTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E091991C74EE3A0018F379 /* KKTextViewController.swift */; };
-		D4E4B0EC1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */; };
-		D4E4B0ED1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,34 +44,6 @@
 			remoteGlobalIDString = D4A0ACB51C7F74B1005F0DF3;
 			remoteInfo = KKBOXOpenAPITests;
 		};
-		D4E4B0E41D7C762B0026A356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D4FAA1EB1C833E03002D8EB4;
-			remoteInfo = KKBOXOpenAPIiOS;
-		};
-		D4E4B0E61D7C762B0026A356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D4FAA1971C833C46002D8EB4;
-			remoteInfo = KKBOXOpenAPIMac;
-		};
-		D4E4B0E81D7C762B0026A356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D4FAA1AC1C833C8D002D8EB4;
-			remoteInfo = KKBOXOpenAPIWatchOS;
-		};
-		D4E4B0EA1D7C762B0026A356 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D4FAA1BF1C833D02002D8EB4;
-			remoteInfo = KKBOXOpenAPItvOS;
-		};
 		D4E4B0EE1D7C76370026A356 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4E4B0D61D7C762B0026A356 /* KKBOXOpenAPI.xcodeproj */;
@@ -90,7 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4E4B0ED1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E4B0EC1D7C76360026A356 /* KKBOXOpenAPIiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,12 +160,8 @@
 		D4E4B0D71D7C762B0026A356 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4E4B0E11D7C762B0026A356 /* libKKBOXOpenAPI.a */,
 				D4E4B0E31D7C762B0026A356 /* KKBOXOpenAPITests.xctest */,
-				D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */,
-				D4E4B0E71D7C762B0026A356 /* KKBOXOpenAPIMac.framework */,
-				D4E4B0E91D7C762B0026A356 /* KKBOXOpenAPIWatchOS.framework */,
-				D4E4B0EB1D7C762B0026A356 /* KKBOXOpenAPItvOS.framework */,
+				D4E4B0E11D7C762B0026A356 /* KKBOXOpenAPI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,7 +213,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = KKBOX;
 				TargetAttributes = {
 					D41EFF721C58C832000B4D10 = {
@@ -266,7 +230,7 @@
 			};
 			buildConfigurationList = D41EFF6E1C58C832000B4D10 /* Build configuration list for PBXProject "KKBOXOpenAPI" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -290,10 +254,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D4E4B0E11D7C762B0026A356 /* libKKBOXOpenAPI.a */ = {
+		D4E4B0E11D7C762B0026A356 /* KKBOXOpenAPI.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKKBOXOpenAPI.a;
+			fileType = wrapper.framework;
+			path = KKBOXOpenAPI.framework;
 			remoteRef = D4E4B0E01D7C762B0026A356 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -302,34 +266,6 @@
 			fileType = wrapper.cfbundle;
 			path = KKBOXOpenAPITests.xctest;
 			remoteRef = D4E4B0E21D7C762B0026A356 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D4E4B0E51D7C762B0026A356 /* KKBOXOpenAPIiOS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KKBOXOpenAPIiOS.framework;
-			remoteRef = D4E4B0E41D7C762B0026A356 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D4E4B0E71D7C762B0026A356 /* KKBOXOpenAPIMac.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KKBOXOpenAPIMac.framework;
-			remoteRef = D4E4B0E61D7C762B0026A356 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D4E4B0E91D7C762B0026A356 /* KKBOXOpenAPIWatchOS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KKBOXOpenAPIWatchOS.framework;
-			remoteRef = D4E4B0E81D7C762B0026A356 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D4E4B0EB1D7C762B0026A356 /* KKBOXOpenAPItvOS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KKBOXOpenAPItvOS.framework;
-			remoteRef = D4E4B0EA1D7C762B0026A356 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -410,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -418,12 +355,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -464,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -472,12 +412,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
