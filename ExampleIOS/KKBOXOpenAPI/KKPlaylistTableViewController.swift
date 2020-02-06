@@ -33,7 +33,7 @@ class KKPlaylistTableViewController: UITableViewController {
 		self.load()
 	}
 
-	init(playlistID: String, style: UITableViewStyle) {
+	init(playlistID: String, style: UITableView.Style) {
 		self.playlistID = playlistID
 		super.init(style: style)
 	}

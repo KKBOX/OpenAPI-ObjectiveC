@@ -11,7 +11,7 @@ class KKFeaturedPlaylistCategoryTableViewController: KKFeaturedPlaylistsTableVie
 
 	private (set) var categoryID: String
 
-	init(categoryID: String, style: UITableViewStyle) {
+	init(categoryID: String, style: UITableView.Style) {
 		self.categoryID = categoryID
 		super.init(style: style)
 	}
