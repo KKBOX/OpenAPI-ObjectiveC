@@ -5,7 +5,21 @@
 //
 
 #import "include/OpenAPI.h"
-#import "private_headers/OpenAPI+Privates.h"
+#import "OpenAPI+Privates.h"
+
+NSString *_Nonnull KKStringFromTerritoryCode(KKTerritoryCode code);
+
+@class KKBOXOpenAPI;
+
+@interface KKBOXOpenAPI (Privates)
+
+- (nonnull NSURLSessionDataTask *)_postToURL:(nonnull NSURL *)URL POSTParameters:(nonnull NSDictionary *)parameters headers:(nonnull NSDictionary<NSString *, NSString *> *)headers callback:(nonnull void (^)(id _Nullable, NSError *_Nullable))callback;
+
+- (nonnull NSURLSessionDataTask *)_postToURL:(nonnull NSURL *)URL POSTData:(nonnull NSData *)POSTData headers:(nonnull NSDictionary<NSString *, NSString * > *)headers callback:(nonnull void (^)(id _Nullable, NSError *_Nullable))callback;
+
+- (nonnull NSURLSessionDataTask *)_apiTaskWithURL:(nonnull NSURL *)URL callback:(nonnull KKBOXOpenAPIDataCallback)callback;
+@end;
+
 
 @interface KKAccessToken () <NSCoding>
 @end

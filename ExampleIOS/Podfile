@@ -1,2 +1,7 @@
+use_frameworks!
+
 pod "KKBOXOpenAPI", :path => "../"
 
+target 'KKBOXOpenAPIDemo' do
+    platform :ios, '9.0'
+end

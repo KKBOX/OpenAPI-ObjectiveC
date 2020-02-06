@@ -5,12 +5,13 @@
 //
 
 import UIKit
+import KKBOXOpenAPI
 
 enum KKPlaylistTableViewControllerState {
 	case unknown
 	case error(Error)
 	case loading
-	case loaded(playlist: KKPlaylistInfo, tracks: [KKTrackInfo], paging: KKPagingInfo, summary: KKSummary)
+	case loaded(playlist: PlaylistInfo, tracks: [TrackInfo], paging: PagingInfo, summary: Summary)
 }
 
 class KKPlaylistTableViewController: UITableViewController {
@@ -19,7 +20,7 @@ class KKPlaylistTableViewController: UITableViewController {
 		didSet {
 			switch self.state {
 			case let .loaded(playlist:playlist, tracks:_, paging:_, summary:_):
-				self.title = playlist.playlistTitle
+				self.title = playlist.title
 			default: break
 			}
 			self.tableView.reloadData()
@@ -45,7 +46,7 @@ class KKPlaylistTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(playlist:playlist, tracks:currentTracks, paging:_, summary:_):
 			let offset = currentTracks.count
-			sharedAPI.fetchTracksInPlaylist(withPlaylistID: playlistID, territory: .taiwan, offset: offset, limit: 20) { tracks, paging, summary, error in
+			sharedAPI.fetchPlaylistTracks(id: playlistID, territory: .taiwan, offset: offset, limit: 20) { tracks, paging, summary, error in
 				if error != nil {
 					return
 				}
@@ -53,7 +54,7 @@ class KKPlaylistTableViewController: UITableViewController {
 			}
 			break
 		default:
-			sharedAPI.fetchPlaylist(withPlaylistID: self.playlistID, territory: .taiwan) { playlist, paging, summary, error in
+			sharedAPI.fetchPlaylist(id: self.playlistID, territory: .taiwan) { playlist, paging, summary, error in
 				if let error = error {
 					self.state = .error(error)
 					return
@@ -87,8 +88,8 @@ class KKPlaylistTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(playlist:_, tracks:tracks, paging:_, summary:summary):
 			let track = tracks[indexPath.row]
-			cell?.textLabel?.text = track.trackName
-			cell?.detailTextLabel?.text = track.album?.artist.artistName ?? "N/A"
+			cell?.textLabel?.text = track.name
+			cell?.detailTextLabel?.text = track.album?.artist.name ?? "N/A"
 
 			if indexPath.row == tracks.count - 1 && indexPath.row < summary.total - 1 {
 				self.load()
@@ -105,7 +106,7 @@ class KKPlaylistTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(playlist:_, tracks:tracks, paging:_, summary:_):
 			let track = tracks[indexPath.row]
-			if let url = track.trackURL {
+			if let url = track.url {
 				UIApplication.shared.openURL(url)
 			}
 		default:

@@ -20,7 +20,7 @@ class KKChartsTableViewController: KKFeaturedPlaylistsTableViewController {
 		default: break
 		}
 
-		sharedAPI.fetchCharts(forTerritory: .taiwan, offset: offset, limit: 10) { playlists, paging, summary, error in
+		sharedAPI.fetchCharts(territory: .taiwan, offset: offset, limit: 10) { playlists, paging, summary, error in
 			if let error = error {
 				switch self.state {
 				case .loaded(playlists: _, paging: _, summary: _): return

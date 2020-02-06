@@ -4,11 +4,14 @@
 // Copyright (c) 2016-2019 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
+import UIKit
+import KKBOXOpenAPI
+
 enum KKFeaturedPlaylistsTableViewControllerState {
 	case unknown
 	case error(Error)
 	case loading
-	case loaded(playlists: [KKPlaylistInfo], paging: KKPagingInfo, summary: KKSummary)
+	case loaded(playlists: [PlaylistInfo], paging: PagingInfo, summary: Summary)
 }
 
 class KKFeaturedPlaylistsTableViewController: UITableViewController {
@@ -32,7 +35,7 @@ class KKFeaturedPlaylistsTableViewController: UITableViewController {
 		default: break
 		}
 
-		sharedAPI.fetchFeaturedPlaylists(forTerritory: .taiwan, offset: offset, limit: 20) { playlists, paging, summary, error in
+		sharedAPI.fetchFeaturedPlaylists(territory: .taiwan, offset: offset, limit: 20) { playlists, paging, summary, error in
 			if let error = error {
 				switch self.state {
 				case .loaded(playlists: _, paging: _, summary: _): return
@@ -72,7 +75,7 @@ class KKFeaturedPlaylistsTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(playlists:playlists, paging:_, summary:summary):
 			let playlist = playlists[indexPath.row];
-			cell.textLabel?.text = playlist.playlistTitle
+			cell.textLabel?.text = playlist.title
 			cell.accessoryType = .disclosureIndicator
 			if indexPath.row == playlists.count - 1 && indexPath.row < summary.total - 1 {
 				self.load()
@@ -87,7 +90,7 @@ class KKFeaturedPlaylistsTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(playlists:playlists, paging:_, summary:_):
 			let playlist = playlists[indexPath.row];
-			let controller = KKPlaylistTableViewController(playlistID: playlist.playlistID, style: .plain)
+			let controller = KKPlaylistTableViewController(playlistID: playlist.id, style: .plain)
 			self.navigationController?.pushViewController(controller, animated: true)
 		default:
 			break

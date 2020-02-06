@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import KKBOXOpenAPI
 
 class KKFeaturedPlaylistCategoryTableViewController: KKFeaturedPlaylistsTableViewController {
 
@@ -25,8 +26,7 @@ class KKFeaturedPlaylistCategoryTableViewController: KKFeaturedPlaylistsTableVie
 		case let .loaded(playlists:playlists, paging:_, summary:_): offset = playlists.count
 		default: break
 		}
-
-		sharedAPI.fetchFeaturedPlaylists(inCategory: categoryID, territory: .taiwan, offset: offset, limit: 20) { (category, playlists, paging, summary, error) in
+		sharedAPI?.fetchFeaturedPlaylistCategoryPlaylists(category: categoryID, territory: .taiwan, offset: offset, limit: 20) { (category, playlists, paging, summary, error) in
 			if let error = error {
 				switch self.state {
 				case .loaded(playlists: _, paging: _, summary: _): return
@@ -40,7 +40,7 @@ class KKFeaturedPlaylistCategoryTableViewController: KKFeaturedPlaylistsTableVie
 			case let .loaded(playlists:currentPlaylists, paging:_, summary:_):
 				self.state = .loaded(playlists: currentPlaylists + playlists!, paging: paging!, summary: summary!)
 			default:
-				self.title = category!.categoryTitle
+				self.title = category!.title
 				self.state = .loaded(playlists: playlists!, paging: paging!, summary: summary!)
 			}
 		}

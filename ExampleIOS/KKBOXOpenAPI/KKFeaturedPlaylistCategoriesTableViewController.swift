@@ -5,12 +5,13 @@
 //
 
 import UIKit
+import KKBOXOpenAPI
 
 enum KKFeaturedPlaylistCategoriesTableViewControllerState {
 	case unknown
 	case error(Error)
 	case loading
-	case loaded(categories: [KKFeaturedPlaylistCategory], paging: KKPagingInfo, summary: KKSummary)
+	case loaded(categories: [FeaturedPlaylistCategory], paging: PagingInfo, summary: Summary)
 }
 
 class KKFeaturedPlaylistCategoriesTableViewController: UITableViewController {
@@ -35,7 +36,7 @@ class KKFeaturedPlaylistCategoriesTableViewController: UITableViewController {
 		default: break
 		}
 
-		sharedAPI.fetchFeaturedPlaylistCategories(forTerritory: .taiwan, offset: offset, limit: 20) { categories, paging, summary, error in
+		sharedAPI.fetchFeaturedPlaylistCategories(territory: .taiwan, offset: offset, limit: 20) { categories, paging, summary, error in
 			if let error = error {
 				switch self.state {
 				case .loaded(categories: _, paging: _, summary: _): return
@@ -74,7 +75,7 @@ class KKFeaturedPlaylistCategoriesTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(categories:categories, paging:_, summary:_):
 			let category = categories[indexPath.row]
-			cell.textLabel?.text = category.categoryTitle
+			cell.textLabel?.text = category.title
 			cell.accessoryType = .disclosureIndicator
 		default:
 			break
@@ -87,7 +88,7 @@ class KKFeaturedPlaylistCategoriesTableViewController: UITableViewController {
 		switch self.state {
 		case let .loaded(categories:categories, paging:_, summary:_):
 			let category = categories[indexPath.row]
-			let controller = KKFeaturedPlaylistCategoryTableViewController(categoryID: category.categoryID, style: .plain)
+			let controller = KKFeaturedPlaylistCategoryTableViewController(categoryID: category.id, style: .plain)
 			self.navigationController?.pushViewController(controller, animated: true)
 		default:
 			break

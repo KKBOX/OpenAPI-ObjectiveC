@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import KKBOXOpenAPI
 
 class KKMainTableViewController: UITableViewController {
 
