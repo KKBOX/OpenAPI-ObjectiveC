@@ -26,7 +26,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "NSData+LFHTTPFormExtensions.h"
+#import "private_headers/NSData+LFHTTPFormExtensions.h"
 
 NS_INLINE NSString *LFHFEEscape(NSString *inValue) {
 	NSMutableCharacterSet *URLQueryPartAllowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];

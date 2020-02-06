@@ -4,8 +4,8 @@
 // Copyright (c) 2017 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
-#import "KKBOXOpenAPIObjects.h"
-#import "KKBOXOpenAPI.h"
+#import "include/OpenAPIObjects.h"
+#import "include/OpenAPI.h"
 
 @interface KKBOXOpenAPIObject ()
 - (void)handleDictionary;

@@ -4,8 +4,8 @@
 // Copyright (c) 2016-2019 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
-#import "KKBOXOpenAPI.h"
-#import "KKBOXOpenAPI+Privates.h"
+#import "include/OpenAPI.h"
+#import "private_headers/OpenAPI+Privates.h"
 
 @interface KKAccessToken () <NSCoding>
 @end
@@ -66,14 +66,14 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 @property (nonatomic) KKScope requestScope;
 @property (strong, nonnull, nonatomic) NSString *clientID;
 @property (strong, nonnull, nonatomic) NSString *clientSecret;
-@property (strong, nullable, nonatomic) KKAccessToken *accessToken;
+//@property (strong, nullable, nonatomic) KKAccessToken *accessToken;
 @end
 
 @implementation KKBOXOpenAPI
 
 - (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret
 {
-	return [self initWithClientID:clientID secret:secret scope:KKScopeAll];
+	return [self initWithClientID:clientID secret:secret scope:KKScopeNone];
 }
 
 - (nonnull instancetype)initWithClientID:(nonnull NSString *)clientID secret:(nonnull NSString *)secret scope:(KKScope)scope

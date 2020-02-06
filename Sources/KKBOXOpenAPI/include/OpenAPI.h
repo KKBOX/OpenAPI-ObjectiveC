@@ -5,7 +5,8 @@
 //
 
 @import Foundation;
-#import "KKBOXOpenAPIObjects.h"
+
+#import "OpenAPIObjects.h"
 
 /**
  * The access token object. You need a valid access token to access
@@ -141,7 +142,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 - (void)logout;
 
 /** The current access token. */
-@property (readonly, strong, nullable, nonatomic) KKAccessToken *accessToken;
+@property (readwrite, strong, nullable, nonatomic) KKAccessToken *accessToken;
 /** If there is a valid access token. */
 @property (readonly, assign) BOOL loggedIn;
 @end

@@ -16,6 +16,7 @@
 @import WatchKit;
 #endif
 
+
 /** The model objects used in KKBOX's Open API. */
 @interface KKBOXOpenAPIObject : NSObject
 /**

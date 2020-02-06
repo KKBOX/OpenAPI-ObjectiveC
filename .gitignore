@@ -13,3 +13,5 @@ xcuserdata
 .vscode
 Pods
 cobertura.xml
+.swiftpm
+.build

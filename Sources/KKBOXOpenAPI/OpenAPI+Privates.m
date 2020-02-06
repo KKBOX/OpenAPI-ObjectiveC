@@ -4,8 +4,8 @@
 // Copyright (c) 2016-2019 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
-#import "KKBOXOpenAPI+Privates.h"
-#import "NSData+LFHTTPFormExtensions.h"
+#import "private_headers/OpenAPI+Privates.h"
+#import "private_headers/NSData+LFHTTPFormExtensions.h"
 
 static NSString *const KKUserAgent = @"KKBOX Open API iOS SDK";
 
