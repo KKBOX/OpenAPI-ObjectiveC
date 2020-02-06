@@ -43,6 +43,24 @@ recommended.
 
 ## Installation
 
+### Swift Package Manager
+
+You can install the library via Swift Package Manager (SPM). Just add the
+following lines to your Package.swift file.
+
+``` swift
+dependencies: [
+    .package(url: "https://github.com/KKBOX/OpenAPI-ObjectiveC.git", from: "0.1.0"),
+],
+```
+
+Then run swift build.
+
+Or, you can use the "Add Package Dependency" command under the "Swift Packages"
+menu in Xcode 11.
+
+### CocoaPods
+
 The SDK supports CocoaPods. Please add `pod 'KKBOXOpenAPI'`
 to your Podfile, and then call `pod install`.
 

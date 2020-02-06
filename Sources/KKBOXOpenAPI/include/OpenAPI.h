@@ -222,7 +222,7 @@ typedef void (^KKBOXOpenAPIDataCallback)(id _Nullable, NSError *_Nullable);
 * @return an NSURLSessionDataTask object that allow you to cancel the
 * task.
 */
-- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))inCallback NS_SWIFT_NAME(fetchAlbumTracks(id:territory:offset:limit:callback:));
+- (nonnull NSURLSessionDataTask *)fetchTracksWithAlbumID:(nonnull NSString *)albumID territory:(KKTerritoryCode)territory offset:(NSInteger)offset limit:(NSInteger)limit callback:(nonnull void (^)(NSArray <KKTrackInfo *> *_Nullable, KKPagingInfo *_Nullable, KKSummary *_Nullable, NSError *_Nullable))callback NS_SWIFT_NAME(fetchAlbumTracks(id:territory:offset:limit:callback:));
 
 #pragma mark - Artists
 

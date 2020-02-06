@@ -4,7 +4,7 @@
 // Copyright (c) 2016-2019 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
-#import "KKBOXOpenAPI.h"
+#import "../include/OpenAPI.h"
 
 NSString *_Nonnull KKStringFromTerritoryCode(KKTerritoryCode code);
 
