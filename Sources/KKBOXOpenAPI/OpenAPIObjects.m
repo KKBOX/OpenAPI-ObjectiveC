@@ -131,7 +131,9 @@
 
 @interface KKBOXOpenAPIObjectParsingHelper : NSObject
 + (NSSet <NSNumber *> *)territoriesFromArray:(NSArray *)array;
+
 + (NSArray <KKImageInfo *> *)imageArrayFromArray:(NSArray *)dictionaryImages;
+
 + (NSArray <KKChildrenCategory *> *)subcategoriesFromArray:(NSArray *)dictionaryImages;
 @end
 
