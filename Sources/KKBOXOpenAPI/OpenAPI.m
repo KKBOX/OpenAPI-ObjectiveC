@@ -1,11 +1,10 @@
 //
 // KKBOXOpenAPI.m
 //
-// Copyright (c) 2016-2019 KKBOX Taiwan Co., Ltd. All Rights Reserved.
+// Copyright (c) 2016-2020 KKBOX Taiwan Co., Ltd. All Rights Reserved.
 //
 
 #import "include/OpenAPI.h"
-#import "OpenAPI+Privates.h"
 
 NSString *_Nonnull KKStringFromTerritoryCode(KKTerritoryCode code);
 
@@ -80,7 +79,6 @@ NSString *const KKBOXOpenAPIDidRestoreAccessTokenNotification = @"KKBOXOpenAPIDi
 @property (nonatomic) KKScope requestScope;
 @property (strong, nonnull, nonatomic) NSString *clientID;
 @property (strong, nonnull, nonatomic) NSString *clientSecret;
-//@property (strong, nullable, nonatomic) KKAccessToken *accessToken;
 @end
 
 @implementation KKBOXOpenAPI
