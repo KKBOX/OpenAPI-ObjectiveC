@@ -6,8 +6,8 @@
 
 @import Foundation;
 
-// FOUNDATION_EXPORT double KKBOXOpenAPIiOSVersionNumber;
-// FOUNDATION_EXPORT const unsigned char KKBOXOpenAPIiOSVersionString[];
+FOUNDATION_EXPORT double KKBOXOpenAPIiOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char KKBOXOpenAPIiOSVersionString[];
 
 #import "OpenAPI.h"
 #import "OpenAPIObjects.h"
